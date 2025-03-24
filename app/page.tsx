@@ -34,7 +34,7 @@ export default function Home() {
     width={20}
     height={20}
   />
-  Deploy nowww
+  Deploy nowwww
 </a>
 
           <a
