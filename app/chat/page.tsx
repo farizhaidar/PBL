@@ -5,18 +5,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../component/navbar";
 
 export default function ChatPage() {
-  const [inputText, setInputText] = useState(""); // State untuk input
+  const [inputText, setInputText] = useState(""); 
 
   const handleSubmit = () => {
     if (inputText.trim() !== "") {
-      console.log("User Input:", inputText); // Bisa diganti dengan logika lain
-      setInputText(""); // Hapus input setelah dikirim
+      console.log("User Input:", inputText); 
+      setInputText(""); 
     }
   };
 
   return (
-    <div className="vh-100 bg-dark text-light">
-      <Navbar /> {/* Navbar tetap di atas */}
+    <div className="vh-100 night-sky text-light">
+      <Navbar /> 
+      {[...Array(50)].map((_, i) => (
+          <span key={i} className="star"></span>
+        ))}
 
       <motion.div
         className="container d-flex align-items-center justify-content-center h-75"

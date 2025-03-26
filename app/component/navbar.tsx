@@ -7,7 +7,7 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <nav className={`navbar navbar-expand-lg ${darkMode ? "bg-dark" : "bg-light"} text-${darkMode ? "light" : "dark"} p-3`}>
+    <nav className={`navbar navbar-expand-lg fixed-top ${darkMode ? "night-sky" : "bg-light"} text-${darkMode ? "light" : "dark"} p-3`}>
       <div className="container-fluid">
         <a className={`navbar-brand text-${darkMode ? "light" : "dark"}`} href="/">
           Chatbot
@@ -25,6 +25,9 @@ export default function Navbar() {
                 Chat
               </a>
             </li>
+            <li className="nav-item">
+              <a className={`nav-link text-${darkMode ? "light" : "dark"}`} href="/recommendation">Rekomendasi</a>
+            </li>
           </ul>
 
           <div className="d-flex align-items-center ms-3">
@@ -36,7 +39,6 @@ export default function Navbar() {
               {darkMode ? "🌙" : "☀️"}
             </button>
 
-            {/* Avatar */}
             <Image
               src="/pajar.jpg"
               alt="User Avatar"
