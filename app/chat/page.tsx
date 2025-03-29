@@ -3,51 +3,103 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../component/navbar";
+import "bootstrap-icons/font/bootstrap-icons.min.css"; // Import Bootstrap Icons
 
 export default function ChatPage() {
   const [inputText, setInputText] = useState(""); 
-
-  const handleSubmit = () => {
-    if (inputText.trim() !== "") {
-      console.log("User Input:", inputText); 
-      setInputText(""); 
-    }
-  };
+  const [messages, setMessages] = useState([]);
 
   return (
-    <div className="vh-100 night-sky text-light">
-      <Navbar /> 
-      {[...Array(50)].map((_, i) => (
-          <span key={i} className="star"></span>
-        ))}
-
-      <motion.div
-        className="container d-flex align-items-center justify-content-center h-75"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-      >
-        <div className="text-center">
-          <h3>Apa yang bisa saya bantu?</h3>
+    <div className="vh-100 bg-black text-light d-flex flex-column">
+      <Navbar />
+      
+      <div className="chat-container flex-grow-1 d-flex flex-column p-3">
+        {messages.map((msg, index) => (
           <motion.div
-            className="input-group mt-3"
+            key={index}
+            className="chat-bubble"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
+            transition={{ duration: 0.3 }}
           >
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Tanya apapun!"
-              value={inputText} // Menggunakan state
-              onChange={(e) => setInputText(e.target.value)} // Menyimpan input
-            />
-            <button className="btn btn-primary" onClick={handleSubmit}>
-              ➤
-            </button>
+            {msg}
           </motion.div>
-        </div>
-      </motion.div>
+        ))}
+      </div>
+
+      {/* Chat Input Container */}
+      <div className="chat-input-container p-3">
+        <textarea
+          className="chat-input"
+          placeholder="Tanya apapun!"
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+        />
+        <button className="btn btn-primary send-button">
+          <i className="bi bi-arrow-up"></i> {/* Ikon panah ke atas */}
+        </button>
+      </div>
+
+      <style jsx>{`
+        .chat-container {
+          overflow-y: auto;
+          max-height: 75vh;
+        }
+
+        .chat-bubble {
+          padding: 12px 16px;
+          border-radius: 16px;
+          max-width: 75%;
+          word-wrap: break-word;
+          margin-bottom: 10px;
+          background-color: #0d6efd;
+          color: white;
+          align-self: flex-end;
+        }
+
+        .chat-input-container {
+          margin-left: 10rem; 
+          margin-right: 10rem; 
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px;
+          border: none;
+          border-radius: 20px;
+          background: rgb(20, 20, 20);
+        }
+
+        .chat-input {
+          
+          flex: 1;
+          padding: 10px;
+          border: none;
+          border-radius: 8px;
+          background: transparent;
+          color: white;
+          font-size: 16px;
+          resize: none;
+          min-height: 50px;
+          max-height: 150px;
+        }
+
+        .chat-input:focus {
+          outline: none;
+          border-color: #0d6efd;
+        }
+
+        .send-button {
+          margin-left: 10px;
+          width: 45px;
+          height: 45px;
+          font-size: 20px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+        }
+      `}</style>
     </div>
   );
 }
