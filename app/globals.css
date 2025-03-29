@@ -3,8 +3,20 @@
   !important; 
 }
 
+.btn-hover-effect {
+  color: #6610f2 !important; /* Warna default */
+  transition: color 0.3s ease-in-out;
+  border: none !important;
+}
+
+.btn-hover-effect:hover {
+  color: white !important; /* Warna berubah saat hover */
+}
+
 .night-sky {
-  background: linear-gradient(to bottom, #000000, #0a0a1a); /* Gradasi hitam kebiruan */
+  /* background: linear-gradient(to bottom, #000000, #0a0a1a); Gradasi hitam kebiruan */
+  background: #000000; /* Atau warna lain sesuai keinginan */
+
   position: relative;
   overflow: hidden;
 }

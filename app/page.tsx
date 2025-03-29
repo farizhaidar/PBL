@@ -21,9 +21,9 @@ export default function Home() {
             <h1 className="text-indigo-500 mb-5 fs-1">Chatbot</h1>
             <p className="mt-3 mx-5 px-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lorem ut odio convallis posuere. Suspendisse potenti. Curabitur feugiat dui id sapien interdum, sed bibendum nunc pellentesque. Integer congue purus id orci aliquet, ac tincidunt lorem fermentum. Donec pharetra, lectus non pharetra efficitur, felis felis luctus velit, at fermentum magna justo non velit. Fusce tincidunt interdum sapien, nec varius lorem tincidunt ut.            </p>
-            <a href="/chat" className="btn mt-3" style={{ backgroundColor: "#6610f2", color: "white" }}>
-              Getting Start
-            </a>
+            <a href="/chat" 
+   className="btn mt-3 btn-hover-effect d-inline-flex align-items-center fs-5">Getting Start</a>
+
           </div>
         </section>
 
