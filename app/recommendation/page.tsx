@@ -1,75 +1,166 @@
 "use client";
-import { useState } from "react";
+
+import React, { useState } from "react";
+import Navbar from "../component/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.min.css";
+import "../globals.css"; // pastikan night-sky dan star ada di sini
 
-export default function LoanRecommendation() {
-  const [income, setIncome] = useState("");
-  const [age, setAge] = useState("");
-  const [loanPurpose, setLoanPurpose] = useState("");
-  const [recommendation, setRecommendation] = useState(null);
+const FormPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    usia: "",
+    jenisKelamin: "",
+    pendapatan: "",
+    saldo: "",
+    riwayatPinjaman: "",
+    frekuensiTransaksi: "",
+    jenisTransaksiFavorit: "",
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Simulasi hasil dari Decision Tree (nanti bisa diganti dengan API ML sesungguhnya)
-    let recommendedProduct = "";
-    if (income > 5000000 && loanPurpose === "business") {
-      recommendedProduct = "Business Loan - Low Interest";
-    } else if (income < 5000000 && loanPurpose === "personal") {
-      recommendedProduct = "Personal Loan - Standard Rate";
-    } else {
-      recommendedProduct = "Flexible Loan Plan";
-    }
-
-    setRecommendation(recommendedProduct);
+    console.log("Data Form:", formData);
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="text-center text-primary mb-4">Loan Product Recommendation</h2>
+    <>
+      <Navbar />
 
-      <form className="p-4 border rounded bg-light shadow-sm" onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Income (IDR)</label>
-          <input
-            type="number"
-            className="form-control"
-            value={income}
-            onChange={(e) => setIncome(e.target.value)}
-            required
-          />
+      <div className="position-relative night-sky min-vh-100 d-flex align-items-center justify-content-center">
+        {[...Array(50)].map((_, i) => (
+          <span key={i} className="star"></span>
+        ))}
+
+        <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
+          <div className="text-light rounded p-4 shadow-lg">
+            <h2 className="mb-4 text-center">Formulir Data Pengguna</h2>
+            <form onSubmit={handleSubmit}>
+              {/* Usia */}
+              <div className="mb-3">
+                <label htmlFor="usia" className="form-label">Usia</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="usia"
+                  name="usia"
+                  value={formData.usia}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              {/* Jenis Kelamin */}
+              <div className="mb-3">
+                <label htmlFor="jenisKelamin" className="form-label">Jenis Kelamin</label>
+                <select
+                  className="form-select"
+                  id="jenisKelamin"
+                  name="jenisKelamin"
+                  value={formData.jenisKelamin}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Pilih</option>
+                  <option value="Laki-laki">Laki-laki</option>
+                  <option value="Perempuan">Perempuan</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+              </div>
+
+              {/* Pendapatan Bulanan */}
+              <div className="mb-3">
+                <label htmlFor="pendapatan" className="form-label">Pendapatan Bulanan (Rp)</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="pendapatan"
+                  name="pendapatan"
+                  value={formData.pendapatan}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              {/* Saldo Rekening */}
+              <div className="mb-3">
+                <label htmlFor="saldo" className="form-label">Saldo Rekening (Rp)</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="saldo"
+                  name="saldo"
+                  value={formData.saldo}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              {/* Riwayat Pinjaman */}
+              <div className="mb-3">
+                <label htmlFor="riwayatPinjaman" className="form-label">Riwayat Pinjaman</label>
+                <select
+                  className="form-select"
+                  id="riwayatPinjaman"
+                  name="riwayatPinjaman"
+                  value={formData.riwayatPinjaman}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Pilih</option>
+                  <option value="Pernah">Pernah</option>
+                  <option value="Belum Pernah">Belum Pernah</option>
+                </select>
+              </div>
+
+              {/* Frekuensi Transaksi */}
+              <div className="mb-3">
+                <label htmlFor="frekuensiTransaksi" className="form-label">Frekuensi Transaksi per Bulan</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="frekuensiTransaksi"
+                  name="frekuensiTransaksi"
+                  value={formData.frekuensiTransaksi}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              {/* Jenis Transaksi Favorit */}
+              <div className="mb-4">
+                <label htmlFor="jenisTransaksiFavorit" className="form-label">Jenis Transaksi Favorit</label>
+                <select
+                  className="form-select"
+                  id="jenisTransaksiFavorit"
+                  name="jenisTransaksiFavorit"
+                  value={formData.jenisTransaksiFavorit}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Pilih</option>
+                  <option value="E-Wallet">E-Wallet</option>
+                  <option value="Kartu Kredit">Kartu Kredit</option>
+                  <option value="Transfer Bank">Transfer Bank</option>
+                  <option value="Investasi">Investasi</option>
+                  <option value="Deposito">Deposito</option>
+                </select>
+              </div>
+
+              <button type="submit" className="btn btn-primary w-100">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-
-        <div className="mb-3">
-          <label className="form-label">Age</label>
-          <input
-            type="number"
-            className="form-control"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Loan Purpose</label>
-          <select className="form-select" value={loanPurpose} onChange={(e) => setLoanPurpose(e.target.value)} required>
-            <option value="">Select Purpose</option>
-            <option value="business">Business</option>
-            <option value="personal">Personal</option>
-            <option value="education">Education</option>
-          </select>
-        </div>
-
-        <button type="submit" className="btn btn-primary w-100">Get Recommendation</button>
-      </form>
-
-      {recommendation && (
-        <div className="mt-4 p-3 border rounded bg-white shadow-sm">
-          <h5 className="text-success">Recommended Loan Product:</h5>
-          <p className="fs-5">{recommendation}</p>
-        </div>
-      )}
-    </div>
+      </div>
+    </>
   );
-}
+};
+
+export default FormPage;

@@ -54,3 +54,28 @@ html {
 .star:nth-child(19) { top: 95%; left: 35%; }
 .star:nth-child(20) { top: 98%; left: 65%; }
 
+.form-control,
+.form-select {
+  background-color: #141414 !important;
+  color: #ffffff;
+  border: 1px solid #141414 !important; /* border disamakan */
+  border-radius: 5px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #141414;
+  border-color: #141414;
+  box-shadow: none !important;
+  color: #ffffff;
+}
+
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-select option {
+  background-color: #141414;
+  color: #fff;
+}
