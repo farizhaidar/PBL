@@ -15,6 +15,7 @@ const FormPage: React.FC = () => {
     riwayatPinjaman: "",
     frekuensiTransaksi: "",
     jenisTransaksiFavorit: "",
+    ratarataJumlahTransaksi: "",
   });
 
   const handleChange = (
@@ -150,6 +151,20 @@ const FormPage: React.FC = () => {
                   <option value="Investasi">Investasi</option>
                   <option value="Deposito">Deposito</option>
                 </select>
+              </div>
+
+              {/* Rata-rata Jumlah Transaksi */}
+              <div className="mb-3">
+                <label htmlFor="ratarataJumlahTransaksi" className="form-label">Rata-rata Jumlah Transaksi (Rp)</label>
+                <input
+                  type="number"
+                  className="form-control"
+                  id="ratarataJumlahTransaksi"
+                  name="ratarataJumlahTransaksi"
+                  value={formData.ratarataJumlahTransaksi}
+                  onChange={handleChange}
+                  required
+                />
               </div>
 
               <button type="submit" className="btn btn-primary w-100">
