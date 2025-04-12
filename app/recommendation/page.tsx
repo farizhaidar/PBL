@@ -15,8 +15,10 @@ const FormPage: React.FC = () => {
     riwayatPinjaman: "",
     frekuensiTransaksi: "",
     jenisTransaksiFavorit: "",
-    ratarataJumlahTransaksi: "",
   });
+
+  const [rekomendasi, setRekomendasi] = useState<string | null>(null);
+  const [showCard, setShowCard] = useState<boolean>(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -24,11 +26,44 @@ const FormPage: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Data Form:", formData);
+  
+    try {
+      const response = await fetch("http://localhost:5000/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+      if (data.rekomendasi) {
+        setRekomendasi(data.rekomendasi);
+        setShowCard(true); // Show recommendation card
+      } else {
+        setRekomendasi("Gagal mendapatkan rekomendasi.");
+        setShowCard(true);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setRekomendasi("Terjadi kesalahan saat memproses data.");
+      setShowCard(true);
+    }
   };
 
+  const handleOkClick = () => {
+    setFormData({
+      usia: "",
+      jenisKelamin: "",
+      pendapatan: "",
+      saldo: "",
+      riwayatPinjaman: "",
+      frekuensiTransaksi: "",
+      jenisTransaksiFavorit: "",
+    });
+    setShowCard(false); // Hide recommendation card
+  };
+  
   return (
     <>
       <Navbar />
@@ -40,7 +75,17 @@ const FormPage: React.FC = () => {
 
         <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
           <div className="text-light rounded p-4 shadow-lg">
+
             <h2 className="mb-4 text-center">Formulir Data Pengguna</h2>
+
+            {/* Box Penjelasan */}
+            <div className="info-box">
+              <p>
+                Untuk mengetahui produk bank yang cocok dengan rutinitasmu, silahkan isi terlebih dahulu data berikut.
+                Hasil rekomendasi akan langsung muncul setelah klik submit.
+              </p>
+            </div>
+
             <form onSubmit={handleSubmit}>
               {/* Usia */}
               <div className="mb-3">
@@ -68,8 +113,8 @@ const FormPage: React.FC = () => {
                   required
                 >
                   <option value="">Pilih</option>
-                  <option value="Laki-laki">Laki-laki</option>
-                  <option value="Perempuan">Perempuan</option>
+                  <option value="Pria">Pria</option>
+                  <option value="Wanita">Wanita</option>
                   <option value="Lainnya">Lainnya</option>
                 </select>
               </div>
@@ -121,7 +166,7 @@ const FormPage: React.FC = () => {
 
               {/* Frekuensi Transaksi */}
               <div className="mb-3">
-                <label htmlFor="frekuensiTransaksi" className="form-label">Frekuensi Transaksi per Bulan</label>
+                <label htmlFor="frekuensiTransaksi" className="form-label">Rata-rata Jumlah Transaksi per Bulan</label>
                 <input
                   type="number"
                   className="form-control"
@@ -153,26 +198,25 @@ const FormPage: React.FC = () => {
                 </select>
               </div>
 
-              {/* Rata-rata Jumlah Transaksi */}
-              <div className="mb-3">
-                <label htmlFor="ratarataJumlahTransaksi" className="form-label">Rata-rata Jumlah Transaksi (Rp)</label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="ratarataJumlahTransaksi"
-                  name="ratarataJumlahTransaksi"
-                  value={formData.ratarataJumlahTransaksi}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
               <button type="submit" className="btn btn-primary w-100">
                 Submit
               </button>
             </form>
           </div>
         </div>
+
+        {/* Rekomendasi Card */}
+        {showCard && (
+          <div className="position-absolute top-50 start-50 translate-middle w-75 p-4 shadow-lg rounded bg-light" style={{ zIndex: 1050 }}>
+            <div className="text-center">
+              <h4 className="text-primary mb-3">💡 Rekomendasi Produk Bank</h4>
+              <div className="card p-4">
+                <p>{rekomendasi}</p>
+                <button className="btn btn-success" onClick={handleOkClick}>OK</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

@@ -79,3 +79,13 @@ html {
   background-color: #141414;
   color: #fff;
 }
+
+
+.info-box {
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
