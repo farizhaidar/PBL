@@ -1,0 +1,1000 @@
+transaction_id,date,customer_id,amount,type,description,Usia,Jenis_Kelamin,Pendapatan_Bulanan,Saldo_Rekening,Riwayat_Pinjaman,Frekuensi_Transaksi,Jenis_Transaksi_Favorit,Minat_Investasi,Produk_Direkomendasikan
+3,2019-09-02,110,7969.68,debit,Direction wife job pull determine leader move college.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+58,2022-03-24,106,2052.33,credit,Maybe provide happy impact another forget.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+435,2020-11-29,103,8725.1,credit,Care media believe local central.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+476,2019-06-08,101,3370.81,debit,Unit health language player bring their then.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+535,2022-06-02,104,475.25,credit,Better a quite current material.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+604,2022-06-26,107,4496.49,credit,Area nothing three who.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+713,2019-08-19,105,3983.95,credit,Reduce fire our difficult game magazine must.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+748,2021-03-29,107,2909.34,transfer,Against program key magazine.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+770,2023-02-21,104,1104.02,transfer,Page really rather debate.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+865,2020-04-25,110,7205.82,credit,Pick become feel position another record.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+1044,2021-11-30,103,8529.38,transfer,Control whether weight lot mind.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+1085,2022-05-13,110,5309.46,transfer,Pick put threat.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+1329,2021-10-31,105,5704.54,credit,May interesting total win.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+1393,2018-11-27,105,4397.45,transfer,Customer president important trouble degree land sing.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+1641,2020-04-11,106,3455.28,transfer,Stage inside draw theory.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+1683,2020-11-26,109,1602.69,credit,Number current with.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+1724,2022-11-29,108,8916.21,credit,Good figure last parent.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+1765,2022-04-30,103,3211.1,debit,We draw near get fall radio.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+1828,2019-05-30,104,8403.46,transfer,Matter set provide city article Democrat herself feel.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+1886,2020-09-26,101,5468.56,transfer,Surface kid owner book choice response test trade.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+1931,2021-06-22,102,354.92,credit,Carry life water majority west trial woman.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+2046,2021-08-31,102,899.56,debit,Spring day second similar listen money late.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+2542,2019-08-22,109,8655.51,debit,Rich at we traditional.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+2791,2019-12-20,103,6226.64,credit,Total rock firm be would.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+2966,2018-09-07,105,8022.25,debit,Low or themselves once.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+2987,2020-12-21,109,7125.78,transfer,Possible kid write all public learn oil provide.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+3210,2021-07-28,104,6086.17,transfer,Minute street Congress.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+3274,2020-09-10,110,9126.08,credit,Word anyone realize knowledge half remember control.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+3393,2018-04-09,107,8411.98,credit,Hold financial pull tax economy third.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+3521,2019-01-20,102,4775.54,debit,Professor these begin article even.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+3569,2018-09-14,102,3917.99,transfer,Wrong peace want test.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+3702,2020-09-26,109,1466.41,transfer,Yes likely condition have message next stage.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+3818,2021-05-28,106,4501.62,debit,Life color last more everybody.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+4119,2021-10-10,107,2698.43,debit,Develop modern author forward.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+4126,2020-12-07,103,6324.43,debit,Movement hold item.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+4508,2021-01-01,108,5792.02,credit,Operation industry responsibility can within tend traditional final.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+4534,2022-12-19,109,7319.54,transfer,Type explain long.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+4569,2021-04-01,107,7524.19,credit,Against pull wife offer.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+4591,2021-05-11,106,4642.59,credit,School society report.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+4641,2019-11-24,109,8911.83,transfer,Issue research performance.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+4732,2018-11-26,103,2138.58,transfer,White western plan traditional dog record.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+4751,2019-12-25,104,6938.79,debit,Whose speak per receive back throughout listen take.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+4775,2019-10-13,109,5462.87,credit,Evidence young room price perform idea.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+4832,2019-07-03,103,5624.29,credit,White their artist single.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+4866,2022-07-19,101,6016.99,debit,Relate high interview store friend most.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+4998,2022-09-12,102,8829.46,credit,During possible get the magazine thing seek land.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+5026,2020-11-02,107,7400.71,debit,Blue certainly vote.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+5038,2023-03-27,103,2713.76,transfer,Wrong suggest result risk water down price.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+5082,2019-07-10,103,6831.48,debit,Every stock compare hair information win type.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+5285,2022-02-16,107,479.2,debit,Health Congress art three so forget thing.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+5351,2020-09-22,107,1125.1,credit,Family push push whether lawyer choice.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+5387,2022-06-14,104,8554.11,debit,Even language break decade young or.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+5410,2019-12-31,107,9319.08,credit,Challenge increase high born way bar.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+5491,2022-07-07,108,7567.49,debit,Before fly wait reason once.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+5608,2020-11-22,101,7295.98,debit,Though direction into what.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+5682,2022-12-23,107,7188.01,transfer,Example week early customer eat color appear.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+5764,2019-11-14,102,6622.4,debit,Foot story note Democrat best analysis.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+5778,2022-08-18,101,4601.87,debit,Others anyone where three almost team shoulder should.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+6126,2022-09-19,107,7374.55,credit,Once guess serious east.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+6349,2022-03-26,107,8508.34,debit,New series low watch Republican light there account.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+6507,2018-09-29,103,4444.92,debit,Western particular difficult thus.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+6511,2023-01-18,102,1603.09,debit,Bring to word history majority.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+6748,2021-11-01,110,7181.2,debit,Stop very training network.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+6751,2022-03-09,104,8876.41,debit,Their available free radio.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+6820,2023-03-21,106,3162.98,credit,Not nature consider election station financial.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+6846,2022-06-20,108,6256.1,credit,Their thank visit.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+6884,2019-08-06,101,4463.91,credit,Field edge light without find contain everyone.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+6885,2022-10-17,105,4725.5,transfer,Picture for point should.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+6893,2020-03-04,109,3988.46,transfer,Bill green new serious deep avoid.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+7335,2019-03-26,109,7959.2,credit,Explain Mr new something.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+7506,2019-07-02,103,6776.7,debit,Control first staff trouble.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+7587,2022-07-29,104,8894.17,transfer,Several sometimes successful by.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+7800,2021-06-30,104,6745.04,credit,More bit yet data all.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+7815,2022-09-09,106,7178.04,debit,Thing before fall same parent according safe.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+8069,2020-08-20,102,9912.79,credit,Know add something.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+8071,2021-06-26,109,4494.83,debit,Business information worker each beyond control claim wall.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+8346,2022-09-16,105,3576.57,credit,Common town air usually under visit.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+8551,2022-10-09,109,4089.62,debit,Difference soon her quality culture care.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+8590,2018-10-14,103,3387.2,transfer,Character goal family tree benefit with.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+8617,2018-08-26,105,3035.57,transfer,Draw me ball air likely indeed fund.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+8742,2020-10-31,110,815.36,transfer,Lawyer power hand.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+8808,2018-07-20,103,1344.44,credit,Even black story artist total memory.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+8892,2020-01-12,108,2509.14,debit,Mother find blue training enough some.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+9086,2021-05-04,108,4505.8,credit,Maybe recent fire together fall Mr range here.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+9171,2020-12-12,107,8826.89,credit,Per agreement usually mother radio force eight.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+9347,2022-04-28,102,900.07,credit,Particularly region only full must decide.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+9435,2020-06-13,109,1776.36,debit,Their national work play issue ball.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+9707,2018-10-01,104,2071.99,transfer,All instead she serve note truth bit.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+9710,2022-09-05,103,2728.98,credit,Push teach ever yet them miss this.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+9734,2018-04-18,106,7511.54,credit,Manager nor peace like defense image Mr good.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+9764,2018-12-02,101,8715.44,transfer,North attorney or light.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+9855,2020-01-06,110,3119.19,debit,Without similar traditional must.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+9934,2019-04-05,105,222.51,transfer,Actually hair lay just.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+10197,2023-02-28,107,7618.43,credit,Successful prepare yet sign site.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+10208,2021-06-04,109,7293.64,credit,Including understand machine bed network understand.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+10271,2018-03-31,106,5748.81,credit,Think ground seven red white provide.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+10405,2018-07-08,108,440.69,debit,Yes magazine health leader reveal way.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+10422,2018-05-18,107,5517.27,credit,Soldier lot threat deep land the coach.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+10467,2021-01-22,106,6449.24,credit,Adult capital morning machine impact.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+10509,2023-02-17,105,926.3,transfer,Class poor team like level include.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+10675,2021-03-19,106,8348.41,debit,Town nation employee pull far ever trial.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+10701,2021-04-14,102,6798.99,transfer,Always own attorney know.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+10704,2022-11-26,103,3459.27,debit,Technology sell note create go.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+10770,2020-03-05,104,5167.59,debit,Night traditional war something do up pattern.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+10784,2021-07-09,106,1140.17,credit,Child military five music story local meet.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+11040,2019-10-29,106,8816.92,transfer,Serious treat billion box standard fact effort red.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+11048,2022-06-30,108,6882.22,transfer,However employee reduce season choose fill next produce.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+11282,2019-11-30,108,7534.3,transfer,Whom key player give area believe claim.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+11320,2023-01-10,101,1429.13,credit,Station force change perhaps arrive continue.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+11521,2021-01-20,104,2226.66,transfer,Seek simply ahead development.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+11618,2022-01-23,106,4242.83,credit,Leave specific leg also.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+11853,2020-09-12,106,8494.44,credit,Reduce newspaper state and store course.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+11889,2021-10-07,108,4636.9,transfer,System natural action area later include throw.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+11906,2019-02-12,108,516.28,debit,Test door hear.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+11944,2020-03-05,106,6540.69,transfer,Poor two difficult decision.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+12038,2018-12-05,106,2480.71,debit,Seem building realize get week.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+12055,2019-10-11,101,855.12,debit,Focus nothing international.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+12156,2021-05-07,105,7523.44,credit,Risk case tell thought reduce avoid focus.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+12258,2018-10-28,104,1607.78,debit,Less trade glass way different others.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+12464,2019-08-25,104,7880.8,credit,Child number garden owner forward.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+12473,2018-10-11,108,1101.85,credit,Return little week throw reach.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+12500,2018-08-02,110,2904.65,transfer,Yet beat it technology bit.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+12773,2022-07-22,105,7618.53,transfer,Subject white color view about stand thousand why.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+12819,2022-03-23,109,2641.38,debit,Late put north themselves read certainly.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+12916,2022-10-12,103,5365.98,debit,Feel list best case career benefit threat.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+12936,2022-12-02,106,5479.47,credit,Actually fast newspaper safe if.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+12945,2019-08-18,101,5231.27,credit,Often activity ball ball.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+13041,2020-08-31,104,9720.76,debit,Language majority decade lay.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+13249,2018-11-04,109,7285.03,credit,Hit keep yard fish information budget.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+13290,2019-04-04,105,4194.3,debit,Customer common knowledge find smile room.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+13393,2018-10-16,102,2043.65,transfer,Administration meeting forget relate simple until painting.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+13453,2022-03-27,101,5215.82,credit,Action quickly fact under executive may serious.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+13465,2022-12-09,101,8390.01,transfer,Accept actually growth experience strong modern father address.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+13480,2021-02-12,107,2029.06,debit,Against deal result manager push air process I.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+13610,2021-01-25,101,3785.79,transfer,Program loss analysis type.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+13888,2020-12-28,102,6008.18,credit,Read yourself why pattern water.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+14032,2022-04-24,104,2945.74,debit,Knowledge figure usually wide.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+14092,2019-09-20,104,3401.96,debit,Provide agent per he they government within.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+14093,2018-05-08,109,6195.8,debit,Test today describe past.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+14156,2020-09-27,103,5175.89,transfer,Back five into have yet road growth nearly.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+14168,2019-03-07,102,1838.03,debit,Citizen cut into guess visit mention.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+14275,2020-05-09,102,972.97,credit,Oil now parent west eat wind down nature.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+14284,2019-11-06,104,146.31,transfer,Evidence form region Mrs various focus coach.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+14320,2019-08-01,103,4709.4,credit,Year who war yard yet station.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+14332,2018-06-15,104,4898.73,credit,Ago benefit give risk.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+14359,2018-12-17,107,7407.52,credit,Great good sing personal impact.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+14697,2022-11-04,102,5613.82,debit,Important key air event affect risk Democrat animal.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+14759,2022-10-10,108,4338.88,transfer,Later class scene push note thank hundred.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+15021,2021-08-01,107,6897.19,credit,Account wear attack job report truth.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+15045,2018-08-25,104,8220.51,debit,Bit commercial have firm other.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+15141,2021-03-03,105,7470.54,transfer,Chance forward wife allow research you result.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+15466,2019-09-16,108,6378.64,credit,Artist responsibility sing piece specific break.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+15510,2020-10-26,107,7885.34,transfer,Against address interesting continue policy size.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+15536,2021-10-10,105,1458.37,transfer,Field street opportunity attack opportunity group my.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+15628,2020-05-28,105,298.99,credit,Evening nice who foot.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+15717,2021-05-02,110,4679.41,credit,Fear hour just individual north pattern young every.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+15745,2020-06-25,109,1181.59,credit,Tough style less partner.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+15748,2022-10-28,107,679.3,credit,Sort happen serve bed point question together letter.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+15799,2018-10-17,105,8140.05,transfer,Open fly represent.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+15856,2018-06-03,104,8318.91,credit,List top allow environment.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+15921,2018-09-20,102,3844.59,debit,Learn power camera television staff name seven outside.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+15960,2022-12-09,108,2138.2,credit,For alone sign.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+15964,2019-11-22,105,3173.19,debit,Boy opportunity issue key structure treat ahead during.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+15992,2020-12-12,109,7127.19,credit,Her standard information industry.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+16036,2021-01-13,104,8874.42,transfer,Much charge book stand end study against.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+16161,2020-01-09,102,2405.23,credit,Serious feeling from product popular upon tough.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+16164,2022-11-22,109,7167.63,transfer,Guy above left admit find.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+16202,2018-07-29,110,8902.63,debit,Director director consider speak.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+16301,2019-09-25,108,9054.76,credit,Tree national billion side open.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+16333,2020-01-08,105,9899.36,debit,Why play million why audience.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+16381,2019-07-10,104,6415.65,credit,Article where baby quickly perform.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+16437,2019-01-14,110,4062.31,debit,Apply campaign speech although care must husband husband.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+16591,2023-02-14,110,1242.87,transfer,Product hear interesting seem first.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+16600,2022-11-28,105,676.36,transfer,Ten develop them offer.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+16606,2018-05-23,101,5617.42,debit,Reason rate church seek economy responsibility.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+16647,2020-12-07,109,3247.65,debit,White view know man.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+16862,2019-08-13,104,1700.85,credit,Threat already could some fast grow morning individual.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+16893,2019-08-07,107,3601.23,debit,Probably gun go keep that number story exactly.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+16930,2022-10-13,101,756.15,debit,Meeting land business.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+16956,2018-11-02,104,8227.63,debit,Inside big its popular.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+17352,2018-08-09,104,1989.18,transfer,Social station save safe else these onto rate.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+17439,2021-07-27,101,249.84,transfer,Modern put difference relationship.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+17500,2020-07-13,103,3575.41,credit,Summer eight sport mission nor argue build.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+17627,2018-09-23,107,6610.06,credit,His parent ground teacher claim.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+17671,2022-12-18,101,8313.7,credit,Hospital present another task might.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+17720,2021-07-02,110,5303.6,credit,During indicate catch role art.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+17749,2023-02-26,110,6987.62,credit,World lay hair share.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+17777,2018-05-03,106,5960.89,transfer,Beautiful source nice allow project enter street event.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+17820,2021-04-13,106,9974.77,credit,Soon drug provide account table.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+17906,2022-01-27,110,2231.74,credit,Political statement short difficult.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+17925,2022-08-23,110,7447.75,credit,Simply people reality security.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+18002,2021-05-01,107,2292.5,transfer,Production mention late ball.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+18129,2018-05-13,108,5234.11,transfer,Too box couple trip.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+18169,2020-02-19,107,8579.44,debit,Political power upon western.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+18189,2019-03-13,109,3435,credit,Perhaps it walk start end.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+18244,2021-12-25,104,7794.63,credit,Possible apply detail return.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+18399,2023-02-12,108,6960.58,transfer,Hit building must room high manager change.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+18462,2022-04-17,107,1332.16,credit,Our government reason.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+18565,2019-01-24,106,7846.07,debit,Buy present share ahead.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+18590,2019-08-10,110,7755.09,debit,Discuss others night north lose agency physical.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+18605,2019-08-06,110,4227.84,credit,Here page agreement player wait structure hour student.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+18607,2018-11-12,101,7668.03,transfer,Pm question away than.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+18637,2022-09-28,101,3936.85,transfer,Feel third strong lay mouth.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+18681,2020-12-08,105,3552.82,debit,Political particular couple.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+18714,2022-11-10,106,4503.87,credit,Today writer assume plant address also.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+18827,2019-05-04,107,7135.68,transfer,Term head add run.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+18870,2019-07-09,101,356.88,debit,Century a establish just firm.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+18904,2021-10-12,109,5053.18,debit,Why design north.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+18940,2021-07-18,102,544.82,debit,Necessary early green share first cut.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+19014,2021-07-14,104,3960.81,debit,Kid decade picture similar to.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+19275,2022-10-29,104,8176.69,credit,Thank role say difficult public data.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+19291,2019-08-04,107,3026.95,debit,Find enter democratic entire onto.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+19477,2022-10-30,110,8680.82,debit,Environment actually still land bar citizen.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+19491,2020-08-14,105,1829.54,transfer,Member put officer seat he understand.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+19517,2018-09-16,109,587.12,transfer,Force mean international sell nearly open.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+19608,2019-09-30,101,3105.93,debit,Prove body box could write tend light.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+19705,2018-12-17,104,9004.68,credit,Often miss growth southern number.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+19892,2018-09-17,106,5656.11,credit,Life big prepare public answer.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+20105,2019-05-11,102,3503.43,debit,Stand spring without pay.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+20195,2020-05-17,101,3907.72,transfer,Item you season.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+20377,2021-08-17,106,7634.13,debit,Former look arm president seat establish public.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+20466,2020-06-17,101,4702.29,credit,Point either child side around coach newspaper.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+20490,2022-11-03,108,7215.32,credit,Debate senior last yes.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+20500,2019-10-01,109,4167.38,transfer,Form sell strong never.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+20601,2018-12-26,104,6158.26,transfer,Think bag indicate suddenly ask.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+20804,2022-07-28,110,5397.24,debit,Water herself plant already strong which art.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+20815,2022-11-13,101,9927.28,credit,Our tend minute start show reveal.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+21278,2019-03-02,107,7563.84,debit,Body purpose spring budget who.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+21351,2021-02-13,102,4224.32,debit,Nor city guess.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+21540,2022-12-17,106,2010.52,transfer,Certain success pretty realize store about positive.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+21563,2019-08-05,105,8674.92,debit,Speak order race shake set society rule.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+21618,2019-05-25,101,4779.41,debit,Draw vote among couple century guy good scene.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+21672,2020-01-08,106,714.33,credit,Door history strong wait budget.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+21742,2021-11-23,102,4630.77,debit,Decide finish year bank theory black couple.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+21768,2023-02-03,107,6135.59,credit,Child trip suggest water impact unit country measure.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+21929,2020-03-08,108,4238.36,debit,Give myself class kitchen.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+22016,2021-10-13,101,9551,credit,Story address generation administration message little.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+22112,2018-07-02,102,5057.4,transfer,Born story whether human young.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+22129,2020-04-16,109,8543.84,credit,Create agree mission traditional group.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+22177,2020-08-29,105,5266.99,transfer,Ability thing big too low son.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+22211,2020-01-15,108,1273.69,transfer,Candidate sister activity.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+22289,2023-01-21,107,2890.66,credit,Tonight open indicate.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+22408,2023-03-07,106,2590.43,credit,Everyone company next seven make.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+22779,2021-09-18,108,4492.91,debit,Sign meet sell myself gun.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+22836,2019-04-28,101,8160.11,credit,Present total child fund religious.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+23028,2020-08-16,109,7585.28,debit,Lot body more want opportunity.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+23234,2018-09-27,102,1636.45,credit,This international election say west politics.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+23470,2018-06-25,106,881.89,debit,Fire station among area heart season partner.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+23480,2020-12-08,101,2407.28,transfer,During watch message.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+23859,2020-04-01,109,8938.44,transfer,Job under type new.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+23909,2020-05-25,103,9142.26,transfer,Measure edge individual fish.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+24208,2022-10-28,101,4283.74,credit,Right compare dinner service.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+24226,2023-01-27,106,8846.16,credit,Seven administration recently card site he call.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+24478,2023-02-17,104,3914.33,debit,Character technology help check four because.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+24516,2021-11-10,102,1067.46,debit,Address time second song reveal tonight.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+24539,2019-01-23,109,1937.27,debit,Without risk we state seek trade material.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+24690,2022-09-30,110,5099.17,credit,Agency south might.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+24714,2023-01-27,102,2539.47,credit,Forget pay threat moment walk hold shoulder by.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+24845,2019-02-11,103,9618.12,credit,Add where help growth draw.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+24930,2022-11-13,108,4928.27,debit,Learn plant use subject view.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+25028,2020-10-15,103,3400.13,credit,Medical company none.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+25188,2019-12-29,102,8547.71,credit,Who rest support budget meeting range writer.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+25263,2020-11-03,110,4123.39,transfer,Century fine morning rich.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+25266,2021-08-08,104,6731.64,transfer,Modern without alone professional blood put truth.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+25377,2019-03-02,103,6033.64,debit,Evidence prepare action class single.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+25509,2023-03-16,106,1938.57,credit,Option effort national help.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+25523,2018-03-29,108,7780.27,debit,Though hold matter woman concern rise charge.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+25895,2020-01-06,104,2720.9,debit,Across show determine with evidence.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+26062,2018-12-02,109,9754.07,transfer,Identify office Republican teacher again already often.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+26287,2019-06-01,103,7897.92,debit,New debate today skin seven example music.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+26504,2019-08-25,106,1440.28,debit,Minute class wife world energy former.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+26516,2020-02-25,110,1286.64,transfer,Loss sell indicate strong method.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+26699,2018-09-23,109,9552.78,debit,Other range member her increase behavior power sort.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+26813,2019-06-28,110,3853.53,debit,Cell response course star by.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+26833,2020-03-18,104,4881.35,debit,Between race room.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+26954,2022-12-25,104,6212.48,transfer,Air nation lead live environment mother.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+27413,2020-08-21,107,4624.06,debit,Choose wind establish unit.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+27417,2019-10-27,102,5288.5,credit,Star born enough.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+27473,2020-12-01,104,5930.53,debit,Follow very more enjoy employee.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+27520,2021-02-13,110,2177.16,credit,First grow research ask remember study order.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+27669,2022-04-18,106,2583.45,credit,Future wife in try while note.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+28039,2021-01-10,109,3833.95,debit,Inside thousand institution class start list that.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+28058,2020-09-16,107,361.47,transfer,Itself foot myself old.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+28242,2020-02-26,102,1230.53,credit,Hand him concern interview yet.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+28428,2021-12-13,110,873.35,transfer,Feel born since line feeling follow.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+28587,2021-06-08,103,6253.5,credit,No believe amount hair paper guy.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+28684,2020-09-02,102,5330.29,credit,Opportunity environmental score big price something.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+28689,2018-12-02,109,8939.03,credit,Between there raise wide.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+28919,2019-03-21,108,109.79,credit,Ability have end.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+29285,2022-05-22,105,592.24,debit,Through energy skin around note hospital.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+29300,2021-08-09,108,8570.93,credit,Give as any ten serve doctor success.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+29559,2019-06-11,108,6706.39,transfer,Wait computer husband part.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+29582,2021-08-06,104,9568.79,debit,Behavior bring history.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+29618,2022-07-23,105,9992.26,credit,Somebody assume position.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+29669,2018-09-14,102,4742.72,credit,Consider control PM hour executive people trial author.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+29728,2018-10-02,104,7252.16,credit,Front yourself clearly quality somebody network total.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+29786,2022-12-19,102,6165.34,debit,Coach commercial health address possible general thank.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+30012,2022-06-27,102,9165.01,credit,Politics power open week store single.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+30186,2019-02-03,110,6394.7,credit,Might dinner show especially ready agent produce alone.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+30293,2021-02-09,107,5228.41,credit,Bag development economy respond street drive.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+30519,2022-01-11,107,8557.01,transfer,Even tough heart care mouth stay ready partner.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+30638,2021-10-27,107,1976.4,debit,Teacher end back but indicate toward half.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+30866,2020-12-15,101,386.51,debit,Fast describe expert sell ball guess too.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+31006,2022-02-08,110,2163.54,debit,Option foreign admit really.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+31009,2018-09-21,103,6764.62,transfer,Window ok magazine of.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+31193,2019-03-26,102,1234.51,debit,Top agreement discussion strategy board politics seem.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+31448,2021-06-09,104,4337.55,credit,Job friend hotel goal medical training but.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+31562,2020-06-10,108,9218.52,credit,Ten boy politics seven really stuff.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+31669,2021-05-15,102,7757.82,debit,Perhaps rest military space.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+31689,2020-01-01,108,6184.88,credit,Note radio old good politics seven market.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+31733,2019-11-22,101,4584.4,debit,Pick senior born.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+31817,2023-03-15,107,9727.91,transfer,Drug ability low guess form wide degree.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+31832,2023-01-06,110,8357.78,credit,Charge more common address treatment partner two.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+32230,2020-05-26,104,745.15,credit,Money speech market picture scientist.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+32234,2022-05-24,106,901.51,debit,View three pay consider.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+32296,2021-11-20,106,2233.8,credit,Itself eight community level.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+32393,2023-03-16,110,8507.27,transfer,Authority law better alone family fear.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+32394,2020-06-28,109,1214.53,transfer,Man successful give late.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+32416,2019-07-17,105,3750.05,debit,Clearly official fast street occur box.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+32560,2018-11-29,101,6629.19,transfer,Successful hard many bit team.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+32574,2021-07-04,108,2422.15,debit,Food right enough character take.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+32822,2018-06-16,107,6401.62,debit,Machine interest training night newspaper.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+32880,2020-03-31,106,20.17,transfer,Environmental very eye city.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+33040,2018-08-26,110,9332.28,debit,It little company education worry thousand resource one.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+33112,2019-11-19,105,5113.25,credit,Option big state whom operation.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+33336,2019-03-06,110,534.64,credit,Front truth ask candidate.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+33377,2022-04-07,105,4539.83,debit,Yes exist American whom kid consumer.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+33482,2019-09-08,102,8150.98,transfer,Real agent yeah program.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+33628,2019-12-12,106,4813.87,credit,Feeling however choose production region treatment music nature.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+33650,2019-01-05,109,7619.18,credit,Race instead company cause which member for bill.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+33733,2018-04-30,109,2623.73,transfer,Put heart lead just really.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+33848,2022-11-09,103,7837.72,debit,Audience per authority explain someone anyone girl.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+34096,2023-02-12,103,3508.36,credit,Choice office indeed where source.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+34169,2021-05-07,106,1652.57,debit,Even better maybe statement bad bag rather.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+34178,2020-04-09,108,5269.33,transfer,Environment lose issue try.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+34360,2019-10-10,110,9242.43,credit,Green skill need institution start hot.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+34397,2021-04-22,108,1571.61,credit,Set everything easy occur raise.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+34561,2020-03-20,104,3474.84,credit,Perhaps method nation another single lot.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+34617,2022-12-20,102,5567.81,debit,Across be evidence hit word that.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+34691,2023-01-16,107,441.8,debit,Center customer stock impact.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+34827,2022-05-30,104,9371.66,debit,Evening four peace heavy meeting partner realize.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+34868,2021-01-11,107,5800.11,credit,No skin experience.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+35086,2020-05-15,108,8904.46,credit,Travel scientist film total in people.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+35157,2018-10-11,109,5543.54,credit,North different build among senior.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+35203,2020-04-28,104,6083.34,transfer,Beat big difference.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+35399,2022-03-08,110,5523.03,transfer,Try want since week some cover could.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+35468,2022-06-14,103,3350.65,transfer,Very south drop similar history training.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+35509,2022-05-05,101,1141.89,transfer,Risk item instead movie couple degree.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+35531,2019-10-04,101,6706.72,credit,Consider modern prepare agent stage require.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+35569,2019-01-11,106,9070.98,debit,Accept site throw morning prevent.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+35581,2018-11-08,108,2686.93,transfer,Explain face to rather tonight a call.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+35690,2021-05-07,107,8625.02,transfer,Mother material society investment executive.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+35861,2019-05-30,110,4015.01,debit,Then rather return.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+35900,2018-07-18,109,4229.45,debit,Whole for lot standard political.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+35930,2021-01-08,107,9740.97,debit,Anyone six morning view charge system.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+36262,2018-04-19,101,5374.15,transfer,Actually enough federal tree task remain community.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+36335,2022-11-29,107,7513.36,credit,Able week main strategy fact position financial service.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+36355,2020-04-28,110,7639.73,transfer,Drop design seat store cup.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+36368,2020-07-08,102,8289.84,credit,Bank receive adult magazine stage compare maintain.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+36405,2018-08-23,105,862.33,debit,Long above maybe move.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+36484,2020-08-01,108,6361.89,credit,Generation data never once authority.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+36528,2020-01-03,110,7738.94,debit,Both important leader probably office always.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+36682,2019-08-27,109,6778.56,debit,Need article feeling peace low common.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+36708,2019-12-21,108,9671.86,credit,Be enter audience film another section animal wind.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+36777,2021-08-10,102,2946.96,debit,Mind today sport yet international cost have.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+36857,2019-11-20,102,5851,debit,Later history raise.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+36872,2020-12-29,101,2147.66,transfer,Important run energy seven.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+36967,2018-04-21,102,9030.5,debit,Use evening call agree training win word herself.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+36988,2020-02-01,103,6549.58,transfer,Work man expert drug what college reduce.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+37062,2020-04-03,110,9355.42,credit,Shake group value.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+37216,2020-07-18,103,8156.95,credit,But exist include indicate animal skill.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+37249,2021-03-11,108,6618.18,credit,Free investment part way ball there.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+37361,2019-02-15,102,5189.13,debit,Wind serve level level.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+37378,2022-04-16,103,1634.39,debit,Ever plant enough property.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+37422,2022-06-30,105,1596.37,credit,Knowledge owner industry share she investment seat walk.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+37449,2021-11-05,110,9819.72,debit,Do compare issue return develop five whose.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+37484,2019-06-01,107,7467.11,transfer,House week year how pick.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+37613,2020-12-19,110,6568.55,transfer,Only during building spring chance.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+37694,2019-05-18,106,5754.4,debit,Sort consider see perhaps.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+37759,2021-12-28,104,768.33,debit,Against eye with few development.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+37800,2019-12-15,102,2515.3,transfer,Thought read popular list building wide with anyone.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+37825,2020-02-24,108,2122.94,credit,Tv perform good well lot remember question.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+37891,2022-07-22,106,9624.53,transfer,Actually those about.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+37922,2021-07-30,106,8534.84,credit,Read station fine always bag ever.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+38061,2018-03-28,102,2194.62,credit,Sit tree edge recognize.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+38151,2021-10-27,109,3434.59,debit,Important key help may despite beat sure guy.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+38172,2022-04-07,101,5510.45,debit,Form clear information remember.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+38197,2021-01-27,108,1214.27,credit,She consumer break of.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+38209,2021-09-04,102,933.38,debit,Skin former spend style.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+38393,2021-04-28,103,3990.24,transfer,Why scene enjoy thousand light feeling.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+38524,2019-04-08,104,9365.01,transfer,Lawyer blue happy everybody box should.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+38650,2022-08-16,106,3015.93,transfer,Everyone art exist other company performance on.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+38652,2021-05-16,102,4027.15,transfer,Explain the others letter sort.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+38798,2018-11-30,109,4110.74,credit,Suggest young scene food people.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+38827,2021-02-24,105,1950.76,debit,Suddenly mention build theory card.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+39015,2019-08-02,109,6870.58,credit,Price executive east ago writer customer begin.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+39255,2018-11-16,102,3100,debit,Scientist lay material hot.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+39295,2023-02-27,109,8873.22,credit,School amount item almost risk at former.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+39317,2021-12-02,103,3174.76,debit,Must guess team film without whatever ago.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+39379,2018-07-10,106,7413.46,transfer,Energy rule special yet hour notice.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+39391,2022-03-13,104,1076.12,credit,Last shoulder surface understand.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+39393,2020-06-02,104,2631.13,debit,Scene Mrs finally hospital.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+39544,2019-03-13,107,7459.41,debit,Moment force attorney fine.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+39624,2018-05-19,107,9971.51,credit,Opportunity Mrs such prove.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+39727,2022-08-09,101,4137.41,transfer,Religious another simple himself fast.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+39763,2021-06-07,105,8091.03,credit,That concern various.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+39797,2023-03-05,103,3169.23,transfer,Reach might see future inside big get.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+39860,2018-08-05,104,4501.14,debit,Take determine attorney.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+40027,2022-07-01,102,7324.24,debit,Live point movement hotel compare.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+40038,2021-12-03,109,5.14,debit,Present task throw interesting management back example item.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+40152,2018-08-01,104,55.32,transfer,Real officer with kitchen.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+40205,2022-12-09,104,6452.83,debit,Forget government begin wrong approach.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+40318,2018-10-28,107,5715.48,debit,Name bill simply might inside force public smile.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+40358,2018-08-21,105,3392.84,credit,Reduce begin edge office season matter foot.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+40435,2018-06-08,107,9672.7,debit,Single sell especially allow south professor sound toward.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+40700,2020-10-02,106,4741.47,debit,Late agree piece protect charge identify huge.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+40782,2020-10-19,104,8343.71,transfer,Operation leader quickly public person.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+40933,2022-06-28,105,2959.05,debit,Bar create ready until later.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+40942,2022-06-10,109,662.54,transfer,Security in suddenly difficult.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+40964,2019-08-21,107,4198.23,transfer,Simply fight alone entire throw hope election out.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+40974,2018-08-31,103,7604.09,debit,Quickly force and project ok garden guy.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+41032,2019-07-03,109,4142.58,transfer,Scientist thank mouth tough cut since.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+41080,2023-01-18,101,7436.33,transfer,Trouble development you me back.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+41126,2022-02-21,103,5740.82,credit,Day reduce remember.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+41191,2019-09-24,104,5670.97,transfer,Program matter thus agreement both itself government doctor.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+41219,2020-08-29,107,7902.19,debit,Result either president probably million believe.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+41293,2020-10-01,110,1001.57,credit,Soldier fast past theory team.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+41420,2020-07-19,101,663.87,debit,Agent indicate lead.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+41471,2022-10-16,101,241.43,transfer,Answer agent must base health student.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+41498,2023-03-27,104,5558.5,debit,Week hand stock student special allow.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+41589,2022-10-25,102,842.02,debit,Yeah deep cut paper recent discover play price.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+41731,2021-08-25,108,4112.03,credit,Data guy degree perhaps course.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+41869,2022-09-03,103,2224.35,credit,Like still hit police.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+41902,2018-07-25,108,5582.04,debit,Name contain reveal agree hundred.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+41929,2020-08-06,106,6446.03,debit,Arm bed manager read.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+41993,2022-04-24,107,5331.24,transfer,Nothing food break seek.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+42027,2018-04-11,109,3957.63,transfer,Difference radio style grow admit if.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+42160,2020-04-05,102,6138.99,debit,Young up rather.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+42346,2019-03-14,103,3826.24,debit,Should avoid man develop staff memory wide rich.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+42456,2021-08-22,108,7569.37,credit,Compare short what anyone make we difference.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+42572,2020-02-12,104,828.58,debit,Forward conference sell part within piece.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+42678,2020-01-27,107,6611.63,transfer,Least pull positive including response.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+42783,2021-02-17,108,8910.34,credit,Challenge national reveal step.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+42790,2018-04-01,101,1232.45,transfer,Memory put serious wrong.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+42839,2020-04-21,108,5591.35,credit,Foreign safe pattern create oil seat end process.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+42893,2020-11-16,108,1285.24,transfer,Question have on party challenge heart glass.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+43141,2022-06-23,102,6486.75,debit,Concern personal soon main old.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+43238,2021-01-27,102,9962.68,credit,Call mind example pretty realize down.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+43269,2019-05-07,106,575.88,credit,Enter resource test special sea voice.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+43309,2021-09-20,106,8979.75,credit,Line tell far director address recognize marriage respond.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+43346,2023-03-14,109,6773.68,debit,Help control list from else.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+43463,2020-03-23,110,7171.15,transfer,Heavy wrong never mind tend.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+43466,2019-07-06,101,6382.25,credit,Gun later test policy ever.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+43514,2021-06-17,101,8589.84,debit,Interest Congress yard understand.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+43610,2018-05-06,107,6334.52,transfer,Turn rich difference right apply open long.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+43817,2019-08-09,101,8571.52,credit,Kind probably turn wear.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+44055,2022-07-07,105,8253.96,debit,Against sign drop various.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+44089,2021-04-07,108,2971.86,credit,Theory certain owner beautiful decision election.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+44131,2019-05-22,107,8835.01,credit,Manage their help significant health debate health night.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+44286,2020-03-16,109,1381.64,debit,Their race its concern seem.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+44295,2019-07-09,109,9639.08,transfer,Total table our.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+44456,2022-01-29,104,3414.62,transfer,Ready account its high begin myself role.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+44641,2022-03-17,107,1021.88,transfer,Dog go local bed sister culture.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+44791,2021-10-20,103,3876.56,debit,Above wall last bit fast team stop.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+44853,2020-10-20,103,8809.28,transfer,Market medical probably foot.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+44856,2022-06-03,103,8016.62,credit,Two five certainly huge American.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+44910,2020-03-03,108,385.19,transfer,Support ok draw at nearly far away.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+44989,2019-04-21,109,1453.33,transfer,Short wind game guess industry activity number.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+45083,2022-08-30,110,9134.23,transfer,Whole sister third call according long.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+45332,2020-06-21,106,5799.53,credit,Science prepare explain traditional live simply.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+45336,2022-03-26,101,5201.07,transfer,During eat claim administration spend.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+45352,2018-12-08,104,1378.43,debit,Morning despite free ready choose herself similar.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+45552,2023-01-14,106,6171.92,debit,Single life conference work do according.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+45788,2019-07-05,108,2101.33,debit,History option design born.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+45896,2021-05-28,102,8273.9,transfer,Able pay recently religious recent lawyer.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+45909,2020-04-04,108,3681.2,transfer,Lay glass whether seem old degree character.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+45957,2021-09-06,103,4146.17,credit,Piece include human around range.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+45982,2021-07-29,106,5743.64,transfer,Raise PM include something interest painting.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+46139,2019-12-03,110,371.47,credit,Red dream deep special need however box middle.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+46217,2021-07-19,106,377.5,debit,Trip assume six our far loss certain travel.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+46278,2019-10-19,105,3734.34,credit,Consider girl apply occur claim beat rest.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+46610,2019-05-19,108,2360.12,credit,Myself by close full coach air.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+46634,2023-02-10,105,5993.78,transfer,Occur no yourself sense.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+46643,2022-05-20,104,2112.59,transfer,Bed actually anything result conference view whose.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+46675,2020-04-09,109,8552.26,transfer,Anything responsibility impact far.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+46773,2021-06-22,102,2403.01,credit,Into white institution picture.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+46997,2018-08-27,102,3634.34,credit,Into job story.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+47098,2022-12-16,110,2942.51,transfer,Enough share family middle including.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+47169,2023-03-19,106,9861.41,transfer,Total factor talk analysis.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+47267,2021-04-17,107,1187.07,debit,Letter eat movie when dog little hold new.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+47400,2021-11-24,110,2131.99,credit,Sea sound system.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+47690,2022-02-05,107,5604.72,credit,Camera somebody again management culture.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+47832,2018-10-28,103,6856.58,debit,Writer another modern.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+47911,2020-03-21,110,2077.43,debit,The throw it.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+48021,2020-07-22,103,9330.57,credit,Small option between guy.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+48068,2021-01-06,101,7266.67,transfer,Oil itself participant in.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+48123,2019-12-01,101,7077.34,debit,Hour arrive environmental security size bar herself education.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+48358,2022-01-06,107,2992,debit,Power church including market form land above.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+48434,2020-10-14,103,3022.59,debit,Other present give daughter sister.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+48704,2018-04-06,102,7675.48,credit,Behind as interesting ahead forget bag product necessary.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+48775,2018-05-31,110,2147.04,debit,Town author court money effort.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+48883,2018-08-21,103,6816.55,credit,Near bank far by.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+48983,2019-08-15,105,9577.67,transfer,Professor church pull question.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+49141,2020-08-23,104,8609.33,transfer,Race end nothing industry recently.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+49169,2022-06-05,109,2776.65,debit,Perhaps network that boy care around finally.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+49198,2021-09-06,108,4957.61,credit,Game debate maintain action our network car.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+49329,2019-09-23,101,5571.8,transfer,Field cause just store close.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+49361,2021-04-17,107,3295.95,transfer,Fight crime speak policy soldier.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+49362,2021-07-17,109,6214.1,credit,College whole whom student.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+49376,2018-08-11,106,4653.9,transfer,Game fight report system big shoulder.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+49424,2021-10-26,104,3904.21,debit,Think impact response fly by daughter.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+49521,2022-11-16,109,7093.38,credit,Development away front nice.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+49572,2020-11-04,105,8915.45,credit,Administration add six method campaign simply save.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+49589,2020-09-02,107,9704.72,debit,On feeling event never.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+49626,2020-01-07,103,2070.4,credit,Sport us factor.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+49634,2019-05-26,110,2556.22,transfer,Woman operation art.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+49669,2019-05-03,103,416.08,debit,Hope road but let data.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+49773,2019-02-19,105,387.54,credit,Call majority character sport.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+49841,2020-09-12,103,3902.83,debit,Your sort wind part morning.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+49951,2021-12-26,102,4350.69,credit,Although somebody officer base fall everybody consider hour.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+50205,2023-01-31,107,5122.22,transfer,Maybe term picture according can car.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+50309,2019-01-24,105,1637.6,transfer,Short laugh effect stuff Mrs quality.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+50319,2019-07-07,101,5105.5,transfer,Buy actually bag daughter social.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+50649,2021-07-14,110,9579.99,credit,Boy group note training individual.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+50672,2019-06-13,101,4486.27,debit,Choice show of customer cover community from.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+51095,2019-02-08,104,9491.6,debit,Us dark follow address suddenly fine prove.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+51534,2018-07-08,110,4526.42,transfer,Hair daughter really bank particularly which door.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+51854,2019-11-27,107,8684.72,debit,Old point memory sign.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+52071,2018-04-11,107,4876.69,transfer,Response successful about how boy sell.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+52082,2019-10-14,104,2838.61,debit,Blue pay administration cell voice.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+52184,2022-04-04,107,7953.01,debit,Charge idea prove treat never coach source.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+52201,2022-12-17,110,9654.82,debit,Establish necessary difficult reach finish.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+52430,2020-12-30,101,86.27,credit,Clearly across improve beat perform.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+52455,2020-10-15,109,4666.07,transfer,Ground operation city world seem.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+52472,2022-08-15,104,1857.97,transfer,Suffer I special clearly.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+52496,2019-05-05,109,3147.73,credit,New very support computer.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+52597,2018-04-09,102,235.96,credit,Education seem whose size general.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+52891,2022-05-17,107,6748.13,debit,Second say understand level school.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+52909,2020-07-22,109,398.25,transfer,Safe audience author sport.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+53153,2022-10-18,105,4439.71,transfer,Stuff good candidate act east clearly.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+53425,2020-01-27,107,8634.89,transfer,Knowledge seek push leave week each.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+53432,2021-02-02,102,4237.33,transfer,Best staff general card.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+53489,2019-07-18,101,8436.11,transfer,Close house public technology while west dark senior.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+53823,2019-03-24,105,2942.57,debit,Table security lay affect night line role.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+53824,2018-05-28,107,2243.04,credit,Billion tree best card pretty.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+53873,2021-05-30,108,6638.43,transfer,Feel part may under meeting always.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+53915,2023-03-10,106,9555.7,credit,Their best material tough simply movement card.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+54009,2018-10-11,102,2772.34,credit,Turn on exactly beyond large south sister.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+54281,2021-11-24,102,5068.38,credit,Court little modern.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+54293,2021-12-07,109,5312.49,debit,Professional let lawyer staff computer.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+54330,2021-09-30,102,9031.37,transfer,Whose always ability home season building.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+54331,2019-06-19,110,7263.42,transfer,Onto official last next important.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+54801,2022-04-20,108,3352.06,credit,Thank wide many amount.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+54823,2019-05-04,106,703.72,transfer,Debate environmental her call market team on.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+55024,2021-02-15,102,7963.92,transfer,Suggest wait relationship feel throughout fine.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+55078,2018-08-15,101,2249.4,debit,Alone sound artist read two check.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+55099,2019-06-15,109,1685.7,transfer,Car as down operation present exist run.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+55126,2019-02-11,109,639.56,debit,Month modern know hope.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+55311,2022-05-16,106,4855.58,credit,Cut when stock fill usually.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+55506,2021-08-02,105,9342.79,credit,Window east course company change ago suggest.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+55589,2021-06-13,107,5475.3,debit,Military stop both low imagine need hospital.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+55617,2020-07-03,101,5245.25,credit,Listen attack send old easy vote reach.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+55704,2018-07-10,104,1699.58,credit,On usually section official could interesting machine.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+55753,2021-10-15,107,2907.78,credit,Decade customer garden get box tax.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+55755,2020-02-03,109,9189.27,debit,Early poor admit seem order analysis manage.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+55785,2021-07-21,101,9070.69,debit,Police set receive find thought.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+56068,2022-12-14,102,8178,debit,Congress country hair top well unit item it.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+56096,2018-08-27,109,3634.05,debit,Feeling firm personal then song push.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+56140,2020-03-19,101,8539.32,transfer,Traditional son administration word.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+56179,2021-09-11,107,7281.15,transfer,Statement media common.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+56234,2020-11-24,108,2242.85,credit,Different serious whatever because successful image huge.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+56300,2021-04-17,110,1349.17,credit,Lay central walk network.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+56366,2018-04-09,108,8969.93,debit,Later suddenly heart director spend buy especially.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+56417,2022-08-15,104,620.84,credit,Strong certainly physical movement down evidence.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+56431,2022-12-21,105,745.7,debit,Hit apply course me store few bad.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+56495,2019-01-07,110,5109.56,credit,Member former husband candidate end law.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+56689,2019-04-19,109,7498.24,debit,Million open use large start.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+56770,2022-05-12,101,4057.34,transfer,Husband close relate professor.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+56994,2018-06-23,104,2969.91,credit,Focus career film do middle same training.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+57075,2019-02-06,102,7654.84,credit,Great stock yet character soon name sort will.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+57191,2020-05-27,110,7639.83,debit,Information prevent old dark skin describe subject your.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+57227,2021-11-25,107,7644.21,transfer,Any democratic stay.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+57235,2022-08-14,101,2578.51,credit,Stay sort sport wide one.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+57367,2020-07-04,106,3212.01,debit,Health officer each strong community.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+57447,2021-10-27,101,6932.92,credit,Itself simple second short over human.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+57735,2019-09-30,104,8410.49,credit,Far network short establish decision.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+57770,2022-06-08,105,9228.21,debit,Table sing they soldier.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+57881,2022-09-05,102,8268.29,transfer,Claim degree because as company.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+58110,2023-02-05,102,7585.1,debit,Least politics week.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+58312,2020-01-10,101,1872.56,credit,Republican baby board major go.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+58369,2019-05-28,109,3137.25,transfer,Skin ok bill together program buy magazine physical.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+58494,2018-05-21,106,3142.36,debit,Factor collection focus maintain general manager.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+58533,2019-10-20,106,8624.96,transfer,Job learn behind staff affect tough picture.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+58547,2022-07-17,107,4708.19,debit,Choose total travel great.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+58667,2022-05-23,101,2644.71,credit,The ask price along.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+58705,2020-10-30,108,5264.8,transfer,Way star son source there lose best again.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+58706,2020-03-10,107,5318.68,debit,Note either space financial month.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+58795,2022-07-30,108,5552.98,transfer,Television anyone check military.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+58859,2023-03-11,107,7031.43,transfer,Just together month participant inside once character anyone.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+58882,2021-09-05,106,830.77,debit,Itself behind take anything.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+58885,2022-11-22,106,6407.63,transfer,Behavior opportunity popular region six behind street.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+58931,2021-02-26,102,800.03,credit,Less as individual safe beautiful home people large.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+59398,2019-02-01,110,9004.22,credit,Tend know pass create.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+59620,2020-01-02,104,4356.72,debit,Spring number former food carry community better.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+59724,2018-06-10,109,5577.25,transfer,Outside rest surface daughter.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+59726,2021-05-06,103,1789.26,transfer,Plant population resource allow believe record kitchen.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+59822,2018-08-01,103,3910.27,credit,Past require reason civil author degree buy.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+59895,2018-04-12,107,3540.94,debit,Policy future reflect arrive company.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+60189,2021-01-28,106,9034.91,credit,Should matter goal method.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+60284,2020-08-12,106,2678.88,transfer,Today hospital military national fear.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+60323,2020-07-23,106,8863.58,credit,Professional send sea guy major new maintain.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+60383,2021-08-20,106,5429.12,transfer,New music road staff manager feel.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+60503,2018-08-10,101,9278.51,transfer,Hear although then administration lawyer moment its.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+60913,2021-02-24,102,1387.72,credit,As media level modern amount consumer month.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+60968,2020-01-07,109,3170.85,debit,Remain hot agency image guy organization.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+61074,2022-12-14,102,8019.44,credit,While set television factor economy leg.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+61125,2019-03-08,103,5738.95,credit,Loss how something account stand.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+61195,2019-08-28,102,7679.34,debit,Two develop call herself drive service analysis.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+61370,2019-07-31,107,5973.35,transfer,Decade everyone coach off your under.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+61495,2019-03-01,107,3460.98,debit,Always house ground bar college once.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+61656,2020-07-02,105,8151.72,credit,Visit through young his system.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+61733,2019-11-28,104,8204.9,transfer,Fire miss likely blue likely power effort.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+61815,2019-01-12,106,8884.26,debit,Really one protect statement.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+62178,2021-10-20,108,4040.56,debit,Ability nature stand task.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+62190,2021-05-17,106,6498.02,transfer,Hair action these happen which.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+62276,2020-02-05,102,8423.23,debit,Door certain order focus fund.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+62292,2018-10-04,102,7076.48,debit,Administration quite central.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+62615,2022-10-30,110,7408.45,transfer,Term me same this shoulder wonder issue.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+62628,2022-04-30,107,5787.28,transfer,Anyone magazine house from.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+62959,2021-10-06,110,7794.48,transfer,Carry international successful play TV.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+62978,2020-10-18,101,8551.52,credit,Expect mouth general low.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+63222,2019-09-13,104,9046.18,credit,Child doctor avoid station girl.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+63236,2019-02-03,107,751.24,transfer,Of form human may model accept.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+63355,2020-03-26,104,3590.73,debit,Upon source issue ok leave in forget.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+63401,2022-05-10,108,4164.51,debit,Oil guy call many current page.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+63914,2021-11-14,110,4371.75,credit,Friend wall soldier run morning vote.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+64023,2019-03-30,109,4113.33,debit,Congress trade book and material kind.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+64027,2020-11-22,110,4923.96,credit,Maybe million wrong just.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+64050,2022-08-14,103,931.18,credit,Investment everyone reality soon.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+64084,2020-02-20,102,1428.95,transfer,These upon meeting Democrat scene mention part most.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+64116,2019-12-08,104,6120.84,transfer,Design reduce book accept field central than.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+64322,2022-01-24,101,8815.65,debit,Red throughout newspaper.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+64388,2019-06-27,110,6911.75,transfer,How perform involve pass.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+64430,2021-03-21,108,6750.97,credit,Enjoy let person assume conference.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+64594,2019-11-13,103,7577.99,transfer,Magazine such night middle far.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+64646,2021-12-15,107,7829.8,debit,Red company well.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+64889,2022-07-04,101,4684.29,debit,Phone level third read kind.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+65022,2021-04-20,107,7421.62,debit,National sell large can market write yard those.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+65167,2018-08-06,110,2276.98,transfer,Second thing music similar owner necessary.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+65174,2018-10-17,105,1846.14,credit,Trade town night end.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+65262,2020-04-02,110,9559.11,debit,Before official part but recently play.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+65305,2020-08-20,102,1926.82,transfer,Ready game include significant arrive.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+65331,2022-01-02,106,2698.63,debit,Item just glass performance none ahead table response.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+65506,2018-06-17,108,397.08,debit,See American great movement long standard prevent sister.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+65509,2018-04-12,110,6950.89,credit,International dream and person fish.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+65607,2021-11-02,102,975.49,debit,Few director skin once doctor painting.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+65628,2022-11-06,101,252.2,debit,Buy us cost drive traditional up wrong.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+65782,2022-08-22,108,3232.88,debit,Reality side leave force without.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+65846,2021-10-07,109,9585.19,transfer,Movie upon commercial act push section.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+65888,2021-07-29,101,5773.45,debit,Often health wife use whole figure visit.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+66153,2022-01-30,101,554.06,transfer,At grow for peace worry across moment.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+66163,2020-09-04,101,6327.32,debit,Popular crime order much behavior interest consider.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+66348,2022-08-16,106,5186.05,transfer,Person choose main many.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+66474,2022-08-01,110,710.59,credit,Industry team push nothing project say on.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+66492,2019-11-28,108,3494.55,debit,Far claim type development development task friend bank.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+66534,2020-11-23,104,9877.29,credit,Manage drug happen kitchen commercial.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+66597,2022-03-06,108,9529.94,credit,Seat table do fund.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+66623,2020-01-01,103,7196.69,transfer,Fight by would course security investment to.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+66907,2019-04-29,109,9904.64,credit,Reduce system so control race huge.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+66910,2022-10-02,103,9317.11,transfer,Man trial military beautiful lose plan.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+66918,2019-10-12,104,4100.81,debit,Teach campaign white myself establish who until.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+66924,2021-02-04,109,2990.02,credit,Pick dream central management son fly employee.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+66987,2022-06-17,104,287.56,transfer,With commercial water boy.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+67034,2018-09-06,105,8037.86,credit,Growth others ago ground around it state.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+67265,2018-12-20,106,1714.94,credit,Act although so them.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+67366,2022-06-22,104,5950.82,credit,Among agreement economic clearly.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+67371,2022-07-28,104,3440.1,debit,Ago clearly far air degree also term.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+67405,2020-05-14,103,9805.16,transfer,East each stage what issue.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+67407,2020-11-14,104,7243.73,credit,Foot since appear great.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+67473,2022-06-21,107,4862.54,debit,Thought beyond deal himself else.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+67518,2019-03-15,105,4947.36,debit,Behind table they.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+67634,2021-07-14,110,9469.96,credit,See big performance beyond large.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+67833,2019-11-23,103,9851.88,debit,Strong source little their data always rest.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+67886,2019-03-15,104,7052.28,transfer,Capital detail usually music loss.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+68010,2021-07-31,102,7119.43,debit,Over especially along design same base firm.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+68029,2018-05-07,109,3638.58,credit,Radio imagine production player son.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+68088,2018-09-24,108,3407.7,transfer,Sing she popular produce.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+68093,2022-05-11,109,7489.79,debit,Plan reduce Democrat growth how with.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+68203,2021-01-25,109,5163.4,debit,Create drive from sometimes debate TV paper.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+68214,2021-02-01,109,2825.1,credit,Coach six protect area.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+68293,2021-07-27,110,215.92,debit,Civil ten result decade.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+68407,2019-04-26,101,8941.67,credit,Doctor nation serious cold make common.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+68437,2022-09-26,102,3789.73,debit,A force husband.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+68444,2019-10-12,107,2070.81,credit,Tv he early.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+68496,2022-04-16,106,1337.53,credit,Office full worker store science item.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+68509,2020-04-12,106,2349.97,debit,Hand point lot why carry cup glass stuff.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+68581,2020-11-04,105,3701.64,debit,Investment sing democratic reach politics forget.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+68655,2019-10-01,103,7934.44,debit,Main let accept now.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+68664,2018-10-24,106,2909.11,credit,Hair remain key.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+68745,2019-01-15,105,4418.77,credit,He eye party.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+68753,2018-07-24,102,6977.78,transfer,Up good room last pressure take.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+69006,2018-06-30,107,1497.94,credit,Similar generation sea later community executive keep.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+69757,2022-12-13,107,3608.91,credit,Land course size respond court.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+70132,2018-08-25,104,9757.76,debit,Moment city believe east.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+70292,2018-06-24,109,19.73,debit,Thus table civil bag short.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+70403,2018-03-27,107,8259.63,credit,Believe ten give daughter here specific she.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+70508,2022-10-20,104,2227.6,credit,Phone hospital away act maybe.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+70536,2022-09-10,105,696.41,transfer,Feeling model marriage begin collection impact thousand.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+70582,2019-05-21,110,6344.37,transfer,Tend maintain big order possible.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+70643,2021-09-25,105,1978.1,debit,Enough body official word concern lawyer senior.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+70710,2022-03-01,106,4007.25,debit,Rich a because member both.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+70894,2020-01-11,109,5805.46,transfer,Detail race will blood my.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+70927,2022-04-30,105,6040.46,debit,Teacher line set better officer.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+71007,2021-02-18,103,2845.94,transfer,Sport article more firm.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+71079,2019-08-01,102,4849.55,transfer,My drive wide increase treatment own determine.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+71253,2021-09-13,106,4288.5,transfer,Have customer yet knowledge.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+71289,2019-03-18,101,2394.23,debit,Learn teach low hotel person best state western.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+71305,2019-01-31,108,136.11,transfer,Catch different training court plant director production.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+71386,2020-05-21,106,1524.78,debit,Focus dark around trial scientist.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+71463,2022-11-05,106,5141.32,transfer,Director report child family couple.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+71829,2021-02-27,104,8419.53,transfer,Each address room hit sometimes.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+71833,2020-03-31,102,3184.63,transfer,Reveal but seem relate stuff wall material from.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+71849,2022-10-28,110,6633.91,credit,Debate staff understand.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+71880,2021-08-08,103,539,credit,Goal clear really evidence quickly reflect.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+71957,2019-07-20,105,9436.37,credit,Sing her mind.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+71974,2018-07-18,107,3120.04,credit,Southern detail development agent method.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+72035,2021-11-17,102,2460.29,debit,Choose network begin easy.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+72144,2023-01-07,102,5828.13,debit,Present week magazine debate.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+72373,2023-02-13,106,7678.4,credit,Technology might military any near record.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+72614,2021-11-26,104,7564.14,debit,International report positive outside girl live include in.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+72745,2020-07-01,107,3243.38,transfer,Nor research lot billion they tend reveal inside.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+72829,2019-07-30,107,3067.48,credit,Think court speech late trouble entire.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+72866,2021-09-26,104,896.98,transfer,Face fast difference head field food.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+73119,2021-11-21,105,752.92,transfer,Grow last their west risk see great.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+73356,2021-04-23,103,859.63,debit,Least parent trade play term.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+73474,2018-08-06,110,8432.64,transfer,One picture hair back agency recently.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+73536,2019-10-15,103,6907.25,debit,Middle attorney similar each plant.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+73545,2019-06-07,104,9743.81,debit,Poor bill push home reality.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+73552,2018-10-08,102,3774.65,credit,Performance fly debate far military.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+73566,2020-01-27,101,4945.42,credit,Local want control center.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+73593,2021-05-14,102,9798.02,debit,Daughter generation enter.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+73596,2020-06-09,101,4744.75,transfer,What much sister step.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+73623,2022-01-13,110,9316.68,credit,Health especially know by every ball skill.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+73657,2019-12-26,102,7380.95,debit,Congress force although sign always whether.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+73776,2020-01-22,105,7562.63,debit,Child meet or effect.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+74001,2018-07-31,105,2926,transfer,Explain again save on within behind help.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+74092,2019-02-27,105,693.85,transfer,Nation including list window Mrs.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+74094,2021-10-07,109,2197.51,transfer,Glass trade strong movement.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+74314,2018-06-09,107,4289.16,credit,Thousand media turn perhaps not hit.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+74315,2022-08-10,106,1629.04,transfer,Stock raise effort feeling president.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+74360,2022-08-04,101,2130.03,debit,Republican house kid election perform federal according.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+74484,2019-08-03,110,8728.89,transfer,Understand remember attorney into.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+74499,2019-01-21,110,7909.19,credit,American six event draw brother as worker.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+74682,2020-07-29,109,7617.61,transfer,Five less respond kitchen various make political method.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+74685,2018-08-21,101,4790.21,transfer,Enter kind bag option bank finish.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+74718,2020-08-15,105,5462.31,debit,Sport place seat perform major force.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+74799,2022-03-13,108,8448.79,credit,Beyond process officer nearly religious.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+74818,2020-11-10,103,6538.73,credit,Send moment store stuff enter different.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+74830,2018-05-26,107,8933.27,credit,Conference bad car.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+74868,2019-01-17,108,7903.07,debit,You allow yard add.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+75133,2022-01-09,107,3224.43,debit,His goal could president house computer quality.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+75224,2020-12-02,105,751.77,debit,Evening particular writer.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+75254,2022-02-20,105,6651.98,debit,Management response describe affect us.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+75672,2022-01-08,109,1412.42,debit,Billion few have development.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+76253,2019-01-09,105,9245.04,credit,Cover become special billion.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+76277,2018-10-11,109,6406.91,transfer,Candidate now development hospital allow position you.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+76355,2019-02-13,107,2729.2,transfer,Create high onto some more former kitchen company.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+76701,2018-08-03,110,23.49,debit,Hospital spring political situation.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+76741,2018-05-04,105,8885.61,transfer,Relationship choice media specific senior create parent.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+76845,2019-12-30,110,4562.93,debit,Report throw born church he contain.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+76997,2019-06-14,107,6096.06,transfer,Never onto security.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+77003,2019-10-14,110,2818.45,credit,American term blue push worry.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+77082,2021-10-17,110,1952.2,debit,Use lay everything shoulder agree still condition.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+77117,2021-10-07,106,792.85,transfer,Eight visit center benefit matter science else fish.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+77214,2021-05-05,102,5564.75,transfer,Common account property on statement popular run hit.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+77225,2019-05-24,103,7380.7,credit,Wonder evidence turn challenge.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+77240,2018-08-09,103,9920.47,credit,His good near.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+77743,2022-06-15,104,9969.26,transfer,Face probably herself I face that.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+77797,2021-09-12,108,9554.76,credit,Activity significant much yes brother treatment score.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+77885,2021-02-25,103,9832.09,debit,Sing parent because able.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+77939,2018-04-09,109,3726.7,credit,Skin hair figure forget task doctor.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+78013,2019-02-22,108,5379.65,debit,Concern none his so tax especially leg.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+78024,2020-04-18,102,1213.97,transfer,Stop change here act can.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+78077,2018-08-16,104,6972.97,transfer,Raise address look relate bar cost effort.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+78223,2019-09-05,104,5549.59,debit,Dog various claim as themselves.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+78512,2019-06-16,107,4139.89,transfer,Never item human short administration.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+78756,2020-05-04,110,8283.95,transfer,Agreement table benefit traditional agent project.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+78770,2020-08-27,110,1997.89,debit,Part where scene television.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+78839,2020-12-18,102,7770.46,transfer,Administration writer stock happy explain yeah.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+79128,2019-08-16,103,3797.49,credit,Husband direction body two believe forward table so.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+79330,2022-12-21,102,8993.76,debit,Type concern seat truth relate discover cultural.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+79345,2018-04-27,105,6228,credit,Bad media century.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+79353,2018-04-25,104,9194.28,debit,Every safe over actually news various conference.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+79385,2019-06-15,110,5320.23,debit,Natural investment model analysis yard drug.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+79432,2020-05-14,101,4131.61,debit,Hand natural animal leg fund.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+79619,2021-09-06,102,3355.88,credit,Research arrive natural lot site key should.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+79966,2018-09-12,108,4949.98,credit,Upon drive professional again morning from figure reality.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+80022,2021-02-04,104,2962.06,transfer,Middle professor provide heart right hospital.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+80044,2019-11-20,107,685.37,credit,Window rule ground director subject serious allow.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+80137,2019-04-19,107,4535.46,transfer,Two project night thus drop.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+80141,2019-01-17,108,1692.37,credit,Trade me allow feeling.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+80311,2019-03-21,106,5535.09,credit,Single agent pick.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+80595,2022-05-27,103,2904.11,transfer,Really rate foot sometimes focus.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+80625,2018-05-21,102,8429.55,transfer,Authority environmental eye talk low across large prepare.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+80710,2020-02-21,107,3634.63,credit,Clearly support left.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+80772,2020-03-04,109,5725.28,credit,Raise again finish impact.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+80795,2018-09-30,104,4657.5,transfer,Turn important feeling would worker nature sometimes unit.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+80982,2022-02-16,104,862.24,debit,Budget sound none particular party chance western.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+81028,2020-09-10,102,5721.71,debit,Each both form do beautiful customer.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+81196,2020-06-07,103,1677.67,debit,Say how medical man huge event so represent.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+81448,2019-06-07,106,1643.86,credit,Stay large myself hand continue.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+81539,2020-08-07,103,8382.23,transfer,Conference trade bad popular wide alone early.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+81540,2022-10-24,105,3264.99,debit,Choose fund social movement side.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+81580,2021-09-11,101,7873.09,credit,Apply shoulder recognize long early this.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+81633,2021-12-23,105,5747.1,credit,Ten according heavy.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+81678,2018-12-27,101,4142.22,credit,Deep share air far close support middle.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+81682,2019-07-07,107,7124.22,credit,Bring what city.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+81796,2021-03-18,103,7490.21,debit,Act scientist group in especially soldier consider PM.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+81828,2020-08-24,101,9725.24,credit,Guy activity difficult ready.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+82010,2022-03-25,106,4060.23,debit,Ago for leave stay put today.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+82138,2022-10-26,104,6258.57,transfer,Rise marriage model tax wrong.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+82197,2020-11-17,106,2917.8,transfer,Foreign notice return spend establish.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+82242,2018-11-09,103,6808.57,debit,Edge young theory game.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+82374,2019-12-30,106,1625.37,debit,Fish parent visit range event drug.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+82428,2020-12-18,110,8085.01,credit,Why party push.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+82441,2022-01-19,101,7700.72,credit,Response end human teach then ten.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+82453,2020-06-16,104,1106.45,transfer,Throughout financial religious decide treatment.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+82463,2019-02-22,110,7416.01,transfer,Ask lead important enter.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+82480,2020-05-16,109,783.79,debit,Imagine again huge statement prepare woman.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+82669,2018-07-18,110,2236.54,debit,Fine agency product return officer scene along.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+82781,2020-10-12,110,8844.1,credit,East clear per simply evidence these challenge.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+82838,2019-02-01,107,7155.62,transfer,Economy effort nothing police development media they any.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+82852,2018-08-02,101,8173.55,transfer,Hold store reason everything board tend stand nothing.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+82955,2021-07-04,104,4805.88,transfer,Perform second local various thought play plant.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+83136,2022-12-10,105,4538.55,transfer,Read magazine start society owner.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+83263,2018-08-02,107,2634.91,transfer,Final body trip everything two.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+83465,2022-05-09,109,9458.07,debit,Hard Mrs that discover.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+83538,2018-09-07,107,8679.42,credit,Begin campaign let federal behavior actually.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+83550,2018-08-23,101,6816.34,credit,Religious take spend follow magazine sound.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+83575,2019-06-11,106,3150.21,credit,Guy husband customer stay form win.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+83603,2019-03-13,104,247.95,credit,Health move benefit loss class.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+83630,2021-12-27,106,7883.97,transfer,Thing soldier major behavior hour this opportunity.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+83764,2018-03-28,102,4736.8,transfer,Though reveal tonight.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+83809,2019-12-11,110,8124.8,credit,Me physical front until next commercial visit.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+84159,2021-03-21,104,8758.54,credit,Bag design standard politics.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+84186,2022-03-25,103,8420,transfer,Whose every rich wind.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+84358,2022-06-22,104,8710.69,credit,Between place discuss area.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+84415,2022-07-22,106,7521.06,debit,Happy run growth summer.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+84498,2021-12-19,108,8449.58,credit,Recent store peace sometimes whose image.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+84518,2020-10-24,104,3703.21,credit,Loss fight capital.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+84729,2020-11-03,106,8189.99,debit,Camera student until month record since eye.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+84887,2020-12-13,109,4071.52,credit,Other seven friend dark middle.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+84891,2021-04-12,109,6067.76,debit,Fall page mouth feel strategy customer.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+84941,2021-10-05,106,2625.29,transfer,Remain that practice high push prepare.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+85271,2018-04-26,108,1567.5,debit,Line color happy audience campaign similar the.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+85365,2022-10-31,101,1396.99,debit,Product ten senior worry hair.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+85396,2019-04-04,110,9960.64,credit,Face wife decision rest yes.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+85436,2023-01-29,104,7028.32,transfer,This because create another piece risk yet.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+85923,2020-01-02,101,5264.02,debit,Body listen where crime happy.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+86000,2018-10-27,102,8049.54,transfer,Personal lose physical produce.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+86187,2018-12-29,104,4572.42,debit,Officer develop visit join really painting.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+86336,2021-06-29,103,9256.5,transfer,Four at pay identify field.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+86557,2022-03-30,107,130.92,credit,When others likely build.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+86607,2021-07-22,110,9715.5,debit,Former prepare foot five improve choice.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+86700,2018-07-06,104,6337.84,debit,Factor different college American.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+86850,2021-08-03,101,9326.11,transfer,Data exist part partner business training together.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+87014,2020-02-01,107,1740.31,transfer,Painting care admit yeah cell follow easy.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+87064,2018-09-23,102,6332.55,debit,Glass police keep note.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+87264,2022-09-29,101,498.34,credit,See property whether change financial assume this.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+87361,2018-08-22,108,5668.12,transfer,Dog risk house ask again wish.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+87380,2020-08-11,108,4360.54,transfer,Yard role moment fire describe dream.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+87394,2022-02-07,108,5619.16,transfer,Financial home far nothing follow.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+87421,2020-03-27,103,6847.99,debit,Candidate involve message off.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+87619,2019-06-29,109,1602.45,transfer,About who scientist source specific recognize success.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+87768,2022-01-17,107,8547.61,debit,Mind particularly rather however.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+88249,2020-09-06,108,8519.76,transfer,Discussion writer defense general professor task plant ball.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+88308,2021-10-15,105,9864.82,credit,Address sport rest state weight reality skin add.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+88309,2021-06-07,101,7871.45,credit,Have wind ever rise no it boy.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+88432,2021-11-03,107,5000.08,debit,Wall kid program agency church skill future.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+88482,2018-10-20,107,8829.7,credit,Leave task loss tough police.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+88521,2022-06-22,103,6492.77,transfer,Imagine minute wind east information police what.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+88603,2020-05-15,105,8823.03,transfer,Forward whole up figure place thousand trip.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+88630,2023-01-27,102,8205.87,debit,Lay drug remain local blood certainly.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+88667,2020-05-29,102,5330.44,credit,Money produce available.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+88784,2018-11-11,110,8189.63,debit,Sister economy spend free character improve.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+88796,2023-03-24,109,404.18,transfer,Dream type society protect.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+88932,2018-08-15,104,128.88,transfer,Feel full break move.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+88947,2018-09-07,104,9549.41,debit,Case single right adult message.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+89063,2021-01-09,109,9811.36,transfer,Field plant drug current like add both want.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+89230,2018-11-02,108,1540.41,debit,Strong smile lawyer stock because.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+89376,2018-05-02,107,9504.02,transfer,Woman information east space.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+89389,2022-08-28,102,3301.7,debit,Available mouth measure trade other national change country.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+89904,2021-06-09,101,4612.93,credit,Decision recent likely maybe.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+89927,2019-03-09,110,500.61,credit,Scene girl maybe but news sea describe.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+89940,2020-03-10,103,5662.85,debit,Record site character positive commercial.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+89974,2022-05-29,104,2640.82,debit,Six upon president face decade couple.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+90100,2020-07-07,108,2390.45,debit,Day agreement structure grow more.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+90231,2020-03-24,110,4336.34,debit,Yourself president wish hair score fill.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+90272,2023-02-07,106,8821.42,credit,Become production agree already down task stage accept.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+90530,2018-09-28,102,3473.69,transfer,Place tree treatment successful space.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+90611,2020-03-16,108,3740.27,credit,Present ability community way family purpose industry.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+90638,2023-02-13,104,3386.27,debit,Teach bar career certain special why store TV.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+90666,2020-11-01,106,5752.5,credit,Direction ask enjoy fine.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+90673,2019-09-21,105,5276.26,credit,Son cell age class continue.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+90712,2020-06-01,109,2426.86,transfer,Open yard world trial wish open mean.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+90804,2021-08-25,105,5247.67,debit,Draw answer attack first could pay help.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+90889,2020-05-02,103,5663.11,debit,Common work eat speak federal hot.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+90953,2021-04-30,106,358.82,transfer,Study within magazine.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+91012,2019-09-29,109,8762.32,credit,Enjoy mission check call reason.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+91054,2019-09-04,108,8522.79,transfer,Join fill sister why.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+91159,2021-01-14,107,42.71,credit,Rate movement specific woman call her drop.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+91259,2023-01-29,105,3452.25,transfer,Yard important move adult minute.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+91297,2020-09-20,101,6937.26,credit,Specific under always.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+91472,2020-05-21,110,4338.45,credit,Conference step heavy.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+91517,2022-08-02,103,2571.85,debit,All I full past page treat citizen.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+91557,2023-02-16,104,904.13,transfer,Claim this child go later stay against stock.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+91567,2021-02-22,107,304.02,transfer,Decision price relationship computer ever national mother.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+91659,2022-07-28,107,5279.72,credit,Represent manager maintain yard power help door ready.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+92008,2021-05-05,104,6255.42,transfer,It white impact space decision.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+92335,2020-10-09,108,3960.58,debit,Approach anything behind suffer suggest under.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+92462,2020-05-09,101,9312.83,transfer,Stuff describe development feeling quality.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+92650,2020-08-05,107,6680.78,credit,Year board voice south exist nothing.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+92714,2019-06-29,109,9853.59,debit,Able speech his fight set challenge religious teacher.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+92730,2018-12-26,102,5314.56,debit,Position under fall deal garden of war cost.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+92810,2021-07-19,103,8640.79,debit,Find always simply necessary teach number.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+92890,2022-06-23,105,9795.79,credit,Again light TV around safe as current.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+93150,2023-02-26,104,5364.25,debit,Bank house reveal face add.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+93209,2020-11-13,103,2354.98,transfer,Since now security western.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+93414,2022-02-13,103,1221,transfer,Pay check bank term should describe.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+93422,2021-12-14,102,8907.25,debit,War of effort cost feeling campaign.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+93712,2023-03-12,107,2168.68,credit,Heart born nice none church.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+93743,2019-03-25,108,3124.43,transfer,Risk until family he back my.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+93783,2021-11-30,108,3963.96,credit,Laugh seem big.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+93788,2020-07-21,103,9114.71,transfer,Around economy film involve forget.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+93797,2022-12-14,107,7626.69,debit,Effort bring fund go whole state compare.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+93832,2021-05-10,101,8037.73,credit,Better great seek computer hot.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+94077,2022-10-24,109,7503.19,credit,Role blood detail forget remain.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+94306,2020-04-02,109,837.74,credit,Join quickly sure American.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+94411,2018-11-09,105,9351.51,credit,Plan paper none quite father.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+94563,2020-07-30,101,5840.08,transfer,Front after staff effect.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+94572,2019-04-23,108,4745.79,transfer,Condition nature for style since situation attention debate.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+94630,2022-07-20,106,167.59,credit,By would magazine player.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+94646,2020-04-17,104,4541.29,transfer,Official visit notice relationship over wall.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+94936,2022-06-19,104,7614.05,transfer,Article half herself writer first maintain sea.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+94959,2019-11-05,103,3512.89,debit,Green of sure process.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+95112,2018-06-21,101,7443.87,transfer,Begin cell picture issue indeed yeah.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+95157,2019-06-25,102,7070.94,credit,Throughout range almost wind majority specific.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+95211,2022-10-10,110,3912.17,credit,Hair address such goal.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+95217,2021-01-08,108,701.03,debit,Decide live compare very board write.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+95223,2019-05-10,106,5066.56,transfer,Authority become not relate subject accept training everybody.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+95237,2018-10-16,103,3057.79,transfer,Where mouth security task be serious himself picture.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+95313,2021-06-14,110,9413.08,transfer,Type heavy great save ability the may place.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+95383,2019-10-06,104,2421.96,debit,Sister painting skin.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+95425,2022-03-31,109,5860.5,credit,More source over bit have.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+95647,2019-08-27,108,3960.14,debit,What represent window name director test low rule.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+95671,2022-02-15,107,493.79,credit,Score nor care change possible.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+95716,2022-04-27,105,1834.73,credit,Method chair provide officer father.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+95809,2018-08-21,101,986.74,transfer,Plant college expert report.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+95851,2020-03-25,108,3431.88,transfer,Off success single big.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+95888,2020-09-24,104,4363.41,credit,Miss tree not goal others participant scientist.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+95970,2022-12-12,104,4056.95,credit,Official play buy write lay.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+96002,2019-08-08,105,4377.83,credit,Less theory natural doctor than.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+96012,2022-02-21,108,3731.98,debit,Act man stage on media.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+96087,2021-02-08,106,666.93,transfer,Policy modern wonder south economy.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+96134,2020-11-19,105,7855.03,credit,Size lawyer bring safe travel tell still parent.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+96157,2021-11-20,101,8674.44,transfer,Sense smile education.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+96349,2021-09-06,105,1114.8,credit,Put smile Mr early line important understand.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+96424,2022-12-05,110,2172.77,transfer,Appear drop media paper price outside worker.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+96460,2022-06-15,103,7700.99,credit,Find ability hot none why old short.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+96548,2023-03-24,109,2453.83,credit,Behind teacher floor when theory military page.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+96608,2022-01-20,108,8045.26,debit,Charge director change pretty senior.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+96688,2018-11-20,104,9537.93,debit,Whatever church computer effect speak land network skill.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+96693,2018-12-19,103,3766.65,credit,Well ever administration study want.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+96726,2020-10-13,107,8550.57,debit,Morning maybe into drug want none follow.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+96745,2018-06-11,109,2058.23,transfer,Media forget visit without in quality.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+96772,2021-10-29,106,5735.21,credit,Much arm receive region.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+96977,2020-04-03,104,3788.38,credit,Recent write art laugh kind control.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+97080,2022-06-14,103,7166.04,transfer,Soldier safe national.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+97605,2022-09-11,103,6258.46,transfer,Tree every central human.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+97620,2020-05-28,105,5739.37,credit,Father major represent list help.,28,Pria,6000000,3000000,0,18,E-Wallet,0,Tabungan Reguler
+97631,2022-12-18,106,3371.88,credit,Effect now around strategy strong itself.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+97683,2022-08-26,110,680.46,credit,Where seek red maybe all item age half.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+97686,2020-04-13,101,3179.83,debit,Industry itself story these.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+97852,2020-08-04,106,6351.74,transfer,Toward attack without thus story first coach.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+97972,2019-11-03,110,9150.89,debit,Include final quickly turn.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+97975,2019-09-30,110,2906.18,transfer,Often attack central.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+98077,2022-02-18,106,2292.92,debit,Everybody they prove section everything.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
+98391,2019-02-07,102,9485.27,transfer,Student religious reality step behind system hand.,40,Wanita,15000000,12000000,1,40,Kartu Kredit,1,Kartu Kredit
+98587,2018-07-23,107,88.66,debit,Increase world husband more.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+98796,2021-01-08,108,5270,transfer,College enter look eye.,33,Wanita,9000000,6000000,0,22,Transfer Bank,0,Tabungan Digital
+98813,2020-02-01,110,4443.04,transfer,Kind family it who.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
+98817,2021-05-09,104,1498.41,debit,Listen book front clear stand.,50,Wanita,20000000,25000000,0,50,Investasi,1,Deposito
+98911,2022-10-21,107,7797.66,credit,Feel do yes reveal different professor.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
+99001,2023-01-01,109,4495.57,credit,Heavy happen interesting.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+99420,2023-03-22,103,5420.92,debit,Push involve enjoy color brother agree senior.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital
+99440,2022-03-25,101,7617.01,credit,Budget art great.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+99445,2021-02-04,101,116.53,debit,Million agency likely husband person age.,25,Pria,5000000,2000000,0,15,E-Wallet,0,Tabungan Reguler
+99517,2018-06-09,109,1472,credit,Hold right laugh.,29,Pria,7500000,4000000,1,20,E-Wallet,0,Tabungan Reguler
+99818,2023-03-14,107,8415.65,credit,Sign wish pretty these hope pay within.,60,Pria,12000000,20000000,1,30,Deposito,1,Reksa Dana
