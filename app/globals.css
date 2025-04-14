@@ -1,22 +1,109 @@
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 10px;
+  padding-top: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+/* Chat Bubble */
+.chat-bubble {
+  padding: 12px 16px;
+  border-radius: 16px;
+  max-width: 75%;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.user-bubble {
+  background-color: #0d6efd;
+  color: white;
+  align-self: flex-end;
+}
+
+.bot-bubble {
+  background-color: #f0f0f0;
+  color: #333;
+  align-self: flex-start;
+}
+
+/* Chat Input */
+.chat-input-container {
+  margin-left: 12rem;
+  margin-right: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background: rgb(20, 20, 20);
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #121212;
+  color: white;
+  font-size: 16px;
+  resize: none;
+  min-height: 50px;
+  max-height: 150px;
+}
+
+.chat-input::placeholder {
+  color: #bbb;
+}
+
+.chat-input:focus {
+  outline: none;
+}
+
+/* Send Button */
+.send-button {
+  margin-left: 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: #6366f1;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #4f46e5;
+}
+
+/* Other Styles */
 .text-indigo-500 {
-  color: #6610f2
-  !important; 
+  color: #6610f2 !important;
 }
 
 .btn-hover-effect {
-  color: #6610f2 !important; /* Warna default */
+  color: #6610f2 !important;
   transition: color 0.3s ease-in-out;
   border: none !important;
 }
 
 .btn-hover-effect:hover {
-  color: white !important; /* Warna berubah saat hover */
+  color: white !important;
 }
 
+/* Night Sky & Stars */
 .night-sky {
-  /* background: linear-gradient(to bottom, #000000, #0a0a1a); Gradasi hitam kebiruan */
-  background: #000000; /* Atau warna lain sesuai keinginan */
-
+  background: #000000;
   position: relative;
   overflow: hidden;
 }
@@ -28,10 +115,6 @@
   height: 2px;
   border-radius: 50%;
   opacity: 0.8;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .star:nth-child(1) { top: 5%; left: 10%; }
@@ -54,11 +137,12 @@ html {
 .star:nth-child(19) { top: 95%; left: 35%; }
 .star:nth-child(20) { top: 98%; left: 65%; }
 
+/* Form Controls for Dark Mode */
 .form-control,
 .form-select {
   background-color: #141414 !important;
   color: #ffffff;
-  border: 1px solid #141414 !important; /* border disamakan */
+  border: 1px solid #141414 !important;
   border-radius: 5px;
 }
 
@@ -69,7 +153,6 @@ html {
   box-shadow: none !important;
   color: #ffffff;
 }
-
 
 .form-control::placeholder {
   color: #aaa;
