@@ -11,7 +11,7 @@ CORS(app)  # Izinkan akses dari React
 df = pd.read_csv("financial_transaction_dataset-tanpa_judul.csv")
 
 fitur_input = ["Usia", "Jenis_Kelamin", "Pendapatan_Bulanan", "Saldo_Rekening",
-               "Riwayat_Pinjaman", "Frekuensi_Transaksi", "Jenis_Transaksi_Favorit"]
+               "Riwayat_Pinjaman", "Jenis_Transaksi_Favorit", "Frekuensi_Transaksi"]
 target = "Produk_Direkomendasikan"
 
 le_gender = LabelEncoder()
@@ -39,10 +39,10 @@ def predict():
         pendapatan = int(data["pendapatan"])
         saldo = int(data["saldo"])
         riwayat = 1 if data["riwayatPinjaman"].lower() == "pernah" else 0
-        frekuensi = int(data["frekuensiTransaksi"])
         jenis_transaksi = le_transaksi.transform([data["jenisTransaksiFavorit"]])[0]
+        frekuensi = int(data["frekuensiTransaksi"])
 
-        input_data = [[usia, jenis_kelamin, pendapatan, saldo, riwayat, frekuensi, jenis_transaksi]]
+        input_data = [[usia, jenis_kelamin, pendapatan, saldo, riwayat, jenis_transaksi, frekuensi]]
         prediksi = model.predict(input_data)[0]
         hasil = le_target.inverse_transform([prediksi])[0]
 
