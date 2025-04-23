@@ -1,4 +1,4 @@
-transaction_id,date,customer_id,amount,type,description,Usia,Jenis_Kelamin,Pendapatan_Bulanan,Saldo_Rekening,Riwayat_Pinjaman,Frekuensi_Transaksi,Jenis_Transaksi_Favorit,Minat_Investasi,Produk_Direkomendasikan
+transaction_id,dacd te,customer_id,amount,type,description,Usia,Jenis_Kelamin,Pendapatan_Bulanan,Saldo_Rekening,Riwayat_Pinjaman,Frekuensi_Transaksi,Jenis_Transaksi_Favorit,Minat_Investasi,Produk_Direkomendasikan
 3,2019-09-02,110,7969.68,debit,Direction wife job pull determine leader move college.,38,Wanita,14000000,18000000,1,35,Kartu Kredit,1,Kartu Kredit
 58,2022-03-24,106,2052.33,credit,Maybe provide happy impact another forget.,45,Wanita,17000000,15000000,1,45,Investasi,1,Deposito
 435,2020-11-29,103,8725.1,credit,Care media believe local central.,35,Pria,8000000,5000000,1,25,Transfer Bank,0,Tabungan Digital

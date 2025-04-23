@@ -26,7 +26,7 @@ export default function Home() {
 
           </div>
         </section>
-
+          
         <section id="features" className="vh-100 d-flex align-items-center justify-content-center night-sky">
           {[...Array(50)].map((_, i) => (
             <span key={i} className="star"></span>

@@ -1,14 +1,21 @@
-/* Chat Container */
+body {
+  margin-top: 50px; /* Sesuaikan dengan tinggi navbar */
+}
+
 .chat-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   overflow-y: auto;
-  height: 100%;
-  padding-bottom: 10px;
-  padding-top: 5rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  flex-grow: 1;
+  padding: 10px;
+  margin-top: 50px; /* Menjaga jarak dengan navbar */
+  margin-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #6c757d transparent;
+  height: calc(100vh - 150px) !important; /* Menggunakan !important agar tidak teroverride */
+  padding-top: 50px !important; /* Menghindari bentrok dengan navbar */
+
 }
 
 /* Chat Bubble */
@@ -24,12 +31,14 @@
   background-color: #0d6efd;
   color: white;
   align-self: flex-end;
+  margin-right: 170px;
 }
 
 .bot-bubble {
   background-color: #f0f0f0;
   color: #333;
   align-self: flex-start;
+  margin-left: 170px;
 }
 
 /* Chat Input */
@@ -84,6 +93,43 @@
 
 .send-button:hover {
   background-color: #4f46e5;
+}
+
+@media (max-width: 767px) {
+  .chat-container {
+    padding: 8px;
+    height: calc(100vh - 120px); /* Menyesuaikan tinggi untuk perangkat kecil */
+  }
+
+  .chat-input-container {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+  }
+
+  .chat-input {
+    font-size: 14px;
+    min-height: 40px;
+    max-height: 120px;
+  }
+
+  .send-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .chat-bubble {
+    max-width: 90%; /* Mengurangi lebar chat bubble untuk layar kecil */
+  }
+
+  .user-bubble {
+    margin-right: 0;
+  }
+
+  .bot-bubble {
+    margin-left: 0;
+  }
 }
 
 /* Other Styles */
