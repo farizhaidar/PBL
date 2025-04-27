@@ -20,7 +20,20 @@ export default function Home() {
           <div className="container-fluid text-light text-center">
             <h1 className="text-indigo-500 mb-5 fs-1">Chatbot</h1>
             <p className="mt-3 mx-5 px-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lorem ut odio convallis posuere. Suspendisse potenti. Curabitur feugiat dui id sapien interdum, sed bibendum nunc pellentesque. Integer congue purus id orci aliquet, ac tincidunt lorem fermentum. Donec pharetra, lectus non pharetra efficitur, felis felis luctus velit, at fermentum magna justo non velit. Fusce tincidunt interdum sapien, nec varius lorem tincidunt ut.            </p>
+            elChatBot adalah asisten virtual berbasis AI yang siap membantu menjawab pertanyaanmu kapan saja.
+              Dirancang dengan antarmuka yang simpel dan responsif, ChatBotKu membuat pengalaman chatting menjadi lebih cepat, nyaman, dan menyenangkan.
+
+              ✨ Fitur Utama:
+
+              Balasan cepat dari chatbot yang cerdas
+
+              Antarmuka ringan, gelap, dan modern
+
+              Navigasi mudah dan tampilan bersih
+
+              Dukungan input multiline dan tombol kirim yang stylish
+
+              Mulai ngobrol sekarang dan rasakan kemudahan berinteraksi bersama ChatBotKu!</p>
             <a href="/chat" 
    className="btn mt-3 btn-hover-effect d-inline-flex align-items-center fs-5">Getting Start</a>
 

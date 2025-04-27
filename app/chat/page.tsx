@@ -7,25 +7,25 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 
 export default function ChatPage() {
   const [inputText, setInputText] = useState("");
-  const [messages, setMessages] = useState<{ text: string, isUser: boolean }[]>([]);
-  const [isLoading, setIsLoading] = useState(false); // State untuk loading
+  const [messages, setMessages] = useState<{ text: string, isUser: boolean }[]>([
+    { text: "Halo! Saya adalah asisten virtual. Silakan tanyakan apa saja tentang layanan kami seputar pinjaman dan perbankan. 😊", isUser: false }
+  ]);
+  const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
   const handleSend = () => {
     const trimmed = inputText.trim();
-    if (!trimmed || isLoading) return; // Jangan kirim pesan jika sedang loading
+    if (!trimmed || isLoading) return;
 
-    // Pesan user
-    setMessages([...messages, { text: trimmed, isUser: true }]);
+    setMessages((prevMessages) => [...prevMessages, { text: trimmed, isUser: true }]);
     setInputText("");
-    setIsLoading(true); // Mulai status loading
+    setIsLoading(true);
 
-    // Simulasi respons bot setelah 1 detik
     setTimeout(() => {
-      const botResponse = "Ini respons dari bot"; // Simulasi respons bot
+      const botResponse = "Ini respons dari bot."; 
       setMessages((prevMessages) => [...prevMessages, { text: botResponse, isUser: false }]);
-      setIsLoading(false); // Selesai loading, aktifkan kembali tombol
-    }, 1000); // Delay 1 detik sebelum bot merespons
+      setIsLoading(false);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -41,8 +41,7 @@ export default function ChatPage() {
         <span key={i} className="star"></span>
       ))}
 
-      {/* Chat bubble container */}
-      <div className="chat-container d-flex flex-column p-3 overflow-auto">
+      <div className="chat-container d-flex flex-column p-3 overflow-auto flex-grow-1">
         {messages.map((msg, index) => (
           <motion.div
             key={index}
@@ -57,10 +56,9 @@ export default function ChatPage() {
         <div ref={bottomRef} />
       </div>
 
-      {/* Input */}
-      <div className="chat-input-container p-3 mb-5">
+      <div className="chat-input-container p-3 mb-5 d-flex align-items-center">
         <textarea
-          className="chat-input"
+          className="chat-input flex-grow-1"
           placeholder="Tanya apapun!"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
@@ -72,14 +70,14 @@ export default function ChatPage() {
           }}
         />
         <button
-          className={`btn send-button ${isLoading ? "disabled" : ""}`} // Menonaktifkan tombol jika sedang loading
+          className={`send-button ms-2 ${isLoading ? "disabled" : ""}`}
           onClick={handleSend}
-          disabled={isLoading} // Menonaktifkan tombol jika sedang loading
+          disabled={isLoading}
         >
           {isLoading ? (
-            <i className="bi bi-arrow-clockwise text-white"></i> // Ikon loading
+            <i className="bi bi-arrow-clockwise"></i>
           ) : (
-            <i className="bi bi-arrow-up text-white"></i>
+            <i className="bi bi-arrow-up"></i>
           )}
         </button>
       </div>

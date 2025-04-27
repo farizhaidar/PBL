@@ -31,7 +31,7 @@ export default function Navbar() {
     <nav className={`navbar navbar-expand-lg fixed-top bg-transparent p-3`}>
       <div className="container-fluid">
         <a className="navbar-brand text-indigo-500" href="/">
-          Chatbot
+          elChatbot
         </a>
 
         <button
@@ -64,24 +64,9 @@ export default function Navbar() {
           </ul>
 
           <div className="d-flex align-items-center ms-3">
-            {/* Dark Mode Toggle */}
-            <div className="dark-mode-toggle-wrapper">
-              <input
-                type="checkbox"
-                id="darkModeToggle"
-                className="dark-mode-toggle"
-                checked={darkMode}
-                onChange={() => setDarkMode(!darkMode)}
-              />
-              <label htmlFor="darkModeToggle" className="dark-mode-toggle-label">
-                <span className="icon sun-icon">☀️</span>
-                <span className="icon moon-icon">🌙</span>
-                <span className="toggle-slider"></span>
-              </label>
-            </div>
 
             <Image
-              src="/pajar.jpg"
+              src="/image.png"
               alt="User Avatar"
               width={32}
               height={32}
