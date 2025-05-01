@@ -46,7 +46,7 @@ export default function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {["Home", "Chat", "Recommendation"].map((item, index) => {
+            {["Home", "Chat", "Recommendation", "Booking"].map((item, index) => {
               const link = item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
               const isActive = pathname === link;
 
