@@ -13,19 +13,47 @@ export default function ChatPage() {
   const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
-  const handleSend = () => {
+  const handleSend = async () => {
     const trimmed = inputText.trim();
     if (!trimmed || isLoading) return;
 
+    // Add user message to chat
     setMessages((prevMessages) => [...prevMessages, { text: trimmed, isUser: true }]);
     setInputText("");
     setIsLoading(true);
 
-    setTimeout(() => {
-      const botResponse = "Ini respons dari bot."; 
-      setMessages((prevMessages) => [...prevMessages, { text: botResponse, isUser: false }]);
+    try {
+      // Send message to your chatbot API
+      const response = await fetch("http://elchatbot.akmalnurwahid.my.id:5678/webhook/bank-chatbot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt: trimmed // Menggunakan 'prompt' sesuai kebutuhan API
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      
+      // Add bot response to chat (menggunakan 'output' dari response)
+      setMessages((prevMessages) => [
+        ...prevMessages, 
+        { text: data.output || "Maaf, saya tidak mengerti pertanyaan Anda.", isUser: false }
+      ]);
+    } catch (error) {
+      console.error("Error calling chatbot API:", error);
+      setMessages((prevMessages) => [
+        ...prevMessages, 
+        { text: "Maaf, terjadi kesalahan saat memproses permintaan Anda.", isUser: false }
+      ]);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   useEffect(() => {

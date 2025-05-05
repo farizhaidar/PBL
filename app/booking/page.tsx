@@ -4,24 +4,34 @@ import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import Navbar from "../component/navbar";
-import "../globals.css"; // pastikan night-sky dan star ada di sini
+import "../globals.css";
 
 export default function BookingPage() {
-  const [form, setForm] = useState({ name: "", email: "", date: "", time: "" });
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    age: "",
+    date: "",
+    time: "",
+    location: "Cabang Depok",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [minDate, setMinDate] = useState("");
-  const [minTime, setMinTime] = useState("");
+  const [minTime, setMinTime] = useState("08:00");
 
   useEffect(() => {
     const now = new Date();
-    setMinDate(now.toISOString().split("T")[0]);
-
-    const nextHour = new Date(now.getTime() + 60 * 60 * 1000);
-    setMinTime(nextHour.toTimeString().substring(0, 5));
+    const today = now.toISOString().split("T")[0];
+    setMinDate(today);
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const isWeekend = (dateStr: string) => {
+    const day = new Date(dateStr).getDay();
+    return day === 0 || day === 6;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
 
@@ -32,22 +42,30 @@ export default function BookingPage() {
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
+    const phoneRegex = /^[0-9]{10,15}$/;
 
     if (!form.name) newErrors.name = "Nama harus diisi";
-    if (!form.email) {
-      newErrors.email = "Email harus diisi";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      newErrors.email = "Format email tidak valid";
+    if (!form.phone) {
+      newErrors.phone = "Nomor HP harus diisi";
+    } else if (!phoneRegex.test(form.phone)) {
+      newErrors.phone = "Format nomor HP tidak valid";
+    }
+    if (!form.age) {
+      newErrors.age = "Umur harus diisi";
+    } else if (isNaN(Number(form.age)) || Number(form.age) <= 0) {
+      newErrors.age = "Umur harus berupa angka positif";
     }
     if (!form.date) {
       newErrors.date = "Tanggal harus diisi";
     } else if (form.date < minDate) {
       newErrors.date = "Tidak bisa memilih tanggal yang sudah lewat";
+    } else if (isWeekend(form.date)) {
+      newErrors.date = "Hanya bisa memilih hari kerja (Senin–Jumat)";
     }
     if (!form.time) {
       newErrors.time = "Waktu harus diisi";
-    } else if (form.date === minDate && form.time < minTime) {
-      newErrors.time = `Waktu harus minimal ${minTime} untuk hari ini`;
+    } else if (form.time < "08:00" || form.time > "15:00") {
+      newErrors.time = "Waktu harus antara 08:00 hingga 15:00";
     }
 
     setErrors(newErrors);
@@ -67,7 +85,7 @@ export default function BookingPage() {
       const availabilityRes = await fetch("/api/booking/check-availability", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ date: form.date, time: form.time }),
+        body: JSON.stringify({ date: form.date, time: form.time, location: form.location }),
       });
 
       if (!availabilityRes.ok) throw new Error("Gagal memeriksa ketersediaan");
@@ -88,7 +106,14 @@ export default function BookingPage() {
       if (!bookingRes.ok) throw new Error(result.error || "Gagal melakukan booking");
 
       alert("Booking berhasil!");
-      setForm({ name: "", email: "", date: "", time: "" });
+      setForm({
+        name: "",
+        phone: "",
+        age: "",
+        date: "",
+        time: "",
+        location: "Cabang Depok",
+      });
     } catch (error) {
       alert("Terjadi kesalahan saat booking.");
     } finally {
@@ -124,17 +149,29 @@ export default function BookingPage() {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Email</label>
+                <label className="form-label">Nomor HP</label>
                 <input
-                  className={`form-control ${errors.email && "is-invalid"}`}
-                  name="email"
-                  type="email"
-                  value={form.email}
+                  className={`form-control ${errors.phone && "is-invalid"}`}
+                  name="phone"
+                  value={form.phone}
                   onChange={handleChange}
                   required
                   style={{ color: "white" }}
                 />
-                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Umur</label>
+                <input
+                  className={`form-control ${errors.age && "is-invalid"}`}
+                  name="age"
+                  value={form.age}
+                  onChange={handleChange}
+                  required
+                  style={{ color: "white" }}
+                />
+                {errors.age && <div className="invalid-feedback">{errors.age}</div>}
               </div>
 
               <div className="mb-3">
@@ -158,13 +195,28 @@ export default function BookingPage() {
                   className={`form-control ${errors.time && "is-invalid"}`}
                   name="time"
                   type="time"
-                  min={form.date === minDate ? minTime : undefined}
+                  min="08:00"
+                  max="15:00"
                   value={form.time}
                   onChange={handleChange}
                   required
                   style={{ color: "white" }}
                 />
                 {errors.time && <div className="invalid-feedback">{errors.time}</div>}
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Tempat</label>
+                <select
+                  className="form-control"
+                  name="location"
+                  value={form.location}
+                  onChange={handleChange}
+                  required
+                  style={{ color: "white" }}
+                >
+                  <option value="Cabang Depok">Cabang Depok</option>
+                </select>
               </div>
 
               <button
