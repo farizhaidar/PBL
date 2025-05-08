@@ -17,38 +17,29 @@ export default function ChatPage() {
     const trimmed = inputText.trim();
     if (!trimmed || isLoading) return;
 
-    // Add user message to chat
-    setMessages((prevMessages) => [...prevMessages, { text: trimmed, isUser: true }]);
+    setMessages((prev) => [...prev, { text: trimmed, isUser: true }]);
     setInputText("");
     setIsLoading(true);
 
     try {
-      // Send message to your chatbot API
       const response = await fetch("http://elchatbot.akmalnurwahid.my.id:5678/webhook/bank-chatbot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          prompt: trimmed // Menggunakan 'prompt' sesuai kebutuhan API
-        }),
+        body: JSON.stringify({ prompt: trimmed }),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
       const data = await response.json();
-      
-      // Add bot response to chat (menggunakan 'output' dari response)
-      setMessages((prevMessages) => [
-        ...prevMessages, 
+
+      setMessages((prev) => [
+        ...prev,
         { text: data.output || "Maaf, saya tidak mengerti pertanyaan Anda.", isUser: false }
       ]);
     } catch (error) {
       console.error("Error calling chatbot API:", error);
-      setMessages((prevMessages) => [
-        ...prevMessages, 
+      setMessages((prev) => [
+        ...prev,
         { text: "Maaf, terjadi kesalahan saat memproses permintaan Anda.", isUser: false }
       ]);
     } finally {
@@ -78,7 +69,11 @@ export default function ChatPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            {msg.text}
+            {msg.isUser ? (
+              msg.text
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: msg.text }} />
+            )}
           </motion.div>
         ))}
         <div ref={bottomRef} />
