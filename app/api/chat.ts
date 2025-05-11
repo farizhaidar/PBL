@@ -21,8 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let data;
     try {
       data = await response.json();
-    } catch (e) {
-      data = {};
+    } catch {
+      
     }
 
     // Tambahkan log untuk memeriksa data dari chatbot

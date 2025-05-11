@@ -18,7 +18,7 @@ export default function BookingPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [minDate, setMinDate] = useState("");
-  const [minTime, setMinTime] = useState("08:00");
+  // const [minTime, setMinTime] = useState("08:00");
 
   useEffect(() => {
     const now = new Date();
@@ -114,7 +114,7 @@ export default function BookingPage() {
         time: "",
         location: "Cabang Depok",
       });
-    } catch (error) {
+    } catch {
       alert("Terjadi kesalahan saat booking.");
     } finally {
       setIsSubmitting(false);
