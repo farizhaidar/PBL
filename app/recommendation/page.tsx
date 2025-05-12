@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Navbar from "../component/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
-import "../globals.css"; // pastikan night-sky dan star ada di sini
+import "../globals.css";
 
 const FormPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +19,8 @@ const FormPage: React.FC = () => {
 
   const [rekomendasi, setRekomendasi] = useState<string | null>(null);
   const [showCard, setShowCard] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -32,26 +34,34 @@ const FormPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError(null);
 
     try {
-      const response = await fetch("http://localhost:5000/predict", {
+      const response = await fetch("http://localhost:8000/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
+      
       if (data.rekomendasi) {
         setRekomendasi(data.rekomendasi);
-        setShowCard(true); // Show recommendation card
-      } else {
-        setRekomendasi("Gagal mendapatkan rekomendasi.");
         setShowCard(true);
+      } else {
+        throw new Error("Gagal mendapatkan rekomendasi dari server");
       }
     } catch (error) {
       console.error("Error:", error);
-      setRekomendasi("Terjadi kesalahan saat memproses data.");
+      setError("Terjadi kesalahan saat memproses data. Silakan coba lagi.");
       setShowCard(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -65,7 +75,8 @@ const FormPage: React.FC = () => {
       jenisTransaksiFavorit: "",
       frekuensiTransaksi: "",
     });
-    setShowCard(false); // Hide recommendation card
+    setShowCard(false);
+    setError(null);
   };
 
   const usiaValid = formData.usia && parseInt(formData.usia) >= 17;
@@ -83,8 +94,8 @@ const FormPage: React.FC = () => {
           <div className="text-light rounded p-4 shadow-lg">
             <h2 className="mb-4 text-center">Formulir Data Pengguna</h2>
 
-            <div className="info-box">
-              <p>
+            <div className="info-box mb-4 p-3 bg-dark rounded">
+              <p className="mb-0">
                 Untuk mengetahui produk bank yang cocok dengan rutinitasmu,
                 silahkan isi terlebih dahulu data berikut. Hasil rekomendasi
                 akan langsung muncul setelah klik submit.
@@ -97,13 +108,13 @@ const FormPage: React.FC = () => {
                 <label htmlFor="usia" className="form-label">Usia</label>
                 <input
                   type="number"
-                  className="form-control"
+                  className="form-control bg-dark text-light"
                   id="usia"
                   name="usia"
                   value={formData.usia}
                   onChange={handleChange}
                   required
-                  style={{ color: "white" }}
+                  min="17"
                 />
                 {formData.usia && parseInt(formData.usia) < 17 && (
                   <div className="alert alert-warning mt-2" role="alert">
@@ -119,13 +130,12 @@ const FormPage: React.FC = () => {
                   <div className="mb-3">
                     <label htmlFor="jenisKelamin" className="form-label">Jenis Kelamin</label>
                     <select
-                      className="form-select"
+                      className="form-select bg-dark text-light"
                       id="jenisKelamin"
                       name="jenisKelamin"
                       value={formData.jenisKelamin}
                       onChange={handleChange}
                       required
-                      style={{ color: "white" }}
                     >
                       <option value="">Pilih</option>
                       <option value="Pria">Pria</option>
@@ -139,13 +149,13 @@ const FormPage: React.FC = () => {
                     <label htmlFor="pendapatan" className="form-label">Pendapatan Bulanan (Rp)</label>
                     <input
                       type="number"
-                      className="form-control"
+                      className="form-control bg-dark text-light"
                       id="pendapatan"
                       name="pendapatan"
                       value={formData.pendapatan}
                       onChange={handleChange}
                       required
-                      style={{ color: "white" }}
+                      min="0"
                     />
                   </div>
 
@@ -154,13 +164,13 @@ const FormPage: React.FC = () => {
                     <label htmlFor="saldo" className="form-label">Saldo Rekening (Rp)</label>
                     <input
                       type="number"
-                      className="form-control"
+                      className="form-control bg-dark text-light"
                       id="saldo"
                       name="saldo"
                       value={formData.saldo}
                       onChange={handleChange}
                       required
-                      style={{ color: "white" }}
+                      min="0"
                     />
                   </div>
 
@@ -168,13 +178,12 @@ const FormPage: React.FC = () => {
                   <div className="mb-3">
                     <label htmlFor="riwayatPinjaman" className="form-label">Riwayat Pinjaman</label>
                     <select
-                      className="form-select"
+                      className="form-select bg-dark text-light"
                       id="riwayatPinjaman"
                       name="riwayatPinjaman"
                       value={formData.riwayatPinjaman}
                       onChange={handleChange}
                       required
-                      style={{ color: "white" }}
                     >
                       <option value="">Pilih</option>
                       <option value="Pernah">Pernah</option>
@@ -186,13 +195,12 @@ const FormPage: React.FC = () => {
                   <div className="mb-4">
                     <label htmlFor="jenisTransaksiFavorit" className="form-label">Jenis Transaksi Favorit</label>
                     <select
-                      className="form-select"
+                      className="form-select bg-dark text-light"
                       id="jenisTransaksiFavorit"
                       name="jenisTransaksiFavorit"
                       value={formData.jenisTransaksiFavorit}
                       onChange={handleChange}
                       required
-                      style={{ color: "white" }}
                     >
                       <option value="">Pilih</option>
                       <option value="E-Wallet">E-Wallet</option>
@@ -203,25 +211,36 @@ const FormPage: React.FC = () => {
                     </select>
                   </div>
 
-                  {/* Frekuensi Transaksi - hanya muncul jika jenisTransaksiFavorit telah dipilih */}
+                  {/* Frekuensi Transaksi */}
                   {formData.jenisTransaksiFavorit !== "" && (
                     <div className="mb-3">
                       <label htmlFor="frekuensiTransaksi" className="form-label">Rata-rata Jumlah Transaksi per Bulan</label>
                       <input
                         type="number"
-                        className="form-control"
+                        className="form-control bg-dark text-light"
                         id="frekuensiTransaksi"
                         name="frekuensiTransaksi"
                         value={formData.frekuensiTransaksi}
                         onChange={handleChange}
                         required
-                        style={{ color: "white" }}
+                        min="1"
                       />
                     </div>
                   )}
 
-                  <button type="submit" className="btn btn-primary w-100">
-                    Submit
+                  <button 
+                    type="submit" 
+                    className="btn btn-primary w-100 py-2"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Memproses...
+                      </>
+                    ) : (
+                      "Submit"
+                    )}
                   </button>
                 </>
               )}
@@ -231,17 +250,35 @@ const FormPage: React.FC = () => {
 
         {/* Rekomendasi Card */}
         {showCard && (
+          <div className="modal-backdrop show"></div>
+        )}
+        
+        {showCard && (
           <div
-            className="position-absolute top-50 start-50 translate-middle w-75 p-4 shadow-lg rounded bg-light"
+            className="modal d-block"
+            tabIndex={-1}
             style={{ zIndex: 1050 }}
           >
-            <div className="text-center">
-              <h4 className="text-primary mb-3">💡 Rekomendasi Produk Bank</h4>
-              <div className="card p-4">
-                <p>{rekomendasi}</p>
-                <button className="btn btn-success" onClick={handleOkClick}>
-                  OK
-                </button>
+            <div className="modal-dialog modal-dialog-centered">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title">💡 Rekomendasi Produk Bank</h5>
+                </div>
+                <div className="modal-body">
+                  {error ? (
+                    <div className="alert alert-danger">{error}</div>
+                  ) : (
+                    <p>{rekomendasi}</p>
+                  )}
+                </div>
+                <div className="modal-footer">
+                  <button 
+                    className="btn btn-success"
+                    onClick={handleOkClick}
+                  >
+                    OK
+                  </button>
+                </div>
               </div>
             </div>
           </div>

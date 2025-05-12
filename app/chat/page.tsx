@@ -22,7 +22,7 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://elchatbot.akmalnurwahid.my.id:5678/webhook/bank-chatbot", {
+      const response = await fetch("http://elchatbot.akmalnurwahid.my.id:3000/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
