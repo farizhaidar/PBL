@@ -54,11 +54,10 @@ export default function ChatPage() {
   }, [messages]);
 
   return (
-    <div className="d-flex flex-column vh-100 bg-black text-light">
-      <Navbar />
-      {[...Array(50)].map((_, i) => (
-        <span key={i} className="star"></span>
-      ))}
+    <div className="d-flex flex-column vh-100  text-light">
+      <div className="navbar-always-scrolled">
+        <Navbar />
+      </div>
 
       <div className="chat-container d-flex flex-column p-3 overflow-auto flex-grow-1">
         {messages.map((msg, index) => (

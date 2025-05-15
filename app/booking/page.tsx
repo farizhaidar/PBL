@@ -51,7 +51,7 @@ export default function BookingPage() {
       newErrors.phone = "Format nomor HP tidak valid";
     }
     if (!form.age) {
-      newErrors.age = "Umur harus diisi";
+      newErrors.age = "U  r harus diisi";
     } else if (isNaN(Number(form.age)) || Number(form.age) <= 0) {
       newErrors.age = "Umur harus berupa angka positif";
     }
@@ -123,15 +123,14 @@ export default function BookingPage() {
 
   return (
     <>
-      <Navbar />
+       <div className="navbar-always-scrolled">
+              <Navbar />
+            </div>
 
-      <div className="position-relative night-sky min-vh-100 d-flex align-items-center justify-content-center">
-        {[...Array(50)].map((_, i) => (
-          <span key={i} className="star"></span>
-        ))}
+      <div className="mt-5 position-relative min-vh-100 d-flex align-items-center justify-content-center">
 
         <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
-          <div className="text-light bg-dark rounded p-4 shadow-lg">
+          <div className="rounded p-4 shadow-lg">
             <h2 className="mb-4 text-center">Booking Konsultasi</h2>
 
             <form onSubmit={handleSubmit}>
@@ -143,7 +142,6 @@ export default function BookingPage() {
                   value={form.name}
                   onChange={handleChange}
                   required
-                  style={{ color: "white" }}
                 />
                 {errors.name && <div className="invalid-feedback">{errors.name}</div>}
               </div>
@@ -156,7 +154,6 @@ export default function BookingPage() {
                   value={form.phone}
                   onChange={handleChange}
                   required
-                  style={{ color: "white" }}
                 />
                 {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
               </div>
@@ -169,7 +166,6 @@ export default function BookingPage() {
                   value={form.age}
                   onChange={handleChange}
                   required
-                  style={{ color: "white" }}
                 />
                 {errors.age && <div className="invalid-feedback">{errors.age}</div>}
               </div>
@@ -184,7 +180,6 @@ export default function BookingPage() {
                   value={form.date}
                   onChange={handleChange}
                   required
-                  style={{ color: "white" }}
                 />
                 {errors.date && <div className="invalid-feedback">{errors.date}</div>}
               </div>
@@ -200,7 +195,6 @@ export default function BookingPage() {
                   value={form.time}
                   onChange={handleChange}
                   required
-                  style={{ color: "white" }}
                 />
                 {errors.time && <div className="invalid-feedback">{errors.time}</div>}
               </div>
@@ -213,14 +207,13 @@ export default function BookingPage() {
                   value={form.location}
                   onChange={handleChange}
                   required
-                  style={{ color: "white" }}
                 >
                   <option value="Cabang Depok">Cabang Depok</option>
                 </select>
               </div>
 
               <button
-                className="btn btn-primary mt-3 w-100"
+                className="btn-submit mt-3 w-100"
                 type="submit"
                 disabled={isSubmitting}
               >

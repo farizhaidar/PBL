@@ -83,18 +83,17 @@ const FormPage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
-
-      <div className="position-relative night-sky min-vh-100 d-flex align-items-center justify-content-center">
-        {[...Array(50)].map((_, i) => (
-          <span key={i} className="star"></span>
-        ))}
+      <div className="navbar-always-scrolled">
+        <Navbar />
+      </div>
+    
+      <div className="position-relative min-vh-100 d-flex align-items-center justify-content-center">
 
         <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
-          <div className="text-light rounded p-4 shadow-lg">
+          <div className="rounded p-4 shadow-lg">
             <h2 className="mb-4 text-center">Formulir Data Pengguna</h2>
 
-            <div className="info-box mb-4 p-3 bg-dark rounded">
+            <div className="info-box mb-4 p-3 rounded">
               <p className="mb-0">
                 Untuk mengetahui produk bank yang cocok dengan rutinitasmu,
                 silahkan isi terlebih dahulu data berikut. Hasil rekomendasi
@@ -108,7 +107,7 @@ const FormPage: React.FC = () => {
                 <label htmlFor="usia" className="form-label">Usia</label>
                 <input
                   type="number"
-                  className="form-control bg-dark text-light"
+                  className="form-control "
                   id="usia"
                   name="usia"
                   value={formData.usia}
@@ -130,7 +129,7 @@ const FormPage: React.FC = () => {
                   <div className="mb-3">
                     <label htmlFor="jenisKelamin" className="form-label">Jenis Kelamin</label>
                     <select
-                      className="form-select bg-dark text-light"
+                      className="form-select "
                       id="jenisKelamin"
                       name="jenisKelamin"
                       value={formData.jenisKelamin}
@@ -149,7 +148,7 @@ const FormPage: React.FC = () => {
                     <label htmlFor="pendapatan" className="form-label">Pendapatan Bulanan (Rp)</label>
                     <input
                       type="number"
-                      className="form-control bg-dark text-light"
+                      className="form-control "
                       id="pendapatan"
                       name="pendapatan"
                       value={formData.pendapatan}
@@ -164,7 +163,7 @@ const FormPage: React.FC = () => {
                     <label htmlFor="saldo" className="form-label">Saldo Rekening (Rp)</label>
                     <input
                       type="number"
-                      className="form-control bg-dark text-light"
+                      className="form-control "
                       id="saldo"
                       name="saldo"
                       value={formData.saldo}
@@ -178,7 +177,7 @@ const FormPage: React.FC = () => {
                   <div className="mb-3">
                     <label htmlFor="riwayatPinjaman" className="form-label">Riwayat Pinjaman</label>
                     <select
-                      className="form-select bg-dark text-light"
+                      className="form-select "
                       id="riwayatPinjaman"
                       name="riwayatPinjaman"
                       value={formData.riwayatPinjaman}
@@ -195,7 +194,7 @@ const FormPage: React.FC = () => {
                   <div className="mb-4">
                     <label htmlFor="jenisTransaksiFavorit" className="form-label">Jenis Transaksi Favorit</label>
                     <select
-                      className="form-select bg-dark text-light"
+                      className="form-select "
                       id="jenisTransaksiFavorit"
                       name="jenisTransaksiFavorit"
                       value={formData.jenisTransaksiFavorit}
@@ -217,7 +216,7 @@ const FormPage: React.FC = () => {
                       <label htmlFor="frekuensiTransaksi" className="form-label">Rata-rata Jumlah Transaksi per Bulan</label>
                       <input
                         type="number"
-                        className="form-control bg-dark text-light"
+                        className="form-control "
                         id="frekuensiTransaksi"
                         name="frekuensiTransaksi"
                         value={formData.frekuensiTransaksi}
@@ -230,7 +229,7 @@ const FormPage: React.FC = () => {
 
                   <button 
                     type="submit" 
-                    className="btn btn-primary w-100 py-2"
+                    className="btn-submit w-100 py-2"
                     disabled={isLoading}
                   >
                     {isLoading ? (

@@ -1,10 +1,12 @@
 'use client';
 
 import Navbar from './component/navbar';
+import Footer from './component/footer'; // Note: Capitalized component name
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { products } from './product'; // Adjust the path if needed
 
 export default function Home() {
   return (
@@ -13,96 +15,63 @@ export default function Home() {
 
       <div className="position-relative night-sky">
         {/* Section Home */}
-        <section id="home" className="vh-100 d-flex align-items-center justify-content-center">
-          {[...Array(50)].map((_, i) => (
-            <span key={i} className="star"></span>
-          ))}
-          <div className="container-fluid text-light text-center">
-            <h1 className="text-indigo-500 mb-5 fs-1">Chatbot</h1>
-            <p className="mt-3 mx-5 px-5">
-              elChatBot adalah asisten virtual berbasis AI yang siap membantu menjawab pertanyaanmu kapan saja.
-              Dirancang dengan antarmuka yang simpel dan responsif, ChatBotKu membuat pengalaman chatting menjadi lebih cepat, nyaman, dan menyenangkan.
-              <br /><br />
-              ✨ Fitur Utama:
-              <br />
-              - Balasan cepat dari chatbot yang cerdas
-              <br />
-              - Antarmuka ringan, gelap, dan modern
-              <br />
-              - Navigasi mudah dan tampilan bersih
-              <br />
-              - Dukungan input multiline dan tombol kirim yang stylish
-              <br />
-              Mulai ngobrol sekarang dan rasakan kemudahan berinteraksi bersama ChatBotKu!
-            </p>
+        <section id="home" className="vh-100 d-flex align-items-center justify-content-center position-relative bg-dark">
+          <div className="overlay position-absolute w-100 h-100" style={{ background: "rgba(0, 0, 0, 0.5)" }}></div>
+          <Image 
+            src="/front-view-woman-desk-wearing-headset-pointing.jpg" 
+            alt="Background Image" 
+            layout="fill" 
+            objectFit="cover" 
+            className="position-absolute bg-blur"
+          />
+
+          <div className="overlay position-absolute w-100 h-100"></div>
+
+          <div className="container text-light mb-5" style={{ zIndex: 2 }}>
+            <h5 className="display-5 fw-bold mb-4 txt-utama">Chatbot For Customer Support</h5>
+              <p className="mt-4" style={{ maxWidth: '700px' }}>
+                Selamat datang di layanan chatbot resmi [Nama Bank]! Saya [Nama Chatbot], asisten virtual
+                yang siap membantu Anda dalam mendapatkan informasi dan menyelesaikan berbagai kebutuhan perbankan dengan
+                cepat dan mudah.
+              </p>
             <Link
               href="/chat"
-              className="btn mt-3 btn-hover-effect d-inline-flex align-items-center fs-5"
+              className="btn btn-start btn-lg mt-3 px-4 fw-medium"
             >
-              Getting Start
+              <b>Mulai Obrolan</b>
             </Link>
           </div>
         </section>
 
         {/* Section Features */}
-        <section id="features" className="vh-100 d-flex align-items-center justify-content-center night-sky">
-          {[...Array(50)].map((_, i) => (
-            <span key={i} className="star"></span>
-          ))}
-          <div className="container text-light text-center">
-            <h1 className="text-indigo-500 mb-4 fs-1">Temukan Produk Pinjaman yang Tepat untuk Anda</h1>
-            <p className="mx-auto px-4" style={{ maxWidth: '700px' }}>
-              Dengan fitur rekomendasi produk pinjaman kami, Anda dapat menemukan pilihan terbaik sesuai kebutuhan finansial Anda. 
-              Cepat, aman, dan terpercaya!
-            </p>
-
-            <div className="row mt-5 justify-content-center">
-              {['Cepat & Mudah', 'Aman & Terpercaya', 'Personalisasi'].map((title, idx) => (
-                <div className="col-md-4" key={idx}>
-                  <div
-                    className="card p-4 text-center shadow-lg"
-                    style={{
-                      backgroundColor: '#2c2f3f',
-                      color: 'white',
-                      borderRadius: '12px',
-                    }}
-                  >
-                    <Image
-                      src="/pajar.jpg"
-                      alt={title}
-                      width={60}
-                      height={60}
-                      className="mx-auto mb-3 object-fit-cover rounded-circle"
+        <section id="features" className="py-5 bg-light text-dark">
+          <div className="container text-center">
+            <h3 className="title mb-5 fs-1">Produk Kami</h3>
+            <div className="row mt-4 justify-content-center">
+              {products.map((product, index) => (
+                <div className="col-md-4 mb-4" key={index}>
+                  <div className="card border-0 shadow-sm h-100">
+                    <Image 
+                      src={product.image} 
+                      alt={product.title} 
+                      width={400} 
+                      height={250} 
+                      className="card-img-top object-fit-cover"
                     />
-                    <h5>{title}</h5>
-                    <p>
-                      {idx === 0 &&
-                        'Hanya dalam beberapa langkah, temukan pinjaman yang sesuai kebutuhan Anda.'}
-                      {idx === 1 &&
-                        'Dukungan AI yang memastikan rekomendasi dari sumber terpercaya.'}
-                      {idx === 2 &&
-                        'Rekomendasi sesuai profil keuangan dan kebutuhan pribadi Anda.'}
-                    </p>
+                    <div className="card-body">
+                      <h5 className="card-title">{product.title}</h5>
+                      <p className="card-text text-muted">{product.description}</p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
-
-            <Link
-              href="/recommendation"
-              className="btn mt-4"
-              style={{
-                backgroundColor: '#6610f2',
-                color: 'white',
-                padding: '12px 20px',
-                borderRadius: '8px',
-              }}
-            >
-              Coba Sekarang
-            </Link>
           </div>
         </section>
       </div>
+      
+      {/* Proper Footer Component */}
+      <Footer />
     </>
   );
 }

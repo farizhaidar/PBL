@@ -2,9 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useScroll } from './navbarScroll';
+import { useState } from 'react';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const scrolled = useScroll();
+  const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
     { label: 'Home', path: '/' },
@@ -14,42 +18,35 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div className="container">
-        <Link href="/" className="navbar-brand text-indigo-500">
-          elChatbot
+    <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'bg-white text-blue shadow-sm' : 'bg-transparent biru-bca'}`}>
+      <div className="container py-2">
+        <Link href="/" className={`navbar-brand ${scrolled ? 'text-dark' : 'biru-bca'}`}>
+          <b><i>ElChatbot</i></b>
         </Link>
 
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${scrolled ? '' : 'custom-toggler'}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {menuItems.map((item, index) => {
-              const isActive = pathname === item.path;
-
-              return (
-                <li className="nav-item me-2" key={index}>
-                  <Link
-                    href={item.path}
-                    className={`nav-link nav-button ${
-                      isActive ? 'active-nav' : 'text-indigo-500'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
+            {menuItems.map((item) => (
+              <li key={item.path} className="nav-item">
+                <Link
+                  href={item.path}
+                  className={`nav-link ${pathname === item.path ? 'active' : ''} ${scrolled ? 'text-dark' : 'text-white'}`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
