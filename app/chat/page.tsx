@@ -80,7 +80,52 @@ export default function ChatPage() {
 
         {isLoading && (
           <motion.div className="chat-bubble bot-bubble" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <span className="typing">• • •</span>
+            <div style={{ display: 'flex', alignItems: 'center', height: '24px' }}>
+              <motion.span
+                style={{ display: 'inline-block', fontSize: '20px' }}
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                •
+              </motion.span>
+              <motion.span
+                style={{ display: 'inline-block', fontSize: '20px', marginLeft: '6px' }}
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.4
+                }}
+              >
+                •
+              </motion.span>
+              <motion.span
+                style={{ display: 'inline-block', fontSize: '20px', marginLeft: '6px' }}
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.8
+                }}
+              >
+                •
+              </motion.span>
+            </div>
           </motion.div>
         )}
 
