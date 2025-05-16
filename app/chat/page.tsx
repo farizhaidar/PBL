@@ -22,11 +22,9 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://elchatbot.akmalnurwahid.my.id:3000/chat", {
+      const response = await fetch("https://n8n.akmalnurwahid.my.id/webhook/bank-chatbot", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: trimmed }),
       });
 
@@ -38,10 +36,7 @@ export default function ChatPage() {
       ]);
     } catch (error) {
       console.error("Error calling chatbot API:", error);
-      setMessages((prev) => [
-        ...prev,
-        { text: "Maaf, terjadi kesalahan saat memproses permintaan Anda.", isUser: false }
-      ]);
+      setMessages((prev) => [...prev, { text: "Maaf, terjadi kesalahan saat memproses permintaan Anda.", isUser: false }]);
     } finally {
       setIsLoading(false);
     }
@@ -54,7 +49,7 @@ export default function ChatPage() {
   }, [messages]);
 
   return (
-    <div className="d-flex flex-column vh-100  text-light">
+    <div className="d-flex flex-column vh-100 text-light">
       <div className="navbar-always-scrolled">
         <Navbar />
       </div>
@@ -75,6 +70,13 @@ export default function ChatPage() {
             )}
           </motion.div>
         ))}
+
+        {isLoading && (
+          <motion.div className="chat-bubble bot-bubble" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <span className="typing">• • •</span>
+          </motion.div>
+        )}
+
         <div ref={bottomRef} />
       </div>
 
@@ -91,6 +93,7 @@ export default function ChatPage() {
             }
           }}
         />
+
         <button
           className={`send-button ms-2 ${isLoading ? "disabled" : ""}`}
           onClick={handleSend}

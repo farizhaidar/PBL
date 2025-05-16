@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { prompt } = req.body;  // Ganti 'message' menjadi 'prompt'
 
   try {
-    const response = await fetch("http://elchatbot.akmalnurwahid.my.id:5678/webhook/bank-chatbot", {
+    const response = await fetch("https://n8n.akmalnurwahid.my.id/webhook/bank-chatbot", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
