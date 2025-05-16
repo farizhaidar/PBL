@@ -131,95 +131,137 @@ export default function BookingPage() {
         <Navbar />
       </div>
 
-      <div className="mt-5 position-relative min-vh-100 d-flex align-items-center justify-content-center">
-        <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
-          <div className="rounded p-4 shadow-lg">
-            <h2 className="mb-4 text-center">Booking Konsultasi</h2>
+      <div
+        className="mt-5 position-relative min-vh-100 d-flex align-items-center justify-content-center"
+        style={{
+          background: "linear-gradient(135deg, #f0f4f8, #d9e2ec)",
+          padding: "40px 20px",
+        }}
+      >
+        <div
+          className="container p-5 rounded shadow"
+          style={{
+            maxWidth: "700px",
+            backgroundColor: "#ffffffdd", // sedikit transparan agar tidak terlalu putih
+            boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
+            borderRadius: "12px",
+          }}
+        >
+          <h2 className="mb-4 text-center" style={{ color: "#243b55", fontWeight: "700" }}>
+            Booking Konsultasi
+          </h2>
 
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label className="form-label">Nama Lengkap</label>
-                <input
-                  className={`form-control ${errors.name && "is-invalid"}`}
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
-              </div>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label className="form-label fw-semibold" style={{ color: "#4a6fa5" }}>
+                Nama Lengkap
+              </label>
+              <input
+                className={`form-control ${errors.name && "is-invalid"}`}
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                required
+                style={{ boxShadow: errors.name ? "0 0 6px #dc3545" : "none" }}
+              />
+              {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+            </div>
 
-              <div className="mb-3">
-                <label className="form-label">Nomor HP</label>
-                <input
-                  className={`form-control ${errors.phone && "is-invalid"}`}
-                  name="phone"
-                  value={form.phone}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
-              </div>
+            <div className="mb-4">
+              <label className="form-label fw-semibold" style={{ color: "#4a6fa5" }}>
+                Nomor HP
+              </label>
+              <input
+                className={`form-control ${errors.phone && "is-invalid"}`}
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                required
+                style={{ boxShadow: errors.phone ? "0 0 6px #dc3545" : "none" }}
+              />
+              {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
+            </div>
 
-              <div className="mb-3">
-                <label className="form-label">Umur</label>
-                <input
-                  className={`form-control ${errors.age && "is-invalid"}`}
-                  name="age"
-                  value={form.age}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.age && <div className="invalid-feedback">{errors.age}</div>}
-              </div>
+            <div className="mb-4">
+              <label className="form-label fw-semibold" style={{ color: "#4a6fa5" }}>
+                Umur
+              </label>
+              <input
+                className={`form-control ${errors.age && "is-invalid"}`}
+                name="age"
+                value={form.age}
+                onChange={handleChange}
+                required
+                style={{ boxShadow: errors.age ? "0 0 6px #dc3545" : "none" }}
+              />
+              {errors.age && <div className="invalid-feedback">{errors.age}</div>}
+            </div>
 
-              <div className="mb-3">
-                <label className="form-label">Tanggal</label>
-                <input
-                  className={`form-control ${errors.date && "is-invalid"}`}
-                  name="date"
-                  type="date"
-                  min={minDate}
-                  value={form.date}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.date && <div className="invalid-feedback">{errors.date}</div>}
-              </div>
+            <div className="mb-4">
+              <label className="form-label fw-semibold" style={{ color: "#4a6fa5" }}>
+                Tanggal
+              </label>
+              <input
+                className={`form-control ${errors.date && "is-invalid"}`}
+                name="date"
+                type="date"
+                min={minDate}
+                value={form.date}
+                onChange={handleChange}
+                required
+                style={{ boxShadow: errors.date ? "0 0 6px #dc3545" : "none" }}
+              />
+              {errors.date && <div className="invalid-feedback">{errors.date}</div>}
+            </div>
 
-              <div className="mb-3">
-                <label className="form-label">Waktu</label>
-                <input
-                  className={`form-control ${errors.time && "is-invalid"}`}
-                  name="time"
-                  type="time"
-                  min="08:00"
-                  max="15:00"
-                  value={form.time}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.time && <div className="invalid-feedback">{errors.time}</div>}
-              </div>
+            <div className="mb-4">
+              <label className="form-label fw-semibold" style={{ color: "#4a6fa5" }}>
+                Waktu
+              </label>
+              <input
+                className={`form-control ${errors.time && "is-invalid"}`}
+                name="time"
+                type="time"
+                min="08:00"
+                max="15:00"
+                value={form.time}
+                onChange={handleChange}
+                required
+                style={{ boxShadow: errors.time ? "0 0 6px #dc3545" : "none" }}
+              />
+              {errors.time && <div className="invalid-feedback">{errors.time}</div>}
+            </div>
 
-              <div className="mb-3">
-                <label className="form-label">Tempat</label>
-                <select
-                  className="form-control"
-                  name="location"
-                  value={form.location}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="Cabang Depok">Cabang Depok</option>
-                </select>
-              </div>
+            <div className="mb-4">
+              <label className="form-label fw-semibold" style={{ color: "#4a6fa5" }}>
+                Tempat
+              </label>
+              <select
+                className="form-control"
+                name="location"
+                value={form.location}
+                onChange={handleChange}
+                required
+                style={{ color: "#243b55", fontWeight: "600" }}
+              >
+                <option value="Cabang Depok">Cabang Depok</option>
+              </select>
+            </div>
 
-              <button className="btn-submit mt-3 w-100" type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Memproses..." : "Buat Booking"}
-              </button>
-            </form>
-          </div>
+            <button
+              className="btn btn-primary mt-3 w-100"
+              type="submit"
+              disabled={isSubmitting}
+              style={{
+                backgroundColor: "#4a6fa5",
+                borderColor: "#3a5f8a",
+                fontWeight: "600",
+                padding: "10px",
+              }}
+            >
+              {isSubmitting ? "Memproses..." : "Buat Booking"}
+            </button>
+          </form>
         </div>
       </div>
 
@@ -237,27 +279,33 @@ export default function BookingPage() {
             className="position-fixed top-50 start-50 translate-middle bg-white text-dark p-4 rounded shadow"
             style={{ zIndex: 1050, width: "90%", maxWidth: "400px" }}
           >
-            <h5 className="mb-3">Booking Berhasil!</h5>
+            <h5 className="mb-3" style={{ color: "#243b55" }}>
+              Booking Berhasil!
+            </h5>
             <p>
               <strong>Nomor Antrian Anda: #{bookingSuccess.queueNumber}</strong>
             </p>
             <p>
               Terima kasih, <strong>{bookingSuccess.name}</strong>.<br />
               Booking Anda pada tanggal <strong>{bookingSuccess.date}</strong> pukul{" "}
-              <strong>{bookingSuccess.time}</strong> di{" "}
-              <strong>{bookingSuccess.location}</strong> telah berhasil.
+              <strong>{bookingSuccess.time}</strong> di <strong>{bookingSuccess.location}</strong> telah berhasil.
             </p>
-            <p><strong>Konsultan: Akmal Nur Wahid</strong></p>
+            <p>
+              <strong>Konsultan: Akmal Nur Wahid</strong>
+            </p>
             <button
               className="btn btn-primary w-100 mt-3"
               onClick={() => setBookingSuccess(null)}
+              style={{ backgroundColor: "#4a6fa5", borderColor: "#3a5f8a" }}
             >
               OK
             </button>
-            <p className="mt-3 text-center"><b>NOTED: Harap screenshoot sebagai bukti!</b></p>
+            <p className="mt-3 text-center">
+              <b>NOTED: Harap screenshoot sebagai bukti!</b>
+            </p>
           </div>
         </>
-      )}      
+      )}
     </>
   );
 }

@@ -49,7 +49,7 @@ const FormPage: React.FC = () => {
       }
 
       const data = await response.json();
-      
+
       if (data.rekomendasi) {
         setRekomendasi(data.rekomendasi);
         setShowCard(true);
@@ -86,11 +86,13 @@ const FormPage: React.FC = () => {
       <div className="navbar-always-scrolled">
         <Navbar />
       </div>
-    
-      <div className="position-relative min-vh-100 d-flex align-items-center justify-content-center">
 
+      <div
+        className="position-relative min-vh-100 d-flex align-items-center justify-content-center"
+        style={{ backgroundColor: "rgba(220, 220, 220, 0.5)" }} // background abu2 transparan
+      >
         <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
-          <div className="rounded p-4 shadow-lg">
+          <div className="rounded p-4 shadow-lg bg-white">
             <h2 className="mb-4 text-center">Formulir Data Pengguna</h2>
 
             <div className="info-box mb-4 p-3 rounded">
@@ -104,7 +106,9 @@ const FormPage: React.FC = () => {
             <form onSubmit={handleSubmit}>
               {/* Usia */}
               <div className="mb-3">
-                <label htmlFor="usia" className="form-label">Usia</label>
+                <label htmlFor="usia" className="form-label">
+                  Usia
+                </label>
                 <input
                   type="number"
                   className="form-control "
@@ -127,7 +131,9 @@ const FormPage: React.FC = () => {
                 <>
                   {/* Jenis Kelamin */}
                   <div className="mb-3">
-                    <label htmlFor="jenisKelamin" className="form-label">Jenis Kelamin</label>
+                    <label htmlFor="jenisKelamin" className="form-label">
+                      Jenis Kelamin
+                    </label>
                     <select
                       className="form-select "
                       id="jenisKelamin"
@@ -145,7 +151,9 @@ const FormPage: React.FC = () => {
 
                   {/* Pendapatan Bulanan */}
                   <div className="mb-3">
-                    <label htmlFor="pendapatan" className="form-label">Pendapatan Bulanan (Rp)</label>
+                    <label htmlFor="pendapatan" className="form-label">
+                      Pendapatan Bulanan (Rp)
+                    </label>
                     <input
                       type="number"
                       className="form-control "
@@ -160,7 +168,9 @@ const FormPage: React.FC = () => {
 
                   {/* Saldo Rekening */}
                   <div className="mb-3">
-                    <label htmlFor="saldo" className="form-label">Saldo Rekening (Rp)</label>
+                    <label htmlFor="saldo" className="form-label">
+                      Saldo Rekening (Rp)
+                    </label>
                     <input
                       type="number"
                       className="form-control "
@@ -175,7 +185,9 @@ const FormPage: React.FC = () => {
 
                   {/* Riwayat Pinjaman */}
                   <div className="mb-3">
-                    <label htmlFor="riwayatPinjaman" className="form-label">Riwayat Pinjaman</label>
+                    <label htmlFor="riwayatPinjaman" className="form-label">
+                      Riwayat Pinjaman
+                    </label>
                     <select
                       className="form-select "
                       id="riwayatPinjaman"
@@ -192,7 +204,12 @@ const FormPage: React.FC = () => {
 
                   {/* Jenis Transaksi Favorit */}
                   <div className="mb-4">
-                    <label htmlFor="jenisTransaksiFavorit" className="form-label">Jenis Transaksi Favorit</label>
+                    <label
+                      htmlFor="jenisTransaksiFavorit"
+                      className="form-label"
+                    >
+                      Jenis Transaksi Favorit
+                    </label>
                     <select
                       className="form-select "
                       id="jenisTransaksiFavorit"
@@ -213,7 +230,12 @@ const FormPage: React.FC = () => {
                   {/* Frekuensi Transaksi */}
                   {formData.jenisTransaksiFavorit !== "" && (
                     <div className="mb-3">
-                      <label htmlFor="frekuensiTransaksi" className="form-label">Rata-rata Jumlah Transaksi per Bulan</label>
+                      <label
+                        htmlFor="frekuensiTransaksi"
+                        className="form-label"
+                      >
+                        Rata-rata Jumlah Transaksi per Bulan
+                      </label>
                       <input
                         type="number"
                         className="form-control "
@@ -227,14 +249,18 @@ const FormPage: React.FC = () => {
                     </div>
                   )}
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="btn-submit w-100 py-2"
                     disabled={isLoading}
                   >
                     {isLoading ? (
                       <>
-                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        <span
+                          className="spinner-border spinner-border-sm me-2"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
                         Memproses...
                       </>
                     ) : (
@@ -248,16 +274,10 @@ const FormPage: React.FC = () => {
         </div>
 
         {/* Rekomendasi Card */}
+        {showCard && <div className="modal-backdrop show"></div>}
+
         {showCard && (
-          <div className="modal-backdrop show"></div>
-        )}
-        
-        {showCard && (
-          <div
-            className="modal d-block"
-            tabIndex={-1}
-            style={{ zIndex: 1050 }}
-          >
+          <div className="modal d-block" tabIndex={-1} style={{ zIndex: 1050 }}>
             <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
@@ -271,10 +291,7 @@ const FormPage: React.FC = () => {
                   )}
                 </div>
                 <div className="modal-footer">
-                  <button 
-                    className="btn btn-success"
-                    onClick={handleOkClick}
-                  >
+                  <button className="btn btn-success" onClick={handleOkClick}>
                     OK
                   </button>
                 </div>
