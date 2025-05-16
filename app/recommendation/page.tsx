@@ -294,7 +294,8 @@ const FormPage: React.FC = () => {
               <p className="fw-bold mb-2 ">{rekomendasi}</p>
               
               {/* Deskripsi produk berdasarkan rekomendasi */}
-              {rekomendasi && (
+              {rekomendasi && ( 
+                
                 <div className="product-description">
                   {rekomendasi.includes("Tabungan Reguler") && (
                     <p>Melihat preferensi Anda, Tabungan Reguler adalah pilihan yang paling sesuai. Anda lebih mengutamakan penyimpanan dana yang sederhana tanpa orientasi investasi. Dengan saldo yang lebih kecil dan frekuensi transaksi rendah, produk ini memberikan kenyamanan bagi Anda yang hanya ingin memiliki tabungan untuk kebutuhan dasar tanpa banyak risiko.</p>
@@ -312,7 +313,7 @@ const FormPage: React.FC = () => {
                     <p>Berdasarkan preferensi yang Anda berikan, saya melihat bahwa Deposito adalah pilihan yang paling tepat untuk Anda. Profil keuangan Anda yang kuat, dengan pendapatan stabil dan saldo rekening besar, mencerminkan karakteristik nasabah Deposito. Anda juga memiliki kecenderungan untuk berinvestasi dan mengelola keuangan dengan bijak, terlihat dari riwayat pinjaman dan frekuensi transaksi yang tinggi. Jika Anda mencari tempat aman untuk mengembangkan aset jangka panjang, Deposito akan menjadi solusi terbaik..</p>
                   )}
                   
-                  {rekomendasi.includes("Reksadana") && (
+                  {rekomendasi.includes("Reksa Dana") && (
                     <p>Melihat preferensi Anda, Reksa Dana adalah pilihan yang paling tepat. Pendapatan Anda stabil, dan saldo rekening Anda tergolong tinggi. Anda memiliki minat yang kuat dalam investasi, dan Reksa Dana memberikan kesempatan bagi Anda untuk mengembangkan aset secara bertahap. Dengan frekuensi transaksi yang sedang, produk ini cocok bagi Anda yang mengutamakan stabilitas dan pertumbuhan.</p>
                   )}
                 </div>

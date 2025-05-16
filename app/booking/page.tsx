@@ -6,7 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 import Navbar from "../component/navbar"; // Pastikan path ini benar
 import "../globals.css"; // Pastikan path ini benar
 import html2canvas from "html2canvas";
-
+  
 export default function BookingPage() {
   const [form, setForm] = useState({
     name: "",
