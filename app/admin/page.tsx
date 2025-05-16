@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 interface Booking {
   id: string;
   name: string;
-  email: string;
   date: string;
   time: string;
   created_at: string;
@@ -26,6 +25,11 @@ export default function AdminDashboard() {
 
       const bookingsData = json.bookings || json.data || json;
       if (!Array.isArray(bookingsData)) throw new Error("Format data tidak valid");
+
+      // Urutkan berdasarkan created_at ascending (lama ke baru)
+      bookingsData.sort(
+        (a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+      );
 
       setBookings(bookingsData);
     } catch (err: unknown) {
@@ -90,8 +94,8 @@ export default function AdminDashboard() {
         >
           <thead style={{ backgroundColor: "#f4f4f4" }}>
             <tr>
+              <th>No. Antrian</th>
               <th>Nama</th>
-              <th>Email</th>
               <th>Tanggal</th>
               <th>Waktu</th>
               <th>Dibuat Pada</th>
@@ -99,10 +103,10 @@ export default function AdminDashboard() {
             </tr>
           </thead>
           <tbody>
-            {bookings.map((b) => (
+            {bookings.map((b, index) => (
               <tr key={b.id}>
+                <td>{String(index + 1).padStart(3, "0")}</td>
                 <td>{b.name}</td>
-                <td>{b.email}</td>
                 <td>{new Date(b.date).toLocaleDateString()}</td>
                 <td>{b.time}</td>
                 <td>{new Date(b.created_at).toLocaleString()}</td>

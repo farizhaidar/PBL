@@ -15,14 +15,14 @@ export default function BookingPage() {
     time: "",
     location: "Cabang Depok",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [minDate, setMinDate] = useState("");
-  // const [minTime, setMinTime] = useState("08:00");
+  const [bookingSuccess, setBookingSuccess] = useState<null | (typeof form & { queueNumber: number })>(null);
 
   useEffect(() => {
-    const now = new Date();
-    const today = now.toISOString().split("T")[0];
+    const today = new Date().toISOString().split("T")[0];
     setMinDate(today);
   }, []);
 
@@ -51,7 +51,7 @@ export default function BookingPage() {
       newErrors.phone = "Format nomor HP tidak valid";
     }
     if (!form.age) {
-      newErrors.age = "U  r harus diisi";
+      newErrors.age = "Umur harus diisi";
     } else if (isNaN(Number(form.age)) || Number(form.age) <= 0) {
       newErrors.age = "Umur harus berupa angka positif";
     }
@@ -85,7 +85,11 @@ export default function BookingPage() {
       const availabilityRes = await fetch("/api/booking/check-availability", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ date: form.date, time: form.time, location: form.location }),
+        body: JSON.stringify({
+          date: form.date,
+          time: form.time,
+          location: form.location,
+        }),
       });
 
       if (!availabilityRes.ok) throw new Error("Gagal memeriksa ketersediaan");
@@ -105,7 +109,7 @@ export default function BookingPage() {
       const result = await bookingRes.json();
       if (!bookingRes.ok) throw new Error(result.error || "Gagal melakukan booking");
 
-      alert("Booking berhasil!");
+      setBookingSuccess({ ...form, queueNumber: result.queueNumber });
       setForm({
         name: "",
         phone: "",
@@ -123,12 +127,11 @@ export default function BookingPage() {
 
   return (
     <>
-       <div className="navbar-always-scrolled">
-              <Navbar />
-            </div>
+      <div className="navbar-always-scrolled">
+        <Navbar />
+      </div>
 
       <div className="mt-5 position-relative min-vh-100 d-flex align-items-center justify-content-center">
-
         <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
           <div className="rounded p-4 shadow-lg">
             <h2 className="mb-4 text-center">Booking Konsultasi</h2>
@@ -212,17 +215,49 @@ export default function BookingPage() {
                 </select>
               </div>
 
-              <button
-                className="btn-submit mt-3 w-100"
-                type="submit"
-                disabled={isSubmitting}
-              >
+              <button className="btn-submit mt-3 w-100" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? "Memproses..." : "Buat Booking"}
               </button>
             </form>
           </div>
         </div>
       </div>
+
+      {/* Modal Pop-up */}
+      {bookingSuccess && (
+        <>
+          {/* Overlay */}
+          <div
+            className="position-fixed top-0 start-0 w-100 h-100"
+            style={{ backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1040 }}
+          />
+
+          {/* Custom Card Pop-up */}
+          <div
+            className="position-fixed top-50 start-50 translate-middle bg-white text-dark p-4 rounded shadow"
+            style={{ zIndex: 1050, width: "90%", maxWidth: "400px" }}
+          >
+            <h5 className="mb-3">Booking Berhasil!</h5>
+            <p>
+              <strong>Nomor Antrian Anda: #{bookingSuccess.queueNumber}</strong>
+            </p>
+            <p>
+              Terima kasih, <strong>{bookingSuccess.name}</strong>.<br />
+              Booking Anda pada tanggal <strong>{bookingSuccess.date}</strong> pukul{" "}
+              <strong>{bookingSuccess.time}</strong> di{" "}
+              <strong>{bookingSuccess.location}</strong> telah berhasil.
+            </p>
+            <p><strong>Konsultan: Akmal Nur Wahid</strong></p>
+            <button
+              className="btn btn-primary w-100 mt-3"
+              onClick={() => setBookingSuccess(null)}
+            >
+              OK
+            </button>
+            <p className="mt-3 text-center"><b>NOTED: Harap screenshoot sebagai bukti!</b></p>
+          </div>
+        </>
+      )}      
     </>
   );
 }
