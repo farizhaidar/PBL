@@ -132,12 +132,13 @@ export default function BookingPage() {
         location: "Cabang Depok",
       });
       setErrors({}); // Bersihkan error juga
-    } catch (error: any) {
-      // Menampilkan pesan error yang lebih informatif kepada pengguna
+    } catch (error: unknown) {
+    if (error instanceof Error) {
       alert(`Terjadi kesalahan: ${error.message || "Tidak dapat terhubung ke server."}`);
-    } finally {
-      setIsSubmitting(false);
+    } else {
+      alert("Terjadi kesalahan tidak terduga.");
     }
+  }
   };
 
   const downloadConfirmation = async () => {
