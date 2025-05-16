@@ -268,7 +268,7 @@ body {
   justify-content: flex-start;
   overflow-y: auto;
   flex-grow: 1;
-  padding: 10px;
+  padding: 10px;  
   margin-top: 70px;   
   scrollbar-width: thin;
   scrollbar-color: #6c757d transparent;
@@ -473,13 +473,26 @@ body {
 }
 
 .btn-submit{
-  background-color: #000000;
+  background-color: #4a6fa5;
   color: white;
   height: 45px;
   border-radius: 10px;
+  border: none;
+}
+
+.btn-ok {
+  background-color: #4a6fa5;
+  width: 50px;
+  height: 35px;
+  color: white;
+  border-radius: 5px;
+  border: none;
 }
 
 .footer{
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 1) !important;
 }
 
+p{
+  text-align: justify;
+}

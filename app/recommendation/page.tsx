@@ -89,9 +89,9 @@ const FormPage: React.FC = () => {
 
       <div
         className="position-relative min-vh-100 d-flex align-items-center justify-content-center"
-        style={{ backgroundColor: "rgba(220, 220, 220, 0.5)" }} // background abu2 transparan
+        style={{ backgroundColor: "#d9e2ec" }} // background abu2 transparan
       >
-        <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1 }}>
+        <div className="container p-4" style={{ maxWidth: "700px", zIndex: 1, marginTop: "100px"  }}>
           <div className="rounded p-4 shadow-lg bg-white">
             <h2 className="mb-4 text-center">Formulir Data Pengguna</h2>
 
@@ -145,7 +145,6 @@ const FormPage: React.FC = () => {
                       <option value="">Pilih</option>
                       <option value="Pria">Pria</option>
                       <option value="Wanita">Wanita</option>
-                      <option value="Lainnya">Lainnya</option>
                     </select>
                   </div>
 
@@ -277,28 +276,62 @@ const FormPage: React.FC = () => {
         {showCard && <div className="modal-backdrop show"></div>}
 
         {showCard && (
-          <div className="modal d-block" tabIndex={-1} style={{ zIndex: 1050 }}>
-            <div className="modal-dialog modal-dialog-centered">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title">💡 Rekomendasi Produk Bank</h5>
-                </div>
-                <div className="modal-body">
-                  {error ? (
-                    <div className="alert alert-danger">{error}</div>
-                  ) : (
-                    <p>{rekomendasi}</p>
+  <div className="modal-backdrop show"></div>
+)}
+
+{showCard && (
+  <div className="modal d-block" tabIndex={-1} style={{ zIndex: 1050 }}>
+    <div className="modal-dialog modal-dialog-centered" style={{ maxWidth: "700px" }}>
+      <div className="modal-content p-3"> 
+        <div className="modal-header">
+          <h5 className="modal-title">💡 Rekomendasi Produk Bank</h5>
+        </div>
+        <div className="modal-body">
+          {error ? (
+            <div className="alert alert-danger">{error}</div>
+          ) : (
+            <>  
+              <p className="fw-bold mb-2 ">{rekomendasi}</p>
+              
+              {/* Deskripsi produk berdasarkan rekomendasi */}
+              {rekomendasi && (
+                <div className="product-description">
+                  {rekomendasi.includes("Tabungan Reguler") && (
+                    <p>Melihat preferensi Anda, Tabungan Reguler adalah pilihan yang paling sesuai. Anda lebih mengutamakan penyimpanan dana yang sederhana tanpa orientasi investasi. Dengan saldo yang lebih kecil dan frekuensi transaksi rendah, produk ini memberikan kenyamanan bagi Anda yang hanya ingin memiliki tabungan untuk kebutuhan dasar tanpa banyak risiko.</p>
+                  )}
+                  
+                  {rekomendasi.includes("Kartu Kredit") && (
+                    <p>Dari preferensi Anda, saya melihat bahwa Kartu Kredit adalah pilihan yang paling sesuai. Anda memiliki pendapatan stabil dan saldo rekening yang cukup besar, serta aktif bertransaksi. Kartu Kredit cocok bagi Anda yang terbiasa dengan kemudahan pembayaran dan fleksibilitas finansial. Ditambah lagi, minat investasi Anda menunjukkan bahwa Anda siap mengelola keuangan dengan lebih dinamis.</p>
+                  )}
+                  
+                  {rekomendasi.includes("Tabungan Digital") && (
+                    <p>Berdasarkan preferensi Anda, Tabungan Digital akan sangat cocok untuk Anda. Anda lebih mengutamakan kemudahan transaksi dan fleksibilitas, tanpa terbebani oleh komitmen investasi. Dengan saldo yang moderat dan frekuensi transaksi yang sedang, produk ini ideal untuk kebutuhan sehari-hari tanpa harus memikirkan pengelolaan keuangan jangka panjang.</p>
+                  )}
+                  
+                  {rekomendasi.includes("Deposito") && (
+                    <p>Berdasarkan preferensi yang Anda berikan, saya melihat bahwa Deposito adalah pilihan yang paling tepat untuk Anda. Profil keuangan Anda yang kuat, dengan pendapatan stabil dan saldo rekening besar, mencerminkan karakteristik nasabah Deposito. Anda juga memiliki kecenderungan untuk berinvestasi dan mengelola keuangan dengan bijak, terlihat dari riwayat pinjaman dan frekuensi transaksi yang tinggi. Jika Anda mencari tempat aman untuk mengembangkan aset jangka panjang, Deposito akan menjadi solusi terbaik..</p>
+                  )}
+                  
+                  {rekomendasi.includes("Reksadana") && (
+                    <p>Melihat preferensi Anda, Reksa Dana adalah pilihan yang paling tepat. Pendapatan Anda stabil, dan saldo rekening Anda tergolong tinggi. Anda memiliki minat yang kuat dalam investasi, dan Reksa Dana memberikan kesempatan bagi Anda untuk mengembangkan aset secara bertahap. Dengan frekuensi transaksi yang sedang, produk ini cocok bagi Anda yang mengutamakan stabilitas dan pertumbuhan.</p>
                   )}
                 </div>
-                <div className="modal-footer">
-                  <button className="btn btn-success" onClick={handleOkClick}>
-                    OK
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+              )}
+            </>
+          )}
+        </div>
+        <div className="modal-footer">
+          <button 
+            className="btn-ok"   
+            onClick={handleOkClick}
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
       </div>
     </>
   );
