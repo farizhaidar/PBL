@@ -8,7 +8,14 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 export default function ChatPage() {
   const [inputText, setInputText] = useState("");
   const [messages, setMessages] = useState<{ text: string, isUser: boolean }[]>([
-    { text: "Halo! Saya adalah asisten virtual. Silakan tanyakan apa saja tentang layanan kami seputar pinjaman dan perbankan. 😊", isUser: false }
+    { text: `
+      <p>Halo! Saya adalah asisten virtual. Silakan tanyakan apa saja tentang layanan kami seputar pinjaman dan perbankan :blush:. Berikut adalah pertanyaan yang dapat membantu Anda:</p>
+      <ul>
+        <li>Apa itu <strong>[Nama pinjaman]</strong>?</li>
+        <li>Apa saja syarat dan dokumen yang diperlukan untuk pinjaman <strong>[Nama pinjaman]</strong>?</li>
+        <li>Apakah pengajuan peminjaman <strong>[Nama pinjaman]</strong> saya akan diterima dengan data diri saya berikut ini <em>[data diri anda (umur, pekerjaan, penghasilan, dll)]</em>?</li>
+      </ul>
+    `, isUser: false }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement | null>(null);
