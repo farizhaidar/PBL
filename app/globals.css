@@ -1,3 +1,4 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 body {
   margin-top: 50px;
 }
@@ -63,7 +64,7 @@ body {
   z-index: 1; 
 }
 
-.btn-start:hover {
+/* .btn-start:hover {
   background-color: #0d45d8 !important;
   border-color: #0d45d8 !important;
   transform: translateY(-2px);
@@ -87,10 +88,10 @@ body {
   right: -2px;
   bottom: -2px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 22px; /* Sedikit lebih besar dari border-radius button */
+  border-radius: 22px;
   z-index: -1;
   pointer-events: none;
-}
+} */
 /* Navbar Base Styles */
 .navbar {
   min-height: 80px;
