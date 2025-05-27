@@ -1,294 +1,281 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { supabase } from '../../lib/supabaseClient';
 
-interface ReviewProgressBarProps {
-  orientation?: 'vertical' | 'horizontal';
+type Classification = 'positif' | 'netral' | 'negatif';
+
+interface Review {
+  id: number;
+  review_text: string;
+  classification: Classification;
+  created_at: string;
 }
 
-export default function ReviewProgressBar({ orientation = 'vertical' }: ReviewProgressBarProps) {
-  const [positivePercent, setPositivePercent] = useState(0);
-  const [negativePercent, setNegativePercent] = useState(0);
+export default function ReviewProgressBar() {
+  const [counts, setCounts] = useState<Record<Classification, number>>({
+    positif: 0,
+    netral: 0,
+    negatif: 0,
+  });
+
+  const [percentages, setPercentages] = useState({
+    positif: 0,
+    negatif: 0,
+  });
+
   const [review, setReview] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [submitMessage, setSubmitMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const [predictionLabel, setPredictionLabel] = useState('');
+
+  const updatePercentages = (counts: Record<Classification, number>) => {
+    const total = counts.positif + counts.negatif;
+    if (total === 0) {
+      setPercentages({ positif: 0, negatif: 0 });
+      return;
+    }
+    setPercentages({
+      positif: (counts.positif / total) * 100,
+      negatif: (counts.negatif / total) * 100,
+    });
+  };
+
+  const fetchReviewCounts = async () => {
+    try {
+      const { data, error } = await supabase.from('reviews').select('classification');
+      if (error) throw error;
+
+      if (data) {
+        const newCounts = data.reduce(
+          (acc, cur) => {
+            const cls = (cur.classification as Classification).toLowerCase() as Classification;
+            if (cls in acc) {
+              acc[cls]++;
+            }
+            return acc;
+          },
+          { positif: 0, netral: 0, negatif: 0 }
+        );
+        setCounts(newCounts);
+        updatePercentages(newCounts);
+      }
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+    }
+  };
 
   useEffect(() => {
-    fetch('/api/review-stats')
-      .then((res) => res.json())
-      .then((data) => {
-        setPositivePercent(data.positivePercentage);
-        setNegativePercent(data.negativePercentage);
-      })
-      .catch((err) => console.error('Error fetching review stats:', err));
+    fetchReviewCounts();
   }, []);
 
   const handleSubmit = async () => {
+    if (!review.trim()) return;
     setIsSubmitting(true);
     setSubmitMessage('');
-    setPredictionLabel('');
+    setError(null);
 
     try {
-      const res = await fetch('http://localhost:8000/sentimen/predict', {
+      const response = await fetch('/api/proxy-sentiment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: review }),
+        body: JSON.stringify({ sentence: review }),
       });
 
-      const data = await res.json();
-      if (data && data.label) {
-        setPredictionLabel(data.label);
-        setSubmitMessage('Ulasan berhasil diklasifikasi!');
-      } else {
-        setSubmitMessage('Gagal memproses ulasan.');
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+      const data = await response.json();
+      if (!data.classification) throw new Error('Response klasifikasi tidak valid');
+
+      const classification = (data.classification as string).toLowerCase() as Classification;
+
+      const { error: supabaseError } = await supabase.from('reviews').insert({
+        review_text: review,
+        classification,
+      });
+
+      if (supabaseError) throw supabaseError;
+
+      const updatedCounts = { ...counts };
+      if (classification in updatedCounts) {
+        updatedCounts[classification]++;
       }
+      setCounts(updatedCounts);
+      updatePercentages(updatedCounts);
 
       setReview('');
-      // Modal tidak langsung ditutup supaya hasil klasifikasi terlihat
-    } catch (err) {
-      console.error(err);
-      setSubmitMessage('Terjadi kesalahan saat mengirim ulasan.');
+      setShowModal(false);
+    } catch (error) {
+      console.error('Error:', error);
+      setError('Terjadi kesalahan saat memproses ulasan. Silakan coba lagi.');
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
   };
 
-  const renderModal = () => {
-    if (!showModal) return null;
+  return (
+    <div style={{ maxWidth: 600, margin: 'auto', paddingRight: '5rem' }}>
+      <hr className="mt-4 mb-3" style={{ borderTop: '2px solid white', width: '140%' }} />
 
-    return (
-      <div
-        className="modal-backdrop"
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          backgroundColor: 'rgba(0,0,0,0.6)',
-          backdropFilter: 'blur(5px)',
-          zIndex: 1050,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '1rem',
-        }}
-        onClick={() => setShowModal(false)}
-      >
+      <div style={{ marginBottom: '1rem' }}>
         <div
-          className="modal-content"
           style={{
-            backgroundColor: 'white',
-            padding: '25px 36px',
-            borderRadius: '12px',
-            width: '100%',
-            height: '100%',
-            maxHeight: '380px',
-            maxWidth: '620px',
-            color: 'black',
-            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.7)',
             display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '0.5rem',
           }}
-          onClick={(e) => e.stopPropagation()}
         >
-          <h5 style={{ marginTop: '1rem', fontWeight: '700' }}>Tulis Ulasan Anda</h5>
-          <textarea
-            className="form-control"
-            rows={6}
-            placeholder="Tulis ulasan..."
-            value={review}
-            onChange={(e) => setReview(e.target.value)}
+          <div style={{ display: 'flex', alignItems: 'center', fontWeight: '600', color: 'green' }}>
+            <i className="fas fa-smile" style={{ marginRight: '0.5rem', fontSize: '1.2rem' }}></i>
+            <span>{percentages.positif.toFixed(0)}%</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', fontWeight: '600', color: 'red' }}>
+            <span style={{ marginRight: '0.5rem' }}>{percentages.negatif.toFixed(0)}%</span>
+            <i className="fas fa-frown" style={{ fontSize: '1.2rem' }}></i>
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            height: '12px',
+            backgroundColor: 'transparent',
+            borderRadius: '6px',
+            overflow: 'hidden',
+          }}
+        >
+          <div
+            style={{
+              width: `${percentages.positif}%`,
+              backgroundColor: 'green',
+            }}
+          ></div>
+          <div
+            style={{
+              width: `${percentages.negatif}%`,
+              backgroundColor: 'red',
+            }}
+          ></div>
+        </div>
+      </div>
+
+      {/* MODIFIED BUTTON */}
+      <button
+        onClick={() => setShowModal(true)}
+        style={{
+          padding: '6px 14px',
+          borderRadius: '12px',
+          border: '2px solid #28a745',
+          backgroundColor: '#28a745',
+          color: 'white',
+          fontWeight: '600',
+          fontSize: '0.9rem',
+          cursor: 'pointer',
+          transition: 'all 0.3s ease',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = 'transparent';
+          e.currentTarget.style.color = '#28a745';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = '#28a745';
+          e.currentTarget.style.color = 'white';
+        }}
+      >
+        Berikan Ulasan
+      </button>
+
+      {showModal && (
+        <div
+          onClick={() => setShowModal(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0,0,0,0.6)',
+            backdropFilter: 'blur(5px)',
+            zIndex: 1050,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '1rem',
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
             style={{
               backgroundColor: 'white',
+              padding: '25px 36px',
+              borderRadius: '12px',
+              width: '100%',
+              height: '100%',
+              maxHeight: '380px',
+              maxWidth: '620px',
               color: 'black',
-              border: '1.5px solid #18b2ea',
-              borderRadius: '8px',
-              padding: '10px',
-              fontSize: '1rem',
-              resize: 'vertical',
+              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.7)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1rem',
             }}
-          />
-          {submitMessage && (
-            <p style={{ fontWeight: 'bold', color: 'green' }}>{submitMessage}</p>
-          )}
-          {predictionLabel && (
-            <p style={{ fontWeight: 'bold', color: '#18b2ea' }}>
-              Hasil klasifikasi: {predictionLabel}
-            </p>
-          )}
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
-            {!predictionLabel && (
-              <>
-                <button
-                  onClick={() => setShowModal(false)}
-                  style={{
-                    padding: '8px 16px',
-                    borderRadius: '8px',
-                    border: '2px solid #bbb',
-                    backgroundColor: 'transparent',
-                    color: '#555',
-                    fontWeight: '600',
-                    cursor: 'pointer',
-                  }}
-                >
-                  Batal
-                </button>
-                <button
-                  onClick={handleSubmit}
-                  disabled={isSubmitting}
-                  style={{
-                    padding: '8px 16px',
-                    borderRadius: '8px',
-                    border: 'none',
-                    backgroundColor: isSubmitting ? '#0d85c4' : '#18b2ea',
-                    color: 'white',
-                    fontWeight: '700',
-                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                  }}
-                >
-                  {isSubmitting ? 'Mengirim...' : 'Kirim'}
-                </button>
-              </>
-            )}
-            {predictionLabel && (
+          >
+            <h3 style={{ marginTop: '1rem', fontWeight: '700' }}>Tulis Ulasan Anda</h3>
+            <textarea
+              rows={6}
+              value={review}
+              onChange={(e) => setReview(e.target.value)}
+              disabled={isSubmitting}
+              style={{
+                backgroundColor: 'white',
+                color: 'black',
+                border: '1.5px solid #18b2ea',
+                borderRadius: '8px',
+                padding: '10px',
+                fontSize: '1rem',
+                resize: 'vertical',
+                width: '100%',
+              }}
+              placeholder="Masukkan ulasan Anda..."
+            />
+            {error && <p style={{ color: 'red', fontWeight: 'bold' }}>{error}</p>}
+            {submitMessage && <p style={{ fontWeight: 'bold', color: 'green' }}>{submitMessage}</p>}
+            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
               <button
-                onClick={() => {
-                  setShowModal(false);
-                  setPredictionLabel('');
-                  setSubmitMessage('');
+                onClick={() => setShowModal(false)}
+                disabled={isSubmitting}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  border: '2px solid #bbb',
+                  backgroundColor: 'transparent',
+                  color: '#555',
+                  fontWeight: '600',
+                  cursor: 'pointer',
                 }}
+              >
+                Batal
+              </button>
+              <button
+                onClick={handleSubmit}
+                disabled={isSubmitting || !review.trim()}
                 style={{
                   padding: '8px 16px',
                   borderRadius: '8px',
                   border: 'none',
-                  backgroundColor: '#18b2ea',
+                  backgroundColor: isSubmitting ? '#0d85c4' : '#18b2ea',
                   color: 'white',
                   fontWeight: '700',
-                  cursor: 'pointer',
+                  cursor: isSubmitting || !review.trim() ? 'not-allowed' : 'pointer',
                 }}
               >
-                Tutup
+                {isSubmitting ? 'Mengirim...' : 'Kirim'}
               </button>
-            )}
+            </div>
           </div>
         </div>
-      </div>
-    );
-  };
-
-  const writeReviewButtonStyle = {
-    padding: '10px 22px',
-    borderRadius: '16px',
-    border: '2px solid #18b2ea',
-    backgroundColor: '#18b2ea',
-    color: 'white',
-    fontWeight: '700',
-    cursor: 'pointer',
-  };
-
-  const writeReviewButtonHover = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const el = e.currentTarget;
-    el.style.backgroundColor = '#18b2ea';
-    el.style.color = 'white';
-  };
-
-  const writeReviewButtonLeave = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const el = e.currentTarget;
-    el.style.backgroundColor = 'transparent';
-    el.style.color = '#18b2ea';
-  };
-
-  // Versi Horizontal
-  if (orientation === 'horizontal') {
-    return (
-      <div style={{ width: '100%', maxWidth: '300px' }}>
-        <hr className="mt-4 mb-3" style={{ borderTop: '2px solid white', width: '180%' }} />
-
-        <div className="d-flex justify-content-between align-items-center mb-1">
-          <div className="d-flex align-items-center fw-semibold fs-6" style={{ color: 'green' }}>
-            <i className="fas fa-smile me-2" style={{ fontSize: '1.2rem', color: 'green' }}></i>
-            <span>{positivePercent.toFixed(0)}%</span>
-          </div>
-          <div className="d-flex align-items-center text-danger fw-semibold fs-6">
-            <span className="me-2">{negativePercent.toFixed(0)}%</span>
-            <i className="fas fa-frown" style={{ fontSize: '1.2rem', color: 'red' }}></i>
-          </div>
-        </div>
-
-        <div className="progress mb-4" style={{ height: '12px', backgroundColor: 'transparent' }}>
-          <div className="progress-bar" role="progressbar" style={{ width: `${positivePercent}%`, backgroundColor: 'green' }}></div>
-          <div className="progress-bar" role="progressbar" style={{ width: `${negativePercent}%`, backgroundColor: 'red' }}></div>
-        </div>
-
-        <button style={writeReviewButtonStyle} onClick={() => setShowModal(true)}>
-          Berikan Ulasan
-        </button>
-
-        {renderModal()}
-        {submitMessage && (
-          <p className="mt-2 small" style={{ color: 'white' }}>
-            {submitMessage}
-          </p>
-        )}
-        {predictionLabel && (
-          <p className="mt-1 small" style={{ color: 'white', fontWeight: 'bold' }}>
-            Hasil klasifikasi: {predictionLabel}
-          </p>
-        )}
-      </div>
-    );
-  }
-
-  // Versi Vertikal
-  return (
-    <div className="d-flex" style={{ width: '90px', height: '200px', position: 'relative' }}>
-      <div className="d-flex flex-column align-items-center me-2" style={{ minWidth: '30px', justifyContent: 'space-between', height: '100%' }}>
-        <div className="d-flex align-items-center fw-semibold fs-6 text-white" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
-          <span>{negativePercent.toFixed(0)}%</span>
-          <i className="fas fa-frown" style={{ fontSize: '1rem' }}></i>
-        </div>
-        <div className="d-flex align-items-center fw-semibold fs-6" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', color: '#18b2ea' }}>
-          <i className="fas fa-smile" style={{ fontSize: '1rem' }}></i>
-          <span>{positivePercent.toFixed(0)}%</span>
-        </div>
-      </div>
-
-      <div className="progress" style={{ width: '14px', height: '100%', display: 'flex', flexDirection: 'column-reverse' }}>
-        <div className="progress-bar" role="progressbar" style={{ height: `${positivePercent}%`, backgroundColor: '#18b2ea' }}></div>
-        <div className="progress-bar" role="progressbar" style={{ height: `${negativePercent}%`, backgroundColor: '#ffffff' }}></div>
-      </div>
-
-      <button
-        style={{
-          ...writeReviewButtonStyle,
-          position: 'absolute',
-          bottom: '-40px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          padding: '6px 14px',
-          fontSize: '0.9rem',
-        }}
-        onClick={() => setShowModal(true)}
-        onMouseEnter={writeReviewButtonHover}
-        onMouseLeave={writeReviewButtonLeave}
-      >
-        Tulis Ulasan
-      </button>
-
-      {renderModal()}
-      {submitMessage && (
-        <p className="mt-2 small" style={{ position: 'absolute', bottom: '-60px', left: '50%', transform: 'translateX(-50%)', color: 'white' }}>
-          {submitMessage}
-        </p>
-      )}
-      {predictionLabel && (
-        <p className="mt-1 small" style={{ position: 'absolute', bottom: '-80px', left: '50%', transform: 'translateX(-50%)', color: 'white', fontWeight: 'bold' }}>
-          Hasil klasifikasi: {predictionLabel}
-        </p>
       )}
     </div>
   );
