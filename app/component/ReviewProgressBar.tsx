@@ -5,13 +5,6 @@ import { supabase } from '../../lib/supabaseClient';
 
 type Classification = 'positif' | 'netral' | 'negatif';
 
-interface Review {
-  id: number;
-  review_text: string;
-  classification: Classification;
-  created_at: string;
-}
-
 export default function ReviewProgressBar() {
   const [counts, setCounts] = useState<Record<Classification, number>>({
     positif: 0,
@@ -30,43 +23,43 @@ export default function ReviewProgressBar() {
   const [submitMessage, setSubmitMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
 
-  const updatePercentages = (counts: Record<Classification, number>) => {
-    const total = counts.positif + counts.negatif;
-    if (total === 0) {
-      setPercentages({ positif: 0, negatif: 0 });
-      return;
-    }
-    setPercentages({
-      positif: (counts.positif / total) * 100,
-      negatif: (counts.negatif / total) * 100,
-    });
-  };
-
-  const fetchReviewCounts = async () => {
-    try {
-      const { data, error } = await supabase.from('reviews').select('classification');
-      if (error) throw error;
-
-      if (data) {
-        const newCounts = data.reduce(
-          (acc, cur) => {
-            const cls = (cur.classification as Classification).toLowerCase() as Classification;
-            if (cls in acc) {
-              acc[cls]++;
-            }
-            return acc;
-          },
-          { positif: 0, netral: 0, negatif: 0 }
-        );
-        setCounts(newCounts);
-        updatePercentages(newCounts);
-      }
-    } catch (error) {
-      console.error('Error fetching reviews:', error);
-    }
-  };
-
   useEffect(() => {
+    const fetchReviewCounts = async () => {
+      try {
+        const { data, error } = await supabase.from('reviews').select('classification');
+        if (error) throw error;
+
+        if (data) {
+          const newCounts = data.reduce(
+            (acc, cur) => {
+              const cls = (cur.classification as string).toLowerCase() as Classification;
+              if (cls in acc) {
+                acc[cls]++;
+              }
+              return acc;
+            },
+            { positif: 0, netral: 0, negatif: 0 }
+          );
+          setCounts(newCounts);
+          updatePercentages(newCounts);
+        }
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+
+    const updatePercentages = (counts: Record<Classification, number>) => {
+      const total = counts.positif + counts.negatif;
+      if (total === 0) {
+        setPercentages({ positif: 0, negatif: 0 });
+        return;
+      }
+      setPercentages({
+        positif: (counts.positif / total) * 100,
+        negatif: (counts.negatif / total) * 100,
+      });
+    };
+
     fetchReviewCounts();
   }, []);
 
@@ -102,7 +95,13 @@ export default function ReviewProgressBar() {
         updatedCounts[classification]++;
       }
       setCounts(updatedCounts);
-      updatePercentages(updatedCounts);
+
+      // Hitung ulang persentase
+      const total = updatedCounts.positif + updatedCounts.negatif;
+      setPercentages({
+        positif: total === 0 ? 0 : (updatedCounts.positif / total) * 100,
+        negatif: total === 0 ? 0 : (updatedCounts.negatif / total) * 100,
+      });
 
       setReview('');
       setShowModal(false);
@@ -161,7 +160,6 @@ export default function ReviewProgressBar() {
         </div>
       </div>
 
-      {/* MODIFIED BUTTON */}
       <button
         onClick={() => setShowModal(true)}
         style={{
