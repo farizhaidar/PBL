@@ -52,7 +52,7 @@ export default function Home() {
 
                 {/* Pindahkan progress bar di sini, tanpa mengubah styling lain */}
                 <div className="mt-4" style={{ maxWidth: '400px' }}>
-                  <ReviewProgressBar orientation="horizontal" />
+                  <ReviewProgressBar/>
                 </div>
               </div>
 

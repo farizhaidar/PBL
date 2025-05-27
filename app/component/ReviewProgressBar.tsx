@@ -5,7 +5,11 @@ import { supabase } from '../../lib/supabaseClient';
 
 type Classification = 'positif' | 'netral' | 'negatif';
 
-export default function ReviewProgressBar() {
+interface ReviewProgressBarProps {
+  orientation?: 'horizontal' | 'vertical';
+}
+
+export default function ReviewProgressBar({ orientation = 'horizontal' }: ReviewProgressBarProps) {
   const [counts, setCounts] = useState<Record<Classification, number>>({
     positif: 0,
     netral: 0,
@@ -23,43 +27,43 @@ export default function ReviewProgressBar() {
   const [submitMessage, setSubmitMessage] = useState('');
   const [showModal, setShowModal] = useState(false);
 
+  const updatePercentages = (counts: Record<Classification, number>) => {
+    const total = counts.positif + counts.negatif;
+    if (total === 0) {
+      setPercentages({ positif: 0, negatif: 0 });
+      return;
+    }
+    setPercentages({
+      positif: (counts.positif / total) * 100,
+      negatif: (counts.negatif / total) * 100,
+    });
+  };
+
+  const fetchReviewCounts = async () => {
+    try {
+      const { data, error } = await supabase.from('reviews').select('classification');
+      if (error) throw error;
+
+      if (data) {
+        const newCounts = data.reduce(
+          (acc, cur) => {
+            const cls = (cur.classification as Classification).toLowerCase() as Classification;
+            if (cls in acc) {
+              acc[cls]++;
+            }
+            return acc;
+          },
+          { positif: 0, netral: 0, negatif: 0 }
+        );
+        setCounts(newCounts);
+        updatePercentages(newCounts);
+      }
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+    }
+  };
+
   useEffect(() => {
-    const fetchReviewCounts = async () => {
-      try {
-        const { data, error } = await supabase.from('reviews').select('classification');
-        if (error) throw error;
-
-        if (data) {
-          const newCounts = data.reduce(
-            (acc, cur) => {
-              const cls = (cur.classification as string).toLowerCase() as Classification;
-              if (cls in acc) {
-                acc[cls]++;
-              }
-              return acc;
-            },
-            { positif: 0, netral: 0, negatif: 0 }
-          );
-          setCounts(newCounts);
-          updatePercentages(newCounts);
-        }
-      } catch (error) {
-        console.error('Error fetching reviews:', error);
-      }
-    };
-
-    const updatePercentages = (counts: Record<Classification, number>) => {
-      const total = counts.positif + counts.negatif;
-      if (total === 0) {
-        setPercentages({ positif: 0, negatif: 0 });
-        return;
-      }
-      setPercentages({
-        positif: (counts.positif / total) * 100,
-        negatif: (counts.negatif / total) * 100,
-      });
-    };
-
     fetchReviewCounts();
   }, []);
 
@@ -95,13 +99,7 @@ export default function ReviewProgressBar() {
         updatedCounts[classification]++;
       }
       setCounts(updatedCounts);
-
-      // Hitung ulang persentase
-      const total = updatedCounts.positif + updatedCounts.negatif;
-      setPercentages({
-        positif: total === 0 ? 0 : (updatedCounts.positif / total) * 100,
-        negatif: total === 0 ? 0 : (updatedCounts.negatif / total) * 100,
-      });
+      updatePercentages(updatedCounts);
 
       setReview('');
       setShowModal(false);
@@ -113,6 +111,8 @@ export default function ReviewProgressBar() {
     }
   };
 
+  const isVertical = orientation === 'vertical';
+
   return (
     <div style={{ maxWidth: 600, margin: 'auto', paddingRight: '5rem' }}>
       <hr className="mt-4 mb-3" style={{ borderTop: '2px solid white', width: '140%' }} />
@@ -121,8 +121,9 @@ export default function ReviewProgressBar() {
         <div
           style={{
             display: 'flex',
+            flexDirection: isVertical ? 'column' : 'row',
             justifyContent: 'space-between',
-            alignItems: 'center',
+            alignItems: isVertical ? 'flex-start' : 'center',
             marginBottom: '0.5rem',
           }}
         >
@@ -139,7 +140,9 @@ export default function ReviewProgressBar() {
         <div
           style={{
             display: 'flex',
-            height: '12px',
+            flexDirection: isVertical ? 'column' : 'row',
+            height: isVertical ? '60px' : '12px',
+            width: isVertical ? '12px' : '100%',
             backgroundColor: 'transparent',
             borderRadius: '6px',
             overflow: 'hidden',
@@ -147,13 +150,15 @@ export default function ReviewProgressBar() {
         >
           <div
             style={{
-              width: `${percentages.positif}%`,
+              height: isVertical ? `${percentages.positif}%` : '100%',
+              width: isVertical ? '100%' : `${percentages.positif}%`,
               backgroundColor: 'green',
             }}
           ></div>
           <div
             style={{
-              width: `${percentages.negatif}%`,
+              height: isVertical ? `${percentages.negatif}%` : '100%',
+              width: isVertical ? '100%' : `${percentages.negatif}%`,
               backgroundColor: 'red',
             }}
           ></div>
