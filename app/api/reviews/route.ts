@@ -1,19 +1,12 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { supabase } from '../../../lib/supabaseClient';
 
 type Classification = 'positif' | 'netral' | 'negatif';
 
-interface Review {
-  id: number;
-  review_text: string;
-  classification: Classification;
-  created_at: string;
-}
-
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const { data, error } = await supabase
-      .from<'reviews', Review>('reviews')
+      .from('reviews')
       .select('classification');
 
     if (error) {
