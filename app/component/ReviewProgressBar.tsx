@@ -148,20 +148,32 @@ export default function ReviewProgressBar({ orientation = 'horizontal' }: Review
             overflow: 'hidden',
           }}
         >
-          <div
-            style={{
-              height: isVertical ? `${percentages.positif}%` : '100%',
-              width: isVertical ? '100%' : `${percentages.positif}%`,
-              backgroundColor: 'green',
-            }}
-          ></div>
-          <div
-            style={{
-              height: isVertical ? `${percentages.negatif}%` : '100%',
-              width: isVertical ? '100%' : `${percentages.negatif}%`,
-              backgroundColor: 'red',
-            }}
-          ></div>
+          {counts.positif + counts.negatif === 0 ? (
+            <div
+              style={{
+                height: isVertical ? '100%' : '100%',
+                width: isVertical ? '100%' : '100%',
+                backgroundColor: 'white',
+              }}
+            ></div>
+          ) : (
+            <>
+              <div
+                style={{
+                  height: isVertical ? `${percentages.positif}%` : '100%',
+                  width: isVertical ? '100%' : `${percentages.positif}%`,
+                  backgroundColor: 'green',
+                }}
+              ></div>
+              <div
+                style={{
+                  height: isVertical ? `${percentages.negatif}%` : '100%',
+                  width: isVertical ? '100%' : `${percentages.negatif}%`,
+                  backgroundColor: 'red',
+                }}
+              ></div>
+            </>
+          )}
         </div>
       </div>
 
