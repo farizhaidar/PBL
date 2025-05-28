@@ -38,7 +38,7 @@ const FormPage: React.FC = () => {
     setError(null);
 
     try {
-      const response = await fetch("https://ml.ghavio.my.id/predict", {
+      const response = await fetch("https://backend.ghavio.my.id/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
