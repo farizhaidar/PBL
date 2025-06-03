@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import Navbar from "../component/navbar"; // Pastikan path ini benar
@@ -22,6 +23,22 @@ export default function BookingPage() {
   const [minDate, setMinDate] = useState("");
   const [bookingSuccess, setBookingSuccess] = useState<null | (typeof form & { queueNumber: number })>(null);
   const popupRef = useRef<HTMLDivElement>(null);
+
+  // Chatbot state
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [inputText, setInputText] = useState("");
+  const [messages, setMessages] = useState<{ text: string, isUser: boolean }[]>([
+    { text: `
+      <p>Halo! Saya adalah asisten virtual. Silakan tanyakan apa saja tentang layanan booking konsultasi kami :blush:. Berikut adalah pertanyaan yang dapat membantu Anda:</p>
+      <ul>
+        <li>Bagaimana cara melakukan booking konsultasi?</li>
+        <li>Apa saja syarat yang diperlukan untuk konsultasi?</li>
+        <li>Jam berapa saja layanan konsultasi tersedia?</li>
+      </ul>
+    `, isUser: false }
+  ]);
+  const [isLoading, setIsLoading] = useState(false);
+  const chatBottomRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
@@ -133,12 +150,14 @@ export default function BookingPage() {
       });
       setErrors({}); // Bersihkan error juga
     } catch (error: unknown) {
-    if (error instanceof Error) {
-      alert(`Terjadi kesalahan: ${error.message || "Tidak dapat terhubung ke server."}`);
-    } else {
-      alert("Terjadi kesalahan tidak terduga.");
+      if (error instanceof Error) {
+        alert(`Terjadi kesalahan: ${error.message || "Tidak dapat terhubung ke server."}`);
+      } else {
+        alert("Terjadi kesalahan tidak terduga.");
+      }
+    } finally {
+      setIsSubmitting(false);
     }
-  }
   };
 
   const downloadConfirmation = async () => {
@@ -150,7 +169,6 @@ export default function BookingPage() {
 
     if (okButton) okButton.style.display = 'none';
     if (downloadButton) downloadButton.style.display = 'none';
-
 
     try {
       const canvas = await html2canvas(popupRef.current, {
@@ -180,6 +198,42 @@ export default function BookingPage() {
       alert('Gagal mengunduh konfirmasi. Silakan coba screenshot manual.');
     }
   };
+
+  // Chatbot functions
+  const handleChatSend = async () => {
+    const trimmed = inputText.trim();
+    if (!trimmed || isLoading) return;
+
+    setMessages((prev) => [...prev, { text: trimmed, isUser: true }]);
+    setInputText("");
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://n8n.akmalnurwahid.my.id/webhook/bank-chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: trimmed }),
+      });
+
+      const data = await response.json();
+
+      setMessages((prev) => [
+        ...prev,
+        { text: data.output || "Maaf, saya tidak mengerti pertanyaan Anda.", isUser: false }
+      ]);
+    } catch (error) {
+      console.error("Error calling chatbot API:", error);
+      setMessages((prev) => [...prev, { text: "Maaf, terjadi kesalahan saat memproses permintaan Anda.", isUser: false }]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (chatBottomRef.current) {
+      chatBottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
 
   return (
     <>
@@ -297,7 +351,6 @@ export default function BookingPage() {
               </div>
             </div>
 
-
             <div className="mb-4"> {/* mb-4 untuk spacing sebelum tombol */}
               <label htmlFor="location" className="form-label fw-semibold" style={{ color: "#000" }}>
                 Tempat
@@ -340,6 +393,160 @@ export default function BookingPage() {
             </button>
           </form>
         </div>
+      </div>
+
+      {/* Chatbot Button and Interface */}
+      <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 1000 }}>
+        {isChatOpen ? (
+          <motion.div 
+            className="card shadow-lg"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            style={{ 
+              width: "320px", 
+              height: "450px", 
+              display: "flex", 
+              flexDirection: "column",
+              backgroundColor: "#f8f9fa"
+            }}
+          >
+            <div className="card-header d-flex justify-content-between align-items-center bg-primary text-white">
+              <h5 className="mb-0">Virtual Assistant</h5>
+              <button 
+                className="btn btn-sm btn-light"
+                onClick={() => setIsChatOpen(false)}
+              >
+                <i className="bi bi-x-lg"></i>
+              </button>
+            </div>
+            
+            <div 
+              className="flex-grow-1 p-3 overflow-auto" 
+              style={{ backgroundColor: "#fff" }}
+            >
+              {messages.map((msg, index) => (
+                <motion.div
+                  key={index}
+                  className={`mb-3 p-3 rounded ${msg.isUser ? "bg-primary text-white ms-auto" : "bg-light"}`}
+                  style={{ 
+                    maxWidth: "70%",
+                    wordWrap: "break-word",
+                    boxShadow: "0 1px 2px rgba(0,0,0,0.1)",
+                    fontSize: "14px"
+                  }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  {msg.isUser ? (
+                    msg.text
+                  ) : (
+                    <div dangerouslySetInnerHTML={{ __html: msg.text }} />
+                  )}
+                </motion.div>
+              ))}
+              
+              {isLoading && (
+                <motion.div 
+                  className="mb-3 p-3 rounded bg-light" 
+                  style={{ maxWidth: "70%", display: "flex" }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', height: '24px' }}>
+                    <motion.span
+                      style={{ display: 'inline-block', fontSize: '20px' }}
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0.6, 1, 0.6],
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    >
+                      •
+                    </motion.span>
+                    <motion.span
+                      style={{ display: 'inline-block', fontSize: '20px', marginLeft: '6px' }}
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0.6, 1, 0.6],
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.4
+                      }}
+                    >
+                      •
+                    </motion.span>
+                    <motion.span
+                      style={{ display: 'inline-block', fontSize: '14px', marginLeft: '6px' }}
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0.6, 1, 0.6],
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.8
+                      }}
+                    >
+                      •
+                    </motion.span>
+                  </div>
+                </motion.div>
+              )}
+              
+              <div ref={chatBottomRef} />
+            </div>
+            
+            <div className="p-3 border-top">
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Tulis pesan..."
+                  value={inputText}
+                  onChange={(e) => setInputText(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      handleChatSend();
+                    }
+                  }}
+                />
+                <button 
+                  className="btn btn-primary"
+                  onClick={handleChatSend}
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <i className="bi bi-arrow-clockwise"></i>
+                  ) : (
+                    <i className="bi bi-send"></i>
+                  )}
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        ) : (
+          <motion.button
+            className="btn btn-primary rounded-circle p-3"
+            onClick={() => setIsChatOpen(true)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+            }}
+          >
+            <i className="bi bi-chat-dots-fill fs-4"></i>
+          </motion.button>
+        )}
       </div>
 
       {/* Modal Pop-up Konfirmasi Booking */}
