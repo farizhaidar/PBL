@@ -72,7 +72,7 @@ export default function BookingPage() {
     }
     if (!form.age.trim()) {
       newErrors.age = "Umur harus diisi";
-    } else if (isNaN(Number(form.age)) || Number(form.age) <= 0 || Number(form.age) > 120) { // Batas umur yang masuk akal
+    } else if (isNaN(Number(form.age)) || Number(form.age) <= 0 || Number(form.age) > 120) {
       newErrors.age = "Umur harus berupa angka positif dan realistis";
     }
     if (!form.date) {
@@ -80,7 +80,7 @@ export default function BookingPage() {
     } else if (form.date < minDate) {
       newErrors.date = "Tidak bisa memilih tanggal yang sudah lewat";
     } else if (isWeekend(form.date)) {
-      newErrors.date = "Hanya bisa memilih hari kerja (Senin–Jumat)";
+      newErrors.date = "Hanya bisa memilih hari kerja (Senin-Jumat)";
     }
     if (!form.time) {
       newErrors.time = "Waktu harus diisi";
@@ -102,8 +102,7 @@ export default function BookingPage() {
     }
 
     try {
-      // Simulasi pengecekan ketersediaan
-      const availabilityRes = await fetch("/api/booking/check-availability", { // Pastikan endpoint API ini ada
+      const availabilityRes = await fetch("/api/booking/check-availability", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -114,7 +113,6 @@ export default function BookingPage() {
       });
 
       if (!availabilityRes.ok) {
-        // Jika API mengembalikan error spesifik, tampilkan itu
         const errorData = await availabilityRes.json().catch(() => null);
         throw new Error(errorData?.message || "Gagal memeriksa ketersediaan slot.");
       }
@@ -122,12 +120,11 @@ export default function BookingPage() {
       const { available } = await availabilityRes.json();
       if (!available) {
         setErrors((prev) => ({ ...prev, time: "Slot waktu pada tanggal dan jam tersebut sudah dipesan. Silakan pilih waktu lain." }));
-        setIsSubmitting(false); // Penting untuk menghentikan submit jika tidak tersedia
+        setIsSubmitting(false);
         return;
       }
 
-      // Simulasi proses booking
-      const bookingRes = await fetch("/api/booking", { // Pastikan endpoint API ini ada
+      const bookingRes = await fetch("/api/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -139,7 +136,6 @@ export default function BookingPage() {
       }
 
       setBookingSuccess({ ...form, queueNumber: result.queueNumber });
-      // Reset form setelah berhasil
       setForm({
         name: "",
         phone: "",
@@ -148,7 +144,7 @@ export default function BookingPage() {
         time: "",
         location: "Cabang Depok",
       });
-      setErrors({}); // Bersihkan error juga
+      setErrors({});
     } catch (error: unknown) {
       if (error instanceof Error) {
         alert(`Terjadi kesalahan: ${error.message || "Tidak dapat terhubung ke server."}`);
@@ -163,7 +159,6 @@ export default function BookingPage() {
   const downloadConfirmation = async () => {
     if (!popupRef.current || !bookingSuccess) return;
 
-    // Untuk sementara sembunyikan tombol OK dan Download pada clone agar tidak ikut tercetak
     const okButton = popupRef.current.querySelector('.btn-primary') as HTMLElement | null;
     const downloadButton = popupRef.current.querySelector('.btn-success') as HTMLElement | null;
 
@@ -172,17 +167,16 @@ export default function BookingPage() {
 
     try {
       const canvas = await html2canvas(popupRef.current, {
-        backgroundColor: '#ffffff', // Latar belakang putih untuk gambar
-        scale: 2, // Meningkatkan resolusi gambar
-        logging: false, // Nonaktifkan logging html2canvas di konsol
-        useCORS: true, // Jika ada gambar dari domain lain (tidak relevan di sini tapi best practice)
-        scrollX: 0, // Pastikan tidak ada scroll horizontal
-        scrollY: -window.scrollY, // Atasi masalah scroll jika popup lebih panjang dari viewport
+        backgroundColor: '#ffffff',
+        scale: 2,
+        logging: false,
+        useCORS: true,
+        scrollX: 0,
+        scrollY: -window.scrollY,
         windowWidth: popupRef.current.scrollWidth,
         windowHeight: popupRef.current.scrollHeight
       });
 
-      // Kembalikan tampilan tombol setelah canvas dibuat
       if (okButton) okButton.style.display = '';
       if (downloadButton) downloadButton.style.display = '';
 
@@ -191,7 +185,6 @@ export default function BookingPage() {
       link.href = canvas.toDataURL('image/png');
       link.click();
     } catch (error) {
-      // Kembalikan tampilan tombol jika terjadi error
       if (okButton) okButton.style.display = '';
       if (downloadButton) downloadButton.style.display = '';
       console.error('Error generating image:', error);
@@ -199,7 +192,6 @@ export default function BookingPage() {
     }
   };
 
-  // Chatbot functions
   const handleChatSend = async () => {
     const trimmed = inputText.trim();
     if (!trimmed || isLoading) return;
@@ -245,15 +237,15 @@ export default function BookingPage() {
         className="mt-5 position-relative min-vh-100 d-flex align-items-center justify-content-center"
         style={{
           background: "linear-gradient(135deg, #f0f4f8, #d9e2ec)",
-          padding: "40px 20px", // Padding untuk viewport kecil
+          padding: "40px 20px",
         }}
       >
         <div
-          className="container p-4 p-md-5 rounded shadow-lg" // p-md-5 untuk padding lebih besar di medium device
+          className="container p-4 p-md-5 rounded shadow-lg"
           style={{
             maxWidth: "700px",
-            backgroundColor: "rgba(255, 255, 255, 0.9)", // Sedikit transparan
-            backdropFilter: "blur(5px)", // Efek blur untuk background
+            backgroundColor: "rgba(255, 255, 255, 0.9)",
+            backdropFilter: "blur(5px)",
             borderRadius: "12px",
           }}
         >
@@ -261,8 +253,8 @@ export default function BookingPage() {
             Booking Konsultasi
           </h2>
 
-          <form onSubmit={handleSubmit} noValidate> {/* noValidate untuk custom validation */}
-            <div className="mb-3"> {/* mb-3 untuk spacing yang lebih konsisten */}
+          <form onSubmit={handleSubmit} noValidate>
+            <div className="mb-3">
               <label htmlFor="name" className="form-label fw-semibold" style={{ color: "#000" }}>
                 Nama Lengkap
               </label>
@@ -284,7 +276,7 @@ export default function BookingPage() {
               </label>
               <input
                 id="phone"
-                type="tel" // type="tel" untuk input nomor telepon
+                type="tel"
                 className={`form-control ${errors.phone ? "is-invalid" : ""}`}
                 name="phone"
                 value={form.phone}
@@ -296,12 +288,12 @@ export default function BookingPage() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="age" className="form-label fw-semibold" style={{ color: "#000" }}> {/* Ubah warna label */}
+              <label htmlFor="age" className="form-label fw-semibold" style={{ color: "#000" }}>
                 Umur
               </label>
               <input
                 id="age"
-                type="number" // type="number" untuk input umur
+                type="number"
                 className={`form-control ${errors.age ? "is-invalid" : ""}`}
                 name="age"
                 value={form.age}
@@ -312,7 +304,7 @@ export default function BookingPage() {
               {errors.age && <div className="invalid-feedback">{errors.age}</div>}
             </div>
 
-            <div className="row g-3 mb-3"> {/* Menggunakan row dan col untuk tanggal dan waktu */}
+            <div className="row g-3 mb-3">
               <div className="col-md-6">
                 <label htmlFor="date" className="form-label fw-semibold" style={{ color: "#000" }}>
                   Tanggal
@@ -328,7 +320,7 @@ export default function BookingPage() {
                   required
                   style={{ boxShadow: errors.date ? "0 0 0 0.25rem rgba(220, 53, 69, 0.25)" : "none" }}
                 />
-                {errors.date && <div className="invalid-feedback d-block">{errors.date}</div>} {/* d-block agar tampil */}
+                {errors.date && <div className="invalid-feedback d-block">{errors.date}</div>}
               </div>
 
               <div className="col-md-6">
@@ -347,17 +339,17 @@ export default function BookingPage() {
                   required
                   style={{ boxShadow: errors.time ? "0 0 0 0.25rem rgba(220, 53, 69, 0.25)" : "none" }}
                 />
-                {errors.time && <div className="invalid-feedback d-block">{errors.time}</div>} {/* d-block agar tampil */}
+                {errors.time && <div className="invalid-feedback d-block">{errors.time}</div>}
               </div>
             </div>
 
-            <div className="mb-4"> {/* mb-4 untuk spacing sebelum tombol */}
+            <div className="mb-4">
               <label htmlFor="location" className="form-label fw-semibold" style={{ color: "#000" }}>
                 Tempat
               </label>
               <select
                 id="location"
-                className="form-select" // Gunakan form-select untuk tampilan select Bootstrap
+                className="form-select"
                 name="location"
                 value={form.location}
                 onChange={handleChange}
@@ -365,8 +357,6 @@ export default function BookingPage() {
                 style={{ color: "#243b55", fontWeight: "600" }}
               >
                 <option value="Cabang Depok">Cabang Depok</option>
-                {/* Tambahkan cabang lain jika ada */}
-                {/* <option value="Cabang Jakarta">Cabang Jakarta</option> */}
               </select>
             </div>
 
@@ -378,8 +368,8 @@ export default function BookingPage() {
                 backgroundColor: "#4a6fa5",
                 borderColor: "#3a5f8a",
                 fontWeight: "600",
-                padding: "10px 15px", // Sedikit padding vertikal dan horizontal
-                fontSize: "1.1rem" // Ukuran font sedikit lebih besar
+                padding: "10px 15px",
+                fontSize: "1.1rem"
               }}
             >
               {isSubmitting ? (
@@ -408,10 +398,14 @@ export default function BookingPage() {
               height: "450px", 
               display: "flex", 
               flexDirection: "column",
-              backgroundColor: "#f8f9fa"
+              backgroundColor: "#f8f9fa",
+              borderRadius: '15px',
             }}
           >
-            <div className="card-header d-flex justify-content-between align-items-center bg-primary text-white">
+            <div 
+              className="card-header d-flex justify-content-between align-items-center" 
+              style={{ backgroundColor: "#4a6fa5", color: "white" }}
+            >
               <h5 className="mb-0">Virtual Assistant</h5>
               <button 
                 className="btn btn-sm btn-light"
@@ -428,12 +422,14 @@ export default function BookingPage() {
               {messages.map((msg, index) => (
                 <motion.div
                   key={index}
-                  className={`mb-3 p-3 rounded ${msg.isUser ? "bg-primary text-white ms-auto" : "bg-light"}`}
+                  className={`mb-3 p-2 rounded ${msg.isUser ? "text-white ms-auto" : "bg-light"}`}
                   style={{ 
-                    maxWidth: "70%",
+                    
+                    maxWidth: "max-content",
                     wordWrap: "break-word",
                     boxShadow: "0 1px 2px rgba(0,0,0,0.1)",
-                    fontSize: "14px"
+                    fontSize: "14px",
+                    backgroundColor: msg.isUser ? "#4a6fa5" : "#f8f9fa"
                   }}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -521,9 +517,10 @@ export default function BookingPage() {
                   }}
                 />
                 <button 
-                  className="btn btn-primary"
+                  className="btn"
                   onClick={handleChatSend}
                   disabled={isLoading}
+                  style={{ backgroundColor: "#4a6fa5", color: "white" }}
                 >
                   {isLoading ? (
                     <i className="bi bi-arrow-clockwise"></i>
@@ -541,7 +538,8 @@ export default function BookingPage() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             style={{
-              boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+              boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+              backgroundColor: "#4a6fa5"
             }}
           >
             <i className="bi bi-chat-dots-fill fs-4"></i>
@@ -552,23 +550,21 @@ export default function BookingPage() {
       {/* Modal Pop-up Konfirmasi Booking */}
       {bookingSuccess && (
         <>
-          {/* Overlay */}
           <div
             className="position-fixed top-0 start-0 w-100 h-100"
             style={{ backgroundColor: "rgba(0,0,0,0.6)", zIndex: 1040 }}
-            onClick={() => setBookingSuccess(null)} // Tutup modal jika klik di luar
+            onClick={() => setBookingSuccess(null)}
           />
 
-          {/* Custom Card Pop-up */}
           <div
             ref={popupRef}
             className="position-fixed top-50 start-50 bg-white text-dark p-4 rounded shadow-lg"
             style={{
               zIndex: 1050,
               width: "90%",
-              maxWidth: "450px", // Sedikit lebih lebar
+              maxWidth: "450px",
               transform: "translate(-50%, -50%)",
-              borderTop: "5px solid #4a6fa5" // Aksen warna
+              borderTop: "5px solid #4a6fa5"
             }}
           >
             <button
@@ -577,7 +573,7 @@ export default function BookingPage() {
               aria-label="Close"
               onClick={() => setBookingSuccess(null)}
             ></button>
-            <h4 className="mb-3 text-center" style={{ color: "#243b55" }}> {/* h4 untuk judul modal */}
+            <h4 className="mb-3 text-center" style={{ color: "#243b55" }}>
               <i className="bi bi-check-circle-fill me-2 text-success"></i>
               Booking Berhasil!
             </h4>
@@ -600,7 +596,7 @@ export default function BookingPage() {
             </div>
             <div className="d-flex gap-2 mt-4">
               <button
-                className="btn btn-secondary flex-grow-1" // btn-secondary untuk OK
+                className="btn btn-secondary flex-grow-1"
                 onClick={() => setBookingSuccess(null)}
               >
                 OK
@@ -608,7 +604,7 @@ export default function BookingPage() {
               <button
                 className="btn btn-success flex-grow-1"
                 onClick={downloadConfirmation}
-                style={{ borderColor: "#198754" }} // Sesuaikan border color jika perlu
+                style={{ borderColor: "#198754" }}
               >
                 <i className="bi bi-download me-2"></i>Unduh Bukti
               </button>
