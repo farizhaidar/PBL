@@ -1,256 +1,148 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabaseClient'
+import { NextRequest, NextResponse } from 'next/server';
+import * as mysql from 'mysql2/promise';
+import pool from '@/lib/mysqlClient';
+
+function timeToMinutes(time: string): number {
+  if (typeof time !== 'string' || !time.includes(':')) {
+    return 0;
+  }
+  const [hours, minutes] = time.split(':').map(Number);
+  return hours * 60 + minutes;
+}
 
 export async function GET() {
   try {
-    const { data, error } = await supabase
-      .from('bookings')
-      .select('*')
-      .order('created_at', { ascending: false })
-
-    if (error) {
-      console.error('Supabase error:', error)
-      return NextResponse.json({ error: error.message }, { status: 500 })
-    }
-
-    return NextResponse.json({ bookings: data }, { status: 200 })
+    const connection = await pool.getConnection();
+    const [rows] = await connection.query<mysql.RowDataPacket[]>(
+      'SELECT * FROM bookings ORDER BY created_at DESC'
+    );
+    connection.release();
+    return NextResponse.json({ bookings: rows }, { status: 200 });
   } catch (err) {
-    console.error('Server error:', err)
-    return NextResponse.json(
-      { error: 'Terjadi kesalahan server' },
-      { status: 500 }
-    )
-  }
-}
-
-export async function POST(request: NextRequest) {
-  try {
-    const requestBody = await request.json()
-
-    // Check if this is an availability check request
-    if (requestBody.date && requestBody.time && requestBody.location && Object.keys(requestBody).length === 3) {
-      // Availability check logic
-      const { date, time, location } = requestBody
-      
-      // Convert time to minutes for easier comparison
-      const [hours, minutes] = time.split(':').map(Number)
-      const requestedTimeInMinutes = hours * 60 + minutes
-
-      // Get all bookings for the same date and location
-      const { data: existingBookings, error: queryError } = await supabase
-        .from('bookings')
-        .select('*')
-        .eq('date', date)
-        .eq('location', location)
-
-      if (queryError) {
-        console.error('Supabase error:', queryError)
-        return NextResponse.json(
-          { error: 'Gagal memeriksa ketersediaan' },
-          { status: 500 }
-        )
-      }
-
-      // Check if requested time conflicts with existing bookings (within 1 hour)
-      const isAvailable = !existingBookings?.some(booking => {
-        const [bookingHours, bookingMinutes] = booking.time.split(':').map(Number)
-        const bookingTimeInMinutes = bookingHours * 60 + bookingMinutes
-        
-        // Check if requested time is within 1 hour before or after any existing booking
-        return Math.abs(requestedTimeInMinutes - bookingTimeInMinutes) < 60
-      })
-
-      return NextResponse.json({
-        available: isAvailable
-      }, { status: 200 })
-    }
-
-    // Otherwise, process as a booking submission
-    const { name, phone, age, date, time, location } = requestBody
-
-    // Validasi 1: Cek data lengkap
-    if (!name || !phone || !age || !date || !time || !location) {
-      return NextResponse.json(
-        { error: 'Semua field harus diisi' },
-        { status: 400 }
-      )
-    }
-
-    // Validasi 2: Format nomor HP
-    const phoneRegex = /^[0-9]{10,15}$/
-    if (!phoneRegex.test(phone)) {
-      return NextResponse.json(
-        { error: 'Format nomor HP tidak valid' },
-        { status: 400 }
-      )
-    }
-
-    // Validasi 3: Umur harus angka positif
-    if (isNaN(Number(age)) || Number(age) <= 0) {
-      return NextResponse.json(
-        { error: 'Umur harus berupa angka positif' },
-        { status: 400 }
-      )
-    }
-
-    // Validasi 4: Pastikan date adalah format yang valid
-    if (isNaN(new Date(date).getTime())) {
-      return NextResponse.json(
-        { error: 'Format tanggal tidak valid' },
-        { status: 400 }
-      )
-    }
-
-    // Validasi 5: Tanggal tidak boleh di masa lalu
-    const today = new Date().toISOString().split('T')[0]
-    if (date < today) {
-      return NextResponse.json(
-        { error: 'Tidak bisa memilih tanggal yang sudah lewat' },
-        { status: 400 }
-      )
-    }
-
-    // Validasi 6: Hari kerja saja (Senin-Jumat)
-    const day = new Date(date).getDay()
-    if (day === 0 || day === 6) { // 0 = Minggu, 6 = Sabtu
-      return NextResponse.json(
-        { error: 'Hanya bisa memilih hari kerja (Senin-Jumat)' },
-        { status: 400 }
-      )
-    }
-
-    // Validasi 7: Waktu antara 08:00 - 15:00
-    if (time < "08:00" || time > "15:00") {
-      return NextResponse.json(
-        { error: 'Waktu harus antara 08:00 hingga 15:00' },
-        { status: 400 }
-      )
-    }
-
-    // Convert time to minutes for 1-hour buffer validation
-    const [hours, minutes] = time.split(':').map(Number)
-    const requestedTimeInMinutes = hours * 60 + minutes
-
-    // Validasi 8: Cek ketersediaan slot dengan buffer 1 jam
-    const { data: existingBookings, error: queryError } = await supabase
-      .from('bookings')
-      .select('*')
-      .eq('date', date)
-      .eq('location', location)
-
-    if (queryError) {
-      console.error('Supabase query error:', queryError)
-      return NextResponse.json(
-        { error: 'Gagal memeriksa ketersediaan slot' },
-        { status: 500 }
-      )
-    }
-
-    // Check for time conflicts with 1-hour buffer
-    const hasConflict = existingBookings?.some(booking => {
-      const [bookingHours, bookingMinutes] = booking.time.split(':').map(Number)
-      const bookingTimeInMinutes = bookingHours * 60 + bookingMinutes
-      
-      return Math.abs(requestedTimeInMinutes - bookingTimeInMinutes) < 60
-    })
-
-    if (hasConflict) {
-      return NextResponse.json(
-        { 
-          error: 'Slot waktu tidak tersedia. Minimal 1 jam dari booking sebelumnya',
-          available: false 
-        },
-        { status: 409 }
-      )
-    }
-
-    // Insert data ke database
-    const { data: insertedData, error: insertError } = await supabase
-      .from('bookings')
-      .insert([{ 
-        name, 
-        phone,
-        age,
-        date, 
-        time,
-        location,
-        created_at: new Date().toISOString() 
-      }])
-      .select()
-
-    if (insertError) {
-      console.error('Supabase insert error:', insertError)
-      return NextResponse.json(
-        { error: 'Gagal menyimpan booking' },
-        { status: 500 }
-      )
-    }
-
-    // Response sukses
-    return NextResponse.json({
-      success: true,
-      booking: insertedData[0],
-      message: 'Booking berhasil dibuat'
-    }, { status: 201 })
-
-  } catch (error) {
-    console.error('Server error:', error)
-    return NextResponse.json(
-      { error: 'Terjadi kesalahan server' },
-      { status: 500 }
-    )
+    console.error('MySQL GET Error:', err);
+    return NextResponse.json({ error: 'Terjadi kesalahan pada server saat mengambil data' }, { status: 500 });
   }
 }
 
 export async function DELETE(request: NextRequest) {
+  let connection: mysql.PoolConnection | null = null;
   try {
-    const { id } = await request.json()
-
+    const { id } = await request.json();
     if (!id) {
-      return NextResponse.json(
-        { error: 'ID booking tidak diberikan' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'ID booking tidak diberikan' }, { status: 400 });
     }
-
-    // Validasi: Cek apakah booking ada sebelum dihapus
-    const { data: existingBooking, error: queryError } = await supabase
-      .from('bookings')
-      .select('*')
-      .eq('id', id)
-      .single()
-
-    if (queryError || !existingBooking) {
-      return NextResponse.json(
-        { error: 'Booking tidak ditemukan' },
-        { status: 404 }
-      )
+    connection = await pool.getConnection();
+    const [existingBookingRows] = await connection.query<mysql.RowDataPacket[]>(
+      'SELECT * FROM bookings WHERE id = ?',
+      [id]
+    );
+    const existingBooking = existingBookingRows[0];
+    if (!existingBooking) {
+      connection.release();
+      return NextResponse.json({ error: 'Booking tidak ditemukan' }, { status: 404 });
     }
-
-    // Hapus booking
-    const { error: deleteError } = await supabase
-      .from('bookings')
-      .delete()
-      .eq('id', id)
-
-    if (deleteError) {
-      console.error('Supabase delete error:', deleteError)
-      return NextResponse.json({ error: deleteError.message }, { status: 500 })
-    }
-
+    await connection.query('DELETE FROM bookings WHERE id = ?', [id]);
+    connection.release();
     return NextResponse.json(
-      { 
-        success: true, 
+      {
+        success: true,
         message: 'Booking berhasil dihapus',
-        deleted_booking: existingBooking
+        deleted_booking: existingBooking,
       },
       { status: 200 }
-    )
+    );
   } catch (err) {
-    console.error('Server error:', err)
+    if (connection) connection.release();
+    console.error('MySQL DELETE Error:', err);
+    return NextResponse.json({ error: 'Terjadi kesalahan pada server saat menghapus data' }, { status: 500 });
+  }
+}
+
+export async function POST(request: NextRequest) {
+  let connection: mysql.PoolConnection | null = null;
+  try {
+    const requestBody = await request.json();
+
+    if (requestBody.checkDate && Object.keys(requestBody).length === 1) {
+      const { checkDate } = requestBody;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(checkDate)) {
+        return NextResponse.json({ error: 'Format tanggal tidak valid, harus YYYY-MM-DD' }, { status: 400 });
+      }
+      connection = await pool.getConnection();
+      const [bookedSlots] = await connection.query<mysql.RowDataPacket[]>(
+        'SELECT time FROM bookings WHERE date = ?',
+        [checkDate]
+      );
+      connection.release();
+      const bookedTimesInMinutes = bookedSlots.map(slot => timeToMinutes(slot.time));
+      const workingHoursStart = 8 * 60, workingHoursEnd = 15 * 60, slotInterval = 60;
+      const availableSlots: string[] = [];
+      for (let time = workingHoursStart; time <= workingHoursEnd; time += slotInterval) {
+        const isSlotTaken = bookedTimesInMinutes.some(bookedTime => Math.abs(time - bookedTime) < slotInterval);
+        if (!isSlotTaken) {
+          const hours = String(Math.floor(time / 60)).padStart(2, '0');
+          const minutes = String(time % 60).padStart(2, '0');
+          availableSlots.push(`${hours}:${minutes}`);
+        }
+      }
+      return NextResponse.json({ availableSlots }, { status: 200 });
+    }
+
+    if (requestBody.date && requestBody.time && requestBody.location && Object.keys(requestBody).length === 3) {
+      const { date, time, location } = requestBody;
+      connection = await pool.getConnection();
+      const [existingBookings] = await connection.query<mysql.RowDataPacket[]>(
+        'SELECT time FROM bookings WHERE date = ? AND location = ?',
+        [date, location]
+      );
+      connection.release();
+      const requestedTimeInMinutes = timeToMinutes(time);
+      const isAvailable = !existingBookings.some(booking => {
+        const bookingTimeInMinutes = timeToMinutes(booking.time);
+        return Math.abs(requestedTimeInMinutes - bookingTimeInMinutes) < 60;
+      });
+      return NextResponse.json({ available: isAvailable }, { status: 200 });
+    }
+
+    const { name, phone, age, date, time, location } = requestBody;
+    if (!name || !phone || !age || !date || !time || !location) {
+      return NextResponse.json({ error: 'Semua field harus diisi' }, { status: 400 });
+    }
+
+    connection = await pool.getConnection();
+    const requestedTimeInMinutes = timeToMinutes(time);
+    const [conflictingBookings] = await connection.query<mysql.RowDataPacket[]>(
+      'SELECT time FROM bookings WHERE date = ? AND location = ?',
+      [date, location]
+    );
+    const hasConflict = conflictingBookings.some(booking => {
+      const bookingTimeInMinutes = timeToMinutes(booking.time);
+      return Math.abs(requestedTimeInMinutes - bookingTimeInMinutes) < 60;
+    });
+    if (hasConflict) {
+      connection.release();
+      return NextResponse.json(
+        { error: 'Slot waktu tidak tersedia. Minimal 1 jam dari booking sebelumnya', available: false },
+        { status: 409 }
+      );
+    }
+    const [result] = await connection.query<mysql.OkPacket>(
+      'INSERT INTO bookings (name, phone, age, date, time, location, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      [name, phone, age, date, time, location, new Date()]
+    );
+    const [newBookingRows] = await connection.query<mysql.RowDataPacket[]>(
+      'SELECT * FROM bookings WHERE id = ?',
+      [result.insertId]
+    );
+    connection.release();
+    const newBooking = newBookingRows[0];
     return NextResponse.json(
-      { error: 'Terjadi kesalahan server' },
-      { status: 500 }
-    )
+      { success: true, booking: newBooking, queueNumber: newBooking.id, message: 'Booking berhasil dibuat' },
+      { status: 201 }
+    );
+  } catch (err) {
+    if (connection) connection.release();
+    console.error('MySQL POST Error:', err);
+    return NextResponse.json({ error: 'Terjadi kesalahan pada server saat memproses permintaan' }, { status: 500 });
   }
 }
