@@ -44,14 +44,35 @@ const FormPage: React.FC = () => {
     setError("");
 
     // Validate inputs
-    if (!formData.usia || !formData.saldo || !formData.pendapatan) {
+    if (!formData.usia) {
+      setError("Harap isi usia terlebih dahulu");
+      setIsLoading(false);
+      return;
+    }
+
+    const age = parseInt(formData.usia);
+    const isUnder17 = age < 17;
+
+    if (isUnder17) {
+      // For under 17, automatically set to Simpanan Pelajar with 0 balance
+      setRekomendasi({
+        product: "Simpanan Pelajar",
+        description: "Tabungan khusus pelajar dengan fitur edukasi keuangan"
+      });
+      setShowCard(true);
+      setIsLoading(false);
+      return;
+    }
+
+    // For 17 and above, validate other fields
+    if (!formData.saldo || !formData.pendapatan) {
       setError("Harap isi semua field yang wajib diisi");
       setIsLoading(false);
       return;
     }
 
     const payload = {
-      Age: parseInt(formData.usia),
+      Age: age,
       CustAccountBalance: parseFloat(formData.saldo),
       CustAmount: parseFloat(formData.pendapatan)
     };
@@ -129,6 +150,7 @@ const FormPage: React.FC = () => {
   };
 
   const usiaValid = formData.usia && parseInt(formData.usia) >= 6;
+  const isUnder17 = usiaValid && parseInt(formData.usia) < 17;
 
   return (
     <>
@@ -163,50 +185,50 @@ const FormPage: React.FC = () => {
                     required
                     min="6"
                   />
-                  {formData.usia && parseInt(formData.usia) < 17 && (
+                  {isUnder17 && (
                     <div className="text-muted mt-1">
-                      Untuk usia di bawah 17 tahun, hanya tersedia Simpanan Pelajar dengan saldo 0
+                      Untuk usia di bawah 17 tahun, hanya tersedia Simpanan Pelajar
                     </div>
                   )}
                 </div>
 
-                <div className="mb-3">
-                  <label htmlFor="jenisKelamin" className="form-label">
-                    Jenis Kelamin
-                  </label>
-                  <select
-                    className="form-select"
-                    id="jenisKelamin"
-                    name="jenisKelamin"
-                    value={formData.jenisKelamin}
-                    onChange={handleChange}
-                  >
-                    <option value="">Pilih Jenis Kelamin</option>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                  </select>
-                </div>
-
-                <div className="mb-3">
-                  <label htmlFor="pekerjaan" className="form-label">
-                    Pekerjaan
-                  </label>
-                  <select
-                    className="form-select"
-                    id="pekerjaan"
-                    name="pekerjaan"
-                    value={formData.pekerjaan}
-                    onChange={handleChange}
-                  >
-                    <option value="">Pilih Pekerjaan</option>
-                    {pekerjaanOptions.map(opt => (
-                      <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                </div>
-
-                {usiaValid && (
+                {usiaValid && !isUnder17 && (
                   <>
+                    <div className="mb-3">
+                      <label htmlFor="jenisKelamin" className="form-label">
+                        Jenis Kelamin
+                      </label>
+                      <select
+                        className="form-select"
+                        id="jenisKelamin"
+                        name="jenisKelamin"
+                        value={formData.jenisKelamin}
+                        onChange={handleChange}
+                      >
+                        <option value="">Pilih Jenis Kelamin</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                      </select>
+                    </div>
+
+                    <div className="mb-3">
+                      <label htmlFor="pekerjaan" className="form-label">
+                        Pekerjaan
+                      </label>
+                      <select
+                        className="form-select"
+                        id="pekerjaan"
+                        name="pekerjaan"
+                        value={formData.pekerjaan}
+                        onChange={handleChange}
+                      >
+                        <option value="">Pilih Pekerjaan</option>
+                        {pekerjaanOptions.map(opt => (
+                          <option key={opt} value={opt}>{opt}</option>
+                        ))}
+                      </select>
+                    </div>
+
                     <div className="mb-3">
                       <label htmlFor="pendapatan" className="form-label">
                         Pendapatan Bulanan (Rp) <span className="text-danger">*</span>
@@ -282,6 +304,8 @@ const FormPage: React.FC = () => {
                         <li>Usia: {formData.usia} tahun</li>
                         {formData.jenisKelamin && <li>Jenis Kelamin: {formData.jenisKelamin}</li>}
                         {formData.pekerjaan && <li>Pekerjaan: {formData.pekerjaan}</li>}
+                        {!isUnder17 && formData.pendapatan && <li>Pendapatan: Rp {parseInt(formData.pendapatan).toLocaleString()}</li>}
+                        {!isUnder17 && formData.saldo && <li>Saldo: Rp {parseInt(formData.saldo).toLocaleString()}</li>}
                       </ul>
                     </div>
                   </>

@@ -18,30 +18,42 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'bg-white text-blue shadow-sm' : 'bg-transparent biru-bca'}`}>
+    <nav
+      className={`navbar navbar-expand-lg fixed-top ${
+        scrolled ? 'bg-white text-blue shadow-sm' : 'bg-transparent biru-bca'
+      }`}
+    >
       <div className="container py-2">
-        <Link href="/" className={`navbar-brand ${scrolled ? 'text-dark' : 'biru-bca'}`}>
-          <b><i>ElChatbot</i></b>
+        <Link
+          href="/"
+          className={`navbar-brand ${scrolled ? 'text-dark' : 'biru-bca'}`}
+        >
+          <b>
+            <i>ElChatbot</i>
+          </b>
         </Link>
 
         <button
           className={`navbar-toggler ${scrolled ? '' : 'custom-toggler'}`}
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          onClick={() => setIsOpen(!isOpen)} // Ganti dengan handler manual
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
+        <div
+          className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav ms-auto">
             {menuItems.map((item) => (
               <li key={item.path} className="nav-item">
                 <Link
                   href={item.path}
-                  className={`nav-link ${pathname === item.path ? 'active' : ''} ${scrolled ? 'text-dark' : 'text-white'}`}
-                  onClick={() => setIsOpen(false)}
+                  className={`nav-link ${
+                    pathname === item.path ? 'active' : ''
+                  } ${scrolled ? 'text-dark' : 'text-white'}`}
+                  onClick={() => setIsOpen(false)} // Tutup menu setelah klik
                 >
                   {item.label}
                 </Link>
