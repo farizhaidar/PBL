@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Navbar from "../component/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "../globals.css";
+import "../chat/chat.css";
 
 const pekerjaanOptions = [
   "Pelajar/Mahasiswa",
@@ -43,7 +45,6 @@ const FormPage: React.FC = () => {
     setIsLoading(true);
     setError("");
 
-    // Validate inputs
     if (!formData.usia) {
       setError("Harap isi usia terlebih dahulu");
       setIsLoading(false);
@@ -54,7 +55,6 @@ const FormPage: React.FC = () => {
     const isUnder17 = age < 17;
 
     if (isUnder17) {
-      // For under 17, automatically set to Simpanan Pelajar with 0 balance
       setRekomendasi({
         product: "Simpanan Pelajar",
         description: "Tabungan khusus pelajar dengan fitur edukasi keuangan"
@@ -64,7 +64,6 @@ const FormPage: React.FC = () => {
       return;
     }
 
-    // For 17 and above, validate other fields
     if (!formData.saldo || !formData.pendapatan) {
       setError("Harap isi semua field yang wajib diisi");
       setIsLoading(false);
@@ -98,7 +97,6 @@ const FormPage: React.FC = () => {
         throw new Error("Format respons tidak valid");
       }
 
-      // Set recommendation with description
       setRekomendasi({
         product: data.recommended_product,
         description: data.description || getProductDescription(data.recommended_product)
@@ -153,20 +151,65 @@ const FormPage: React.FC = () => {
   const isUnder17 = usiaValid && parseInt(formData.usia) < 17;
 
   return (
-    <>
-      <div className="navbar-always-scrolled">
-        <Navbar />
-      </div>
+    <div className="chat-page" style={{ 
+      minHeight: "100vh", 
+      display: "flex", 
+      flexDirection: "column",
+      position: "relative"
+    }}>
+      {/* Navbar Transparan di Atas Konten */}
+      <Navbar style={{ 
+        position: "fixed", 
+        top: 0, 
+        left: 0, 
+        right: 0, 
+        zIndex: 1000,
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
+        backdropFilter: "blur(5px)",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
+      }} />
 
-      <div className="min-vh-100 d-flex align-items-center justify-content-center bg-light py-5">
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div className="card shadow">
+      {/* Konten Utama */}
+      <div style={{
+        flex: 1,
+        paddingTop: "70px", // Sesuaikan dengan tinggi navbar
+        display: "flex",
+        flexDirection: "column",
+        // background: "linear-gradient(135deg, #f0f4f8, #d9e2ec)"
+      }}>
+        <div className="container" style={{
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          maxWidth: "900px",
+          margin: "0 auto",
+          width: "100%",
+          padding: "20px"
+        }}>
+          {/* Form Card */}
+          <motion.div 
+            className="card shadow"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              borderRadius: "12px",
+              border: "none",
+              overflow: "hidden",
+              backgroundColor: "rgba(255, 255, 255, 0.9)",
+              backdropFilter: "blur(5px)"
+            }}
+          >
             <div className="card-body p-4">
-              <h2 className="card-title text-center mb-4">Formulir Rekomendasi Produk Bank</h2>
+              <h2 className="card-title text-center mb-4" style={{ color: "#333" }}>Formulir Rekomendasi Produk Bank</h2>
               
-              <div className="alert alert-info mb-4">
-                <p className="mb-0">
-                  Isi data diri Anda untuk mendapatkan rekomendasi produk bank yang paling sesuai.
+              <div className="alert alert-info mb-4" style={{
+                backgroundColor: "#e7f5ff",
+                borderColor: "#d0ebff",
+                color: "#1864ab"
+              }}>
+                <p className="mb-0 text-center">
+                  Untuk mengetahui produk bank yang cocok dengan rutinitasmu, silahkan isi terlebih dahulu data berikut. Hasil rekomendasi akan langsung muncul setelah klik submit.
                 </p>
               </div>
 
@@ -184,9 +227,14 @@ const FormPage: React.FC = () => {
                     onChange={handleChange}
                     required
                     min="6"
+                    style={{
+                      borderRadius: "8px",
+                      padding: "10px 15px",
+                      border: "1px solid #ddd"
+                    }}
                   />
                   {isUnder17 && (
-                    <div className="text-muted mt-1">
+                    <div className="text-muted mt-1" style={{ fontSize: "0.875rem" }}>
                       Untuk usia di bawah 17 tahun, hanya tersedia Simpanan Pelajar
                     </div>
                   )}
@@ -204,6 +252,11 @@ const FormPage: React.FC = () => {
                         name="jenisKelamin"
                         value={formData.jenisKelamin}
                         onChange={handleChange}
+                        style={{
+                          borderRadius: "8px",
+                          padding: "10px 15px",
+                          border: "1px solid #ddd"
+                        }}
                       >
                         <option value="">Pilih Jenis Kelamin</option>
                         <option value="Laki-laki">Laki-laki</option>
@@ -221,6 +274,11 @@ const FormPage: React.FC = () => {
                         name="pekerjaan"
                         value={formData.pekerjaan}
                         onChange={handleChange}
+                        style={{
+                          borderRadius: "8px",
+                          padding: "10px 15px",
+                          border: "1px solid #ddd"
+                        }}
                       >
                         <option value="">Pilih Pekerjaan</option>
                         {pekerjaanOptions.map(opt => (
@@ -242,6 +300,11 @@ const FormPage: React.FC = () => {
                         onChange={handleChange}
                         required
                         min="0"
+                        style={{
+                          borderRadius: "8px",
+                          padding: "10px 15px",
+                          border: "1px solid #ddd"
+                        }}
                       />
                     </div>
 
@@ -258,15 +321,28 @@ const FormPage: React.FC = () => {
                         onChange={handleChange}
                         required
                         min="0"
+                        style={{
+                          borderRadius: "8px",
+                          padding: "10px 15px",
+                          border: "1px solid #ddd"
+                        }}
                       />
                     </div>
                   </>
                 )}
 
-                <button
+                <motion.button
                   type="submit"
                   className="btn btn-primary w-100 py-2 mt-3"
                   disabled={isLoading}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    borderRadius: "20px",
+                    backgroundColor: "#007bff",
+                    border: "none",
+                    fontWeight: "500"
+                  }}
                 >
                   {isLoading ? (
                     <>
@@ -276,31 +352,68 @@ const FormPage: React.FC = () => {
                   ) : (
                     "Dapatkan Rekomendasi"
                   )}
-                </button>
+                </motion.button>
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Recommendation Modal */}
       {showCard && (
-        <div className="modal fade show d-block" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">Rekomendasi Produk Bank</h5>
-              </div>
+        <>
+          <div 
+            className="position-fixed top-0 start-0 w-100 h-100" 
+            style={{ 
+              backgroundColor: "rgba(0,0,0,0.5)", 
+              zIndex: 1040 
+            }} 
+            onClick={() => setShowCard(false)} 
+          />
+          
+          <motion.div 
+            className="position-fixed d-flex align-items-center justify-content-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            style={{ 
+              zIndex: 1050,
+              inset: 0
+            }}
+          >
+            <div 
+              className="bg-white text-dark p-4 rounded shadow-lg"
+              style={{ 
+                width: "90%", 
+                maxWidth: "450px",
+                borderTop: "5px solid #007bff",
+                borderRadius: "12px",
+                position: "relative"
+              }}
+            >
+              <button 
+                type="button" 
+                className="btn-close position-absolute top-0 end-0 p-3" 
+                aria-label="Close" 
+                onClick={() => setShowCard(false)}
+              />
+              
+              <h4 className="mb-3 text-center" style={{ color: "#007bff" }}>
+                <i className="bi bi-check-circle-fill me-2 text-success"></i>
+                Rekomendasi Produk Bank
+              </h4>
+              
               <div className="modal-body">
                 {error ? (
-                  <div className="alert alert-danger">{error}</div>
+                  <div className="alert alert-danger">
+                    {error}
+                  </div>
                 ) : (
                   <>
-                    <h4 className="text-primary mb-3">{rekomendasi.product}</h4>
-                    <p>{rekomendasi.description}</p>
+                    <h4 className="text-primary mb-3" style={{ fontWeight: "600" }}>{rekomendasi.product}</h4>
+                    <p style={{ color: "#555", lineHeight: "1.6" }}>{rekomendasi.description}</p>
                     <div className="mt-4">
-                      <h6>Detail Profil:</h6>
-                      <ul>
+                      <h6 style={{ fontWeight: "500", color: "#333" }}>Detail Profil:</h6>
+                      <ul style={{ paddingLeft: "20px", color: "#555" }}>
                         <li>Usia: {formData.usia} tahun</li>
                         {formData.jenisKelamin && <li>Jenis Kelamin: {formData.jenisKelamin}</li>}
                         {formData.pekerjaan && <li>Pekerjaan: {formData.pekerjaan}</li>}
@@ -311,19 +424,29 @@ const FormPage: React.FC = () => {
                   </>
                 )}
               </div>
-              <div className="modal-footer">
+              
+              <div className="text-center mt-4">
                 <button 
                   className="btn btn-primary"
                   onClick={handleOkClick}
+                  style={{
+                    borderRadius: "20px",
+                    padding: "8px 20px",
+                    fontWeight: "500"
+                  }}
                 >
                   Tutup
                 </button>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </>
       )}
-    </>
+
+      <footer className="text-center text-light py-3 small">
+        © 2025 by ElChatbot
+      </footer>
+    </div>
   );
 };
 

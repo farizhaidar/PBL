@@ -26,32 +26,30 @@ export default function Navbar() {
       <div className="container py-2">
         <Link
           href="/"
-          className={`navbar-brand ${scrolled ? 'text-dark' : 'biru-bca'}`}
+          className={`navbar-brand fw-bold ${
+            scrolled ? 'text-dark' : 'text-white'
+          }`}
         >
-          <b>
-            <i>ElChatbot</i>
-          </b>
+          <i>ElChatbot</i>
         </Link>
 
         <button
-          className={`navbar-toggler ${scrolled ? '' : 'custom-toggler'}`}
+          className="navbar-toggler"
           type="button"
-          onClick={() => setIsOpen(!isOpen)} // Ganti dengan handler manual
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}
-          id="navbarNav"
-        >
+        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
           <ul className="navbar-nav ms-auto">
             {menuItems.map((item) => (
               <li key={item.path} className="nav-item">
                 <Link
                   href={item.path}
                   className={`nav-link ${
-                    pathname === item.path ? 'active' : ''
+                    pathname === item.path ? 'active fw-semibold' : ''
                   } ${scrolled ? 'text-dark' : 'text-white'}`}
                   onClick={() => setIsOpen(false)} // Tutup menu setelah klik
                 >
