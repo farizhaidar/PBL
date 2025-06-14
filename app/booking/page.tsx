@@ -238,9 +238,8 @@ export default function BookingPage() {
         backdropFilter: "blur(5px)",
         boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
       }}>
-        {/* isi navbar */}
+        <Navbar />
       </nav>
-      <Navbar />
 
       {/* Konten Utama */}
       <div style={{
