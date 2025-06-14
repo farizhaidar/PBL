@@ -228,7 +228,7 @@ export default function BookingPage() {
       // backgroundColor: "#f8f9fa"
     }}>
       {/* Navbar Transparan di Atas Konten */}
-      <Navbar style={{ 
+      <nav style={{ 
         position: "fixed", 
         top: 0, 
         left: 0, 
@@ -237,7 +237,10 @@ export default function BookingPage() {
         // backgroundColor: "rgba(255, 255, 255, 0.9)",
         backdropFilter: "blur(5px)",
         boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
-      }} />
+      }}>
+        {/* isi navbar */}
+      </nav>
+      <Navbar />
 
       {/* Konten Utama */}
       <div style={{
