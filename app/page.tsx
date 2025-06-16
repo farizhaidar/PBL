@@ -42,9 +42,7 @@ export default function Home() {
                   Chatbot For Customer Support
                 </h5>
                 <p className="mt-4" style={{ maxWidth: '700px' }}>
-                  Selamat datang di layanan chatbot resmi [Nama Bank]! Saya [Nama Chatbot], asisten virtual
-                  yang siap membantu Anda dalam mendapatkan informasi dan menyelesaikan berbagai kebutuhan perbankan
-                  dengan cepat dan mudah.
+                 Selamat datang! Saya Elchatbot, asisten virtual yang siap mendampingi Anda mendapatkan informasi perbankan serta membantu proses dan persetujuan kelayakan pinjaman dengan cepat dan mudah.
                 </p>
                 <Link href="/chat" className="btn btn-start btn-lg mt-3 px-4 fw-medium">
                   <b>Mulai Obrolan</b>
