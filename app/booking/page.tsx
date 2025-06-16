@@ -18,6 +18,12 @@ type BookingSuccessData = {
   queueNumber: number;
 };
 
+// Available time slots
+const availableTimes = [
+  "08:00", "09:00", "10:00", "11:00", 
+  "12:00", "13:00", "14:00"
+];
+
 export default function BookingPage() {
   const [form, setForm] = useState({
     name: "",
@@ -93,8 +99,8 @@ export default function BookingPage() {
     }
     if (!form.time) {
       newErrors.time = "Waktu harus diisi";
-    } else if (form.time < "08:00" || form.time > "15:00") {
-      newErrors.time = "Waktu harus antara pukul 08:00 hingga 15:00";
+    } else if (!availableTimes.includes(form.time)) {
+      newErrors.time = "Waktu yang dipilih tidak valid";
     }
 
     setErrors(newErrors);
@@ -223,7 +229,6 @@ export default function BookingPage() {
       display: "flex", 
       flexDirection: "column",
       position: "relative",
-      // backgroundColor: "#f8f9fa"
     }}>
       {/* Navbar Transparan di Atas Konten */}
       <nav style={{ 
@@ -232,7 +237,6 @@ export default function BookingPage() {
         left: 0, 
         right: 0, 
         zIndex: 1000,
-        // backgroundColor: "rgba(255, 255, 255, 0.9)",
         backdropFilter: "blur(5px)",
         boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
       }}>
@@ -242,10 +246,9 @@ export default function BookingPage() {
       {/* Konten Utama */}
       <div style={{
         flex: 1,
-        paddingTop: "70px", // Sesuaikan dengan tinggi navbar
+        paddingTop: "70px",
         display: "flex",
         flexDirection: "column",
-        // backgroundColor: "#f8f9fa"
       }}>
         <div className="container" style={{
           flex: 1,
@@ -362,23 +365,26 @@ export default function BookingPage() {
                   </div>
                   <div className="col-md-6">
                     <label htmlFor="time" className="form-label">Waktu</label>
-                    <input 
-                      id="time" 
-                      className={`form-control ${errors.time ? "is-invalid" : ""}`} 
-                      name="time" 
-                      type="time" 
-                      min="08:00" 
-                      max="15:00" 
-                      step="3600" 
-                      value={form.time} 
-                      onChange={handleChange} 
-                      required 
+                    <select
+                      id="time"
+                      className={`form-select ${errors.time ? "is-invalid" : ""}`}
+                      name="time"
+                      value={form.time}
+                      onChange={handleChange}
+                      required
                       style={{
                         borderRadius: "8px",
                         padding: "10px 15px",
                         border: "1px solid #ddd"
                       }}
-                    />
+                    >
+                      <option value="">Pilih Waktu</option>
+                      {availableTimes.map((time) => (
+                        <option key={time} value={time}>
+                          {time}
+                        </option>
+                      ))}
+                    </select>
                     {errors.time && <div className="invalid-feedback d-block">{errors.time}</div>}
                   </div>
                 </div>
