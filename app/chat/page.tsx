@@ -11,7 +11,7 @@ export default function ChatPage() {
   const [messages, setMessages] = useState<{ text: string; isUser: boolean }[]>([
     { 
       text: `
-        <p>Halo! Saya adalah asisten virtual. Silakan tanyakan apa saja tentang layanan kami seputar pinjaman dan perbankan :blush:. Berikut adalah pertanyaan yang dapat membantu Anda:</p>
+        <p>Halo! Saya adalah asisten virtual. Silakan tanyakan apa saja tentang layanan kami seputar pinjaman dan perbankan 😊. Berikut adalah pertanyaan yang dapat membantu Anda:</p>
         <ul>
           <li>Apa itu <strong>[Nama pinjaman]</strong>?</li>
           <li>Apa saja syarat dan dokumen yang diperlukan untuk pinjaman <strong>[Nama pinjaman]</strong>?</li>

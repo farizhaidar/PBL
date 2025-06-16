@@ -41,8 +41,6 @@ export default function BookingPage() {
         <p>Halo! Saya adalah asisten virtual. Ada yang bisa dibantu terkait layanan booking konsultasi kami? 😊</p>
         <p>Anda bisa bertanya seperti:</p>
         <ul>
-          <li>Bagaimana cara booking?</li>
-          <li>Syaratnya apa saja?</li>
           <li>Tanggal 28 Juni 2025 jam berapa saja yang kosong?</li>
         </ul>
       `, 
