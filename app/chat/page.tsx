@@ -9,7 +9,7 @@ import "./chat.css";
 export default function ChatPage() {
   const [inputText, setInputText] = useState("");
   const [messages, setMessages] = useState<{ text: string; isUser: boolean }[]>([
-    { 
+    {
       text: `
         <p>Halo! Saya adalah asisten virtual. Silakan tanyakan apa saja tentang layanan kami seputar pinjaman dan perbankan 😊. Berikut adalah pertanyaan yang dapat membantu Anda:</p>
         <ul>
@@ -17,8 +17,8 @@ export default function ChatPage() {
           <li>Apa saja syarat dan dokumen yang diperlukan untuk pinjaman <strong>[Nama pinjaman]</strong>?</li>
           <li>Apakah pengajuan peminjaman <strong>[Nama pinjaman]</strong> saya akan diterima dengan data diri saya berikut ini <em>[data diri anda (umur, pekerjaan, penghasilan, dll)]</em>?</li>
         </ul>
-      `, 
-      isUser: false 
+      `,
+      isUser: false,
     },
   ]);
 
@@ -64,30 +64,29 @@ export default function ChatPage() {
   }, [messages]);
 
   return (
-    <div className="chat-page" style={{ 
-      minHeight: "100vh", 
-      display: "flex", 
+    <div className="chat-page" style={{
+      minHeight: "100vh",
+      display: "flex",
       flexDirection: "column",
       position: "relative"
     }}>
-      {/* Navbar Transparan di Atas Konten */}
-      <nav style={{ 
-              position: "fixed", 
-              top: 0, 
-              left: 0, 
-              right: 0, 
-              zIndex: 1000,
-              // backgroundColor: "rgba(255, 255, 255, 0.9)",
-              backdropFilter: "blur(5px)",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
-            }}>
-              <Navbar />
+      {/* Navbar */}
+      <nav style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1000,
+        backdropFilter: "blur(5px)",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
+      }}>
+        <Navbar />
       </nav>
 
       {/* Konten Utama */}
       <div style={{
         flex: 1,
-        paddingTop: "70px", // Sesuaikan dengan tinggi navbar
+        paddingTop: "70px",
         display: "flex",
         flexDirection: "column"
       }}>
@@ -101,7 +100,7 @@ export default function ChatPage() {
           padding: "20px"
         }}>
           {/* Area Chat */}
-          <div ref={bottomRef} style={{
+          <div style={{
             flex: 1,
             overflowY: "auto",
             display: "flex",
@@ -137,7 +136,7 @@ export default function ChatPage() {
             ))}
 
             {isLoading && (
-              <motion.div 
+              <motion.div
                 style={{
                   alignSelf: "flex-start",
                   backgroundColor: "#f1f1f1",
@@ -146,63 +145,39 @@ export default function ChatPage() {
                   borderTopLeftRadius: "4px",
                   maxWidth: "85%"
                 }}
-                initial={{ opacity: 0 }} 
+                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', height: '24px' }}>
-                  <motion.span
-                    style={{ display: 'inline-block', fontSize: '20px' }}
-                    animate={{
-                      scale: [1, 1.5, 1],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 1.2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    •
-                  </motion.span>
-                  <motion.span
-                    style={{ display: 'inline-block', fontSize: '20px', marginLeft: '6px' }}
-                    animate={{
-                      scale: [1, 1.5, 1],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 1.2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 0.4
-                    }}
-                  >
-                    •
-                  </motion.span>
-                  <motion.span
-                    style={{ display: 'inline-block', fontSize: '20px', marginLeft: '6px' }}
-                    animate={{
-                      scale: [1, 1.5, 1],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 1.2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 0.8
-                    }}
-                  >
-                    •
-                  </motion.span>
+                  {[0, 0.4, 0.8].map((delay, i) => (
+                    <motion.span
+                      key={i}
+                      style={{ display: 'inline-block', fontSize: '20px', marginLeft: i === 0 ? 0 : '6px' }}
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0.6, 1, 0.6],
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay
+                      }}
+                    >
+                      •
+                    </motion.span>
+                  ))}
                 </div>
               </motion.div>
             )}
+
+            {/* Ref di bawah */}
+            <div ref={bottomRef} />
           </div>
 
           {/* Input Area */}
           <div style={{
             padding: "10px 0",
-            // backgroundColor: "#fff",
             position: "sticky",
             bottom: 0
           }}>
@@ -226,9 +201,9 @@ export default function ChatPage() {
                   border: "1px solid #ddd"
                 }}
               />
-              <button 
-                className="btn btn-primary" 
-                onClick={handleSend} 
+              <button
+                className="btn btn-primary"
+                onClick={handleSend}
                 disabled={isLoading}
                 style={{
                   borderRadius: "50%",
