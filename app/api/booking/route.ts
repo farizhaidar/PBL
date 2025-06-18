@@ -10,17 +10,49 @@ function timeToMinutes(time: string): number {
   return hours * 60 + minutes;
 }
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+  const date = searchParams.get('date');
+  const location = searchParams.get('location') || 'Cabang Depok';
+
+  if (!date) {
+    return NextResponse.json({ error: 'Parameter date diperlukan' }, { status: 400 });
+  }
+
   try {
     const connection = await pool.getConnection();
-    const [rows] = await connection.query<mysql.RowDataPacket[]>(
-      'SELECT * FROM bookings ORDER BY created_at DESC'
+    
+    const [bookedSlots] = await connection.query<mysql.RowDataPacket[]>(
+      'SELECT time FROM bookings WHERE date = ? AND location = ?',
+      [date, location]
     );
     connection.release();
-    return NextResponse.json({ bookings: rows }, { status: 200 });
+
+    const bookedTimesInMinutes = bookedSlots.map(slot => timeToMinutes(slot.time));
+
+    const workingHoursStart = 8 * 60;
+    const workingHoursEnd = 15 * 60;
+    const slotInterval = 60;
+
+    const allSlots: string[] = [];
+    for (let time = workingHoursStart; time <= workingHoursEnd; time += slotInterval) {
+      const hours = String(Math.floor(time / 60)).padStart(2, '0');
+      const minutes = String(time % 60).padStart(2, '0');
+      allSlots.push(`${hours}:${minutes}`);
+    }
+
+    const availableSlots = allSlots.filter(slot => {
+      const slotInMinutes = timeToMinutes(slot);
+      return !bookedTimesInMinutes.some(bookedTime => Math.abs(slotInMinutes - bookedTime) < slotInterval);
+    });
+
+    return NextResponse.json({ availableSlots }, { status: 200 });
   } catch (err) {
-    console.error('MySQL GET Error:', err);
-    return NextResponse.json({ error: 'Terjadi kesalahan pada server saat mengambil data' }, { status: 500 });
+    console.error('Error fetching available slots:', err);
+    return NextResponse.json(
+      { error: 'Terjadi kesalahan saat memeriksa ketersediaan jam' },
+      { status: 500 }
+    );
   }
 }
 

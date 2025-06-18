@@ -50,6 +50,9 @@ export default function Home() {
 
                 {/* Pindahkan progress bar di sini, tanpa mengubah styling lain */}
                 <div className="mt-4" style={{ maxWidth: '400px' }}>
+                  <h6 className="mb-2" style={{ fontSize: '0.9rem', fontWeight: 500 }}>
+                    Hasil ulasan web kami
+                  </h6>
                   <ReviewProgressBar/>
                 </div>
               </div>

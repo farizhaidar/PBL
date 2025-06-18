@@ -18,10 +18,9 @@ type BookingSuccessData = {
   queueNumber: number;
 };
 
-// Available time slots
-const availableTimes = [
+const defaultAvailableTimes = [
   "08:00", "09:00", "10:00", "11:00", 
-  "12:00", "13:00", "14:00"
+  "12:00", "13:00", "14:00", "15:00"
 ];
 
 export default function BookingPage() {
@@ -55,11 +54,43 @@ export default function BookingPage() {
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const chatBottomRef = useRef<HTMLDivElement | null>(null);
+  const [availableTimes, setAvailableTimes] = useState<string[]>(defaultAvailableTimes);
+  const [isLoadingTimes, setIsLoadingTimes] = useState(false);
 
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
     setMinDate(today);
   }, []);
+
+  useEffect(() => {
+    const fetchAvailableTimes = async () => {
+      if (!form.date) {
+        setAvailableTimes(defaultAvailableTimes);
+        return;
+      }
+
+      setIsLoadingTimes(true);
+      try {
+        const response = await fetch(`/api/booking?date=${form.date}&location=${form.location}`);
+        if (!response.ok) {
+          throw new Error('Gagal memuat jam tersedia');
+        }
+        const data = await response.json();
+        setAvailableTimes(data.availableSlots || []);
+        
+        if (form.time && !data.availableSlots.includes(form.time)) {
+          setForm(prev => ({ ...prev, time: "" }));
+        }
+      } catch (error) {
+        console.error("Error fetching available times:", error);
+        setAvailableTimes(defaultAvailableTimes);
+      } finally {
+        setIsLoadingTimes(false);
+      }
+    };
+
+    fetchAvailableTimes();
+  }, [form.date, form.location]);
 
   const isWeekend = (dateStr: string): boolean => {
     if (!dateStr) return false;
@@ -100,7 +131,7 @@ export default function BookingPage() {
     if (!form.time) {
       newErrors.time = "Waktu harus diisi";
     } else if (!availableTimes.includes(form.time)) {
-      newErrors.time = "Waktu yang dipilih tidak valid";
+      newErrors.time = "Waktu yang dipilih tidak tersedia";
     }
 
     setErrors(newErrors);
@@ -230,7 +261,6 @@ export default function BookingPage() {
       flexDirection: "column",
       position: "relative",
     }}>
-      {/* Navbar Transparan di Atas Konten */}
       <nav style={{ 
         position: "fixed", 
         top: 0, 
@@ -243,7 +273,6 @@ export default function BookingPage() {
         <Navbar />
       </nav>
 
-      {/* Konten Utama */}
       <div style={{
         flex: 1,
         paddingTop: "70px",
@@ -259,7 +288,6 @@ export default function BookingPage() {
           width: "100%",
           padding: "20px"
         }}>
-          {/* Form Card */}
           <motion.div 
             className="card shadow"
             initial={{ opacity: 0, y: 20 }}
@@ -372,19 +400,34 @@ export default function BookingPage() {
                       value={form.time}
                       onChange={handleChange}
                       required
+                      disabled={!form.date || isLoadingTimes}
                       style={{
                         borderRadius: "8px",
                         padding: "10px 15px",
-                        border: "1px solid #ddd"
+                        border: "1px solid #ddd",
+                        position: "relative"
                       }}
                     >
-                      <option value="">Pilih Waktu</option>
-                      {availableTimes.map((time) => (
-                        <option key={time} value={time}>
-                          {time}
+                      <option value="">{isLoadingTimes ? "Memuat jam tersedia..." : "Pilih Waktu"}</option>
+                      {availableTimes.length > 0 ? (
+                        availableTimes.map((time) => (
+                          <option key={time} value={time}>
+                            {time}
+                          </option>
+                        ))
+                      ) : (
+                        <option value="" disabled>
+                          {form.date ? "Tidak ada jam tersedia untuk tanggal ini" : "Pilih tanggal terlebih dahulu"}
                         </option>
-                      ))}
+                      )}
                     </select>
+                    {isLoadingTimes && (
+                      <div className="position-absolute end-0 top-0 h-100 d-flex align-items-center pe-3">
+                        <div className="spinner-border spinner-border-sm text-primary" role="status">
+                          <span className="visually-hidden">Loading...</span>
+                        </div>
+                      </div>
+                    )}
                     {errors.time && <div className="invalid-feedback d-block">{errors.time}</div>}
                   </div>
                 </div>
@@ -436,7 +479,6 @@ export default function BookingPage() {
         </div>
       </div>
 
-      {/* Chat Button */}
       <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 1000 }}>
         {isChatOpen ? (
           <motion.div 
@@ -626,7 +668,6 @@ export default function BookingPage() {
         )}
       </div>
 
-      {/* Success Modal */}
       {bookingSuccess && (
         <>
           <div 
