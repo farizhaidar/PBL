@@ -32,6 +32,7 @@ const FormPage: React.FC = () => {
     description: ""
   });
   const [showCard, setShowCard] = useState(false);
+  const [showLoadingCard, setShowLoadingCard] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -44,21 +45,27 @@ const FormPage: React.FC = () => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
+    setShowLoadingCard(true);
 
     if (!formData.usia) {
       setError("Harap isi usia terlebih dahulu");
       setIsLoading(false);
+      setShowLoadingCard(false);
       return;
     }
 
     const age = parseInt(formData.usia);
     const isUnder17 = age < 17;
 
+    // Simulasi loading 2 detik
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
     if (isUnder17) {
       setRekomendasi({
         product: "Simpanan Pelajar",
         description: "Tabungan khusus pelajar dengan fitur edukasi keuangan"
       });
+      setShowLoadingCard(false);
       setShowCard(true);
       setIsLoading(false);
       return;
@@ -67,6 +74,7 @@ const FormPage: React.FC = () => {
     if (!formData.saldo || !formData.pendapatan) {
       setError("Harap isi semua field yang wajib diisi");
       setIsLoading(false);
+      setShowLoadingCard(false);
       return;
     }
 
@@ -101,6 +109,7 @@ const FormPage: React.FC = () => {
         product: data.recommended_product,
         description: data.description || getProductDescription(data.recommended_product)
       });
+      setShowLoadingCard(false);
       setShowCard(true);
 
     } catch (error) {
@@ -110,6 +119,7 @@ const FormPage: React.FC = () => {
           ? error.message 
           : "Terjadi kesalahan saat memproses data"
       );
+      setShowLoadingCard(false);
       setShowCard(true);
     } finally {
       setIsLoading(false);
@@ -164,7 +174,6 @@ const FormPage: React.FC = () => {
               left: 0, 
               right: 0, 
               zIndex: 1000,
-              // backgroundColor: "rgba(255, 255, 255, 0.9)",
               backdropFilter: "blur(5px)",
               boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
             }}>
@@ -174,10 +183,9 @@ const FormPage: React.FC = () => {
       {/* Konten Utama */}
       <div style={{
         flex: 1,
-        paddingTop: "70px", // Sesuaikan dengan tinggi navbar
+        paddingTop: "70px",
         display: "flex",
         flexDirection: "column",
-        // background: "linear-gradient(135deg, #f0f4f8, #d9e2ec)"
       }}>
         <div className="container" style={{
           flex: 1,
@@ -343,7 +351,8 @@ const FormPage: React.FC = () => {
                     borderRadius: "20px",
                     backgroundColor: "#007bff",
                     border: "none",
-                    fontWeight: "500"
+                    fontWeight: "500",
+                    height: "45px"
                   }}
                 >
                   {isLoading ? (
@@ -360,6 +369,58 @@ const FormPage: React.FC = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Loading Card Modal */}
+      {showLoadingCard && (
+        <>
+          <div 
+            className="position-fixed top-0 start-0 w-100 h-100" 
+            style={{ 
+              backgroundColor: "rgba(0,0,0,0.5)", 
+              zIndex: 1040 
+            }} 
+          />
+          
+          <motion.div 
+            className="position-fixed d-flex align-items-center justify-content-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            style={{ 
+              zIndex: 1050,
+              inset: 0
+            }}
+          >
+            <div 
+              className="bg-white text-dark p-4 rounded shadow-lg"
+              style={{ 
+                width: "90%", 
+                maxWidth: "450px",
+                borderTop: "5px solid #007bff",
+                borderRadius: "12px",
+                position: "relative"
+              }}
+            >
+              <div className="modal-body text-center">
+                <img 
+                  src="/loading_animation.gif" 
+                  alt="Loading" 
+                  style={{ 
+                    width: "100px", 
+                    height: "100px",
+                    marginBottom: "20px"
+                  }} 
+                />
+                <h4 className="mb-3" style={{ color: "#007bff" }}>
+                  Memproses Data Anda...
+                </h4>
+                <p style={{ color: "#555" }}>
+                  Sedang menganalisis profil Anda untuk memberikan rekomendasi terbaik
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </>
+      )}
 
       {/* Recommendation Modal */}
       {showCard && (
